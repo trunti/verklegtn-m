@@ -123,7 +123,45 @@ void UI::listScientists()
         break;
     }
     SortScientists(selection);
-    mainMenu();
+    listScientistsRepeat();
+}
+
+void UI::listScientistsRepeat()
+{
+    char selection;
+    cout << endl <<"######################################################" << endl;
+    cout << endl << "Do you want to try again? (Y/N)" << endl;
+
+    cout << endl << "You can press 'M' for MAIN or 'Q' to QUIT." << endl;
+
+    cout << endl;
+    cout << "Selection: ";
+    cin >> selection;
+
+    switch (selection)
+    {
+    case 'Y':
+    case 'y':
+        cleanScreen();
+        cout << "##################### SCIENTISTS #####################" << endl << endl;
+        listScientists();
+        break;
+    case 'N':
+    case 'n':
+    case 'm':
+    case 'M':
+        cleanScreen();
+        mainMenu();
+        break;
+    case 'q':
+    case 'Q': return exit (-1);
+        break;
+    default:
+        cleanScreen();
+        cout << "Error: Invalid choice, try again!" << endl << endl;
+        listScientistsRepeat();
+        break;
+    }
 }
 
 void UI::listComputers()
@@ -173,6 +211,44 @@ void UI::listComputers()
     }
     SortComputers(selection);
     mainMenu();
+}
+
+void UI::listComputersRepeat()
+{
+    char selection;
+    cout << endl <<"######################################################" << endl;
+    cout << endl << "Do you want to try again? (Y/N)" << endl;
+
+    cout << endl << "You can press 'M' for MAIN or 'Q' to QUIT." << endl;
+
+    cout << endl;
+    cout << "Selection: ";
+    cin >> selection;
+
+    switch (selection)
+    {
+    case 'Y':
+    case 'y':
+        cleanScreen();
+        cout << "##################### COMPUTERS ######################" << endl << endl;
+        listComputers();
+        break;
+    case 'N':
+    case 'n':
+    case 'm':
+    case 'M':
+        cleanScreen();
+        mainMenu();
+        break;
+    case 'q':
+    case 'Q': return exit (-1);
+        break;
+    default:
+        cleanScreen();
+        cout << "Error: Invalid choice, try again!" << endl << endl;
+        listComputersRepeat();
+        break;
+    }
 }
 
 void UI::listRelationship()

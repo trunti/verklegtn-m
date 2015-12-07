@@ -12,7 +12,7 @@ void Data::openDatabase()
     db.setDatabaseName(dbName);
     db.open();
 }
-/*void Data::SortByName()
+void Data::SortByName()
 {
     openDatabase();
         QSqlQuery query(db);
@@ -66,7 +66,7 @@ void Data::SortByGenderF()
                 died = query.value("Died").toUInt();
             }
 }
-*/void Data::SortByGenderM()
+void Data::SortByGenderM()
 {
     openDatabase();
         QSqlQuery query(db);
@@ -78,7 +78,6 @@ void Data::SortByGenderF()
         query.exec();
         while(query.next())
             {
-            cout << "hello";
                 name = query.value("Name").toString().toStdString();
                 gender = query.value("Gender").toString().toStdString();
                 born = query.value("Born").toUInt();
@@ -96,10 +95,58 @@ void Data::SortByCpuName()
         query.exec();
         while(query.next())
         {
-            cout << "Hello";
             name = query.value("Name").toString().toStdString();
             year = query.value("Year").toUInt();
             type = query.value("Type").toString().toStdString();
-            cout << name << " ";
+        }
+}
+void Data::SortByCpuNameD()
+{
+    openDatabase();
+        QSqlQuery query(db);
+        query.prepare("SELECT * FROM Computers ORDER BY Name DESC");
+        query.bindValue("Name", QString::fromStdString("*"));
+        query.bindValue("Year", QString::fromStdString("*"));
+        query.bindValue("Type", QString::fromStdString("*"));
+        query.exec();
+        while(query.next())
+        {
+            name = query.value("Name").toString().toStdString();
+            year = query.value("Year").toUInt();
+            type = query.value("Type").toString().toStdString();
+             cout << name << endl;
+        }
+}
+void Data::SortByCpuYear()
+{
+    openDatabase();
+        QSqlQuery query(db);
+        query.prepare("SELECT * FROM Computers ORDER BY Year");
+        query.bindValue("Name", QString::fromStdString("*"));
+        query.bindValue("Year", QString::fromStdString("*"));
+        query.bindValue("Type", QString::fromStdString("*"));
+        query.exec();
+        while(query.next())
+        {
+            name = query.value("Name").toString().toStdString();
+            year = query.value("Year").toUInt();
+            type = query.value("Type").toString().toStdString();
+        }
+}
+void Data::SortByCpuYearD()
+{
+    openDatabase();
+        QSqlQuery query(db);
+        query.prepare("SELECT * FROM Computers ORDER BY Year DESC");
+        query.bindValue("Name", QString::fromStdString("*"));
+        query.bindValue("Year", QString::fromStdString("*"));
+        query.bindValue("Type", QString::fromStdString("*"));
+        query.exec();
+        while(query.next())
+        {
+            name = query.value("Name").toString().toStdString();
+            year = query.value("Year").toUInt();
+            type = query.value("Type").toString().toStdString();
+            cout << year << endl;
         }
 }

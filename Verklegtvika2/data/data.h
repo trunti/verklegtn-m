@@ -27,6 +27,9 @@ public:
     void SortByGenderM();
     void SortByCpuName();
     void openDatabase();
+    void SortByCpuNameD();
+    void SortByCpuYear();
+    void SortByCpuYearD();
 private:
     int born, died, year;
     string name, gender, type;

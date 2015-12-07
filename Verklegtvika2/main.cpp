@@ -5,8 +5,8 @@ int main()
 {
     Data data;
     //UI ui;
-    data.SortByCpuName();
-    data.SortByGenderM();
+    data.SortByCpuNameD();
+    data.SortByCpuYearD();
     //ui.mainMenu();
 
     return 0;

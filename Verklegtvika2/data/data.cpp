@@ -42,11 +42,16 @@ void Data::SortByNameB()
         query.exec();
         while(query.next())
             {
-                name = query.value("Name").toString().toStdString();
-                gender = query.value("Gender").toString().toStdString();
-                born = query.value("Born").toUInt();
-                died = query.value("Died").toUInt();
+                Scientists* pScientist = new Scientists();
+                pScientist -> name = query.value("Name").toString().toStdString();
+                pScientist -> gender = query.value("Gender").toString().toStdString();
+                pScientist -> born = query.value("Born").toUInt();
+                pScientist -> died = query.value("Died").toUInt();
+                scient.push_back(pScientist);
             }
+        for(unsigned int i = 0; i < scient.size(); i++){
+            cout << scient[i] -> name << endl;
+        }
 }
 void Data::SortByGenderF()
 {

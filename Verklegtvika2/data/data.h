@@ -14,6 +14,7 @@
 #include <QString>
 using namespace std;
 
+class Scientists;
 
 class Data
 {
@@ -31,6 +32,7 @@ public:
     void SortByCpuYear();
     void SortByCpuYearD();
     void SortByCpuType();
+    vector<Scientists*> scient;
 private:
     int born, died, year;
     string name, gender, type;

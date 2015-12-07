@@ -6,6 +6,6 @@ int main()
     Data data;
     //UI ui;
     //ui.mainMenu();
-
+    data.SortByNameB();
     return 0;
 }

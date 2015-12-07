@@ -210,7 +210,7 @@ void UI::listComputers()
         break;
     }
     SortComputers(selection);
-    mainMenu();
+    listComputersRepeat();
 }
 
 void UI::listComputersRepeat()

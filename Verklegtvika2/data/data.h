@@ -33,11 +33,12 @@ public:
     void SortByCpuYear();
     void SortByCpuYearD();
     void SortByCpuType();
+    void Search();
     vector<Scientists*> scient;
     vector<Computers*> comp;
 private:
     int born, died, year;
-    string name, gender, type;
+    string name, gender, type, str;
 };
 
 #endif // DATA_H

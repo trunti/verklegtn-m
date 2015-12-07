@@ -83,7 +83,6 @@ void UI::listScientists()
     cout << "2: By name (Z-A)" << endl;
     cout << "3: By gender (M/F)" << endl;
     cout << "4: By gender (F/M)" << endl;
-    cout << "5: By..." << endl;
 
     cout << endl << "You can press 'M' to go back to MAIN or 'Q' to QUIT." << endl;
 
@@ -106,9 +105,6 @@ void UI::listScientists()
     case '4':
         cout << "################## SCIENTISTS (F-M) ##################" << endl << endl;
         break;
-    case '5':
-        cout << "################## SCIENTISTS (...) ##################" << endl << endl;
-        break;
     case 'm':
     case 'M':
         mainMenu();
@@ -129,10 +125,8 @@ void UI::listScientists()
 void UI::listScientistsRepeat()
 {
     char selection;
-    cout << endl <<"######################################################" << endl;
-    cout << endl << "Do you want to try again? (Y/N)" << endl;
 
-    cout << endl << "You can press 'M' for MAIN or 'Q' to QUIT." << endl;
+    cout << endl << "Do you want to sort again? (Y/N)" << endl;
 
     cout << endl;
     cout << "Selection: ";
@@ -172,7 +166,6 @@ void UI::listComputers()
     cout << "1: By name (A-Z)" << endl;
     cout << "2: By name (Z-A)" << endl;
     cout << "3: By build year" << endl;
-    cout << "5: By..." << endl;
 
     cout << endl << "You can press 'M' for MAIN or 'Q' to QUIT." << endl;
 
@@ -191,9 +184,6 @@ void UI::listComputers()
         break;
     case '3':
         cout << "################## COMPUTERS BY YEAR #################" << endl << endl;
-        break;
-    case '4':
-        cout << "################## COMPUTERS (...) ###################" << endl << endl;
         break;
     case 'm':
     case 'M':
@@ -216,10 +206,8 @@ void UI::listComputers()
 void UI::listComputersRepeat()
 {
     char selection;
-    cout << endl <<"######################################################" << endl;
-    cout << endl << "Do you want to try again? (Y/N)" << endl;
 
-    cout << endl << "You can press 'M' for MAIN or 'Q' to QUIT." << endl;
+    cout << endl << "Do you want to sort again? (Y/N)" << endl;
 
     cout << endl;
     cout << "Selection: ";

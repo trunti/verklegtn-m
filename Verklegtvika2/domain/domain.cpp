@@ -55,27 +55,11 @@ void Domain::SortComputers(char select){
     close();
 }
 void Domain::displayvectorS(){
-    cout << "Name" << "\t\t\t\t" << "Gender" << "\t\t" << "Born" << "\t" << "Dead" << endl;
-    cout << "------------------------------------------------------------------" << endl;
     for(unsigned int i = 0; i < scient.size(); i++){
-        cout << "| ";
-        cout << scient[i] -> name << "\t";
-        if(scient[i] -> name.size() < 22){
-            cout << "\t";
-            if(scient[i] -> name.size() < 14){
-                    cout << "\t";
-            }
-        }
-        cout << scient[i] -> gender << "\t\t";
-        cout << scient[i] -> born << "\t";
-        if(scient[i] -> died == 0){
-            cout << "Alive!";
-        }else{
-        cout << scient[i] -> died;
-        }
-        cout << "\t |" << endl;
-        cout << "------------------------------------------------------------------" << endl;
-
+        cout << scient[i] -> name << " ";
+        cout << scient[i] -> gender << " ";
+        cout << scient[i] -> born << " ";
+        cout << scient[i] -> died << endl;
     }
 }
 void Domain::displayvectorC(){

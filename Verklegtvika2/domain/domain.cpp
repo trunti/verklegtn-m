@@ -79,10 +79,21 @@ void Domain::displayvectorS(){
     }
 }
 void Domain::displayvectorC(){
+    cout << "Name" << "\t\t\t" << "Year" << "\t" << "Type" << "\t\t\t" << "Built" << endl;
+    cout << "------------------------------------------------------------------" << endl;
     for(unsigned int i = 0; i < comp.size(); i++){
-        cout << comp[i] -> name << " ";
-        cout << comp[i] -> year << " ";
-        cout << comp[i] -> type << " ";
+        cout << "| ";
+        cout << comp[i] -> name << "\t";
+        if(comp[i] -> name.size() < 16)
+            cout << "\t";
+            if(comp[i] -> name.size() < 6){
+                    cout << "\t";
+            }
+        cout << comp[i] -> year << "\t";
+        cout << comp[i] -> type << "\t";
+        if(comp[i] -> type.size() < 13)
+            cout << "\t";
         cout << comp[i] -> built << endl;
+    cout << "------------------------------------------------------------------" << endl;
     }
 }

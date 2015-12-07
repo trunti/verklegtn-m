@@ -6,9 +6,9 @@ Domain::Domain()
 
 }
 
-void Domain::SortScientists(int numb){
-    switch (numb) {
-    case 1:
+void Domain::SortScientists(char select){
+    switch (select) {
+    case '1':
         cout << "blah";
         SortByNameB();
         dipslayvectorS();
@@ -23,9 +23,9 @@ void SortComputers(){
 }
 void Domain::dipslayvectorS(){
     for(unsigned int i = 0; i < scient.size(); i++){
-        cout << scient[i] -> name;
-        cout << scient[i] -> gender;
-        cout << scient[i] -> born;
+        cout << scient[i] -> name << " ";
+        cout << scient[i] -> gender << " ";
+        cout << scient[i] -> born << " ";
         cout << scient[i] -> died << endl;
     }
 }

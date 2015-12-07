@@ -9,7 +9,7 @@ class Domain:Data
 {
 public:
     Domain();
-    void SortScientists(int numb);
+    void SortScientists(char select);
     void SortComputers();
     void dipslayvectorS();
     vector<Scientists*> blah;

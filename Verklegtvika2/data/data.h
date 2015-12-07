@@ -21,8 +21,9 @@ class Data
 {
 public:
     Data();
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    QSqlDatabase db;
     QString dbName = "database.sqlite";
+    void close();
     void SortByName();
     void SortByNameB();
     void SortByGenderF();

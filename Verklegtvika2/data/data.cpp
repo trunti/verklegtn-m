@@ -9,9 +9,11 @@ Data::Data()
 }
 void Data::openDatabase()
 {
+    db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName(dbName);
     db.open();
 }
+
 void Data::SortByName()
 {
     openDatabase();
@@ -42,7 +44,6 @@ void Data::SortByNameB()
                 pScientist -> born = query.value("Born").toUInt();
                 pScientist -> died = query.value("Died").toUInt();
                 scient.push_back(pScientist);
-                cout << scient[1] -> name;
             }
 }
 void Data::SortByGenderF()

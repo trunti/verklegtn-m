@@ -28,10 +28,6 @@ public:
     void SortSci(QString str);
     void openDatabase();
     void SortCpu(QString str);
-    void SortByCpuNameA();
-    void SortByCpuYear();
-    void SortByCpuYearD();
-    void SortByCpuType();
     void Search();
     vector<Scientists*> scient;
     vector<Computers*> comp;

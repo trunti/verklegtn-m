@@ -90,39 +90,24 @@ void UI::listScientists()
     cout << endl;
     cout << "Selection: ";
     cin >> selection;
-
+    cleanScreen();
 
     switch (selection)
     {
     case '1':
-        cleanScreen();
         cout << "################## SCIENTISTS (A-Z) ##################" << endl << endl;
-        SortScientists(selection);
-        mainMenu();
         break;
     case '2':
-        cleanScreen();
         cout << "################## SCIENTISTS (Z-A) ##################" << endl << endl;
-        SortScientists(selection);
-        mainMenu();
         break;
     case '3':
-        cleanScreen();
         cout << "################## SCIENTISTS (M-F) ##################" << endl << endl;
-        SortScientists(selection);
-        mainMenu();
         break;
     case '4':
-        cleanScreen();
         cout << "################## SCIENTISTS (F-M) ##################" << endl << endl;
-        SortScientists(selection);
-        mainMenu();
         break;
     case '5':
-        cleanScreen();
         cout << "################## SCIENTISTS (...) ##################" << endl << endl;
-        SortScientists(selection);
-        mainMenu();
         break;
     case 'm':
     case 'M':
@@ -137,6 +122,8 @@ void UI::listScientists()
         listScientists();
         break;
     }
+    SortScientists(selection);
+    mainMenu();
 }
 
 void UI::listComputers()
@@ -154,32 +141,21 @@ void UI::listComputers()
     cout << endl;
     cout << "Selection: ";
     cin >> selection;
+    cleanScreen();
 
     switch (selection)
     {
     case '1':
-        cleanScreen();
         cout << "################## COMPUTERS (A-Z) ###################" << endl << endl;
-        SortComputers(selection);
-        mainMenu();
         break;
     case '2':
-        cleanScreen();
         cout << "################## COMPUTERS (Z-A) ###################" << endl << endl;
-        SortComputers(selection);
-        mainMenu();
         break;
     case '3':
-        cleanScreen();
         cout << "################## COMPUTERS BY YEAR #################" << endl << endl;
-        SortComputers(selection);
-        mainMenu();
         break;
     case '4':
-        cleanScreen();
         cout << "################## COMPUTERS (...) ###################" << endl << endl;
-        SortComputers(selection);
-        mainMenu();
         break;
     case 'm':
     case 'M':
@@ -195,6 +171,8 @@ void UI::listComputers()
         listComputers();
         break;
     }
+    SortComputers(selection);
+    mainMenu();
 }
 
 void UI::listRelationship()

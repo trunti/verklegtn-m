@@ -55,75 +55,7 @@ void Data::SortCpu(QString str)
             Computers* pComputers = new Computers();
             pComputers -> name = query.value("Name").toString().toStdString();
             pComputers -> year = query.value("Year").toUInt();
-            pComputers -> type = query.value("Type").toUInt();
-            pComputers -> built = query.value("Build").toBool();
-            comp.push_back(pComputers);
-        }
-}
-void Data::SortByCpuNameA()
-{
-    openDatabase();
-        QSqlQuery query(db);
-        query.prepare("SELECT * FROM Computers ORDER BY Name DESC");
-        query.bindValue("Name", QString::fromStdString("*"));
-        query.exec();
-        while(query.next())
-        {
-            Computers* pComputers = new Computers();
-            pComputers -> name = query.value("Name").toString().toStdString();
-            pComputers -> year = query.value("Year").toUInt();
-            pComputers -> type = query.value("Type").toUInt();
-            pComputers -> built = query.value("Build").toBool();
-            comp.push_back(pComputers);
-        }
-}
-void Data::SortByCpuYear()
-{
-    openDatabase();
-        QSqlQuery query(db);
-        query.prepare("SELECT * FROM Computers ORDER BY Year");
-        query.bindValue("Year", QString::fromStdString("*"));
-        query.exec();
-        while(query.next())
-        {
-            Computers* pComputers = new Computers();
-            pComputers -> name = query.value("Name").toString().toStdString();
-            pComputers -> year = query.value("Year").toUInt();
-            pComputers -> type = query.value("Type").toUInt();
-            pComputers -> built = query.value("Build").toBool();
-            comp.push_back(pComputers);
-        }
-}
-void Data::SortByCpuYearD()
-{
-    openDatabase();
-        QSqlQuery query(db);
-        query.prepare("SELECT * FROM Computers ORDER BY Year DESC");
-        query.bindValue("Year", QString::fromStdString("*"));
-        query.exec();
-        while(query.next())
-        {
-            Computers* pComputers = new Computers();
-            pComputers -> name = query.value("Name").toString().toStdString();
-            pComputers -> year = query.value("Year").toUInt();
-            pComputers -> type = query.value("Type").toUInt();
-            pComputers -> built = query.value("Build").toBool();
-            comp.push_back(pComputers);
-        }
-}
-void Data::SortByCpuType()
-{
-    openDatabase();
-        QSqlQuery query(db);
-        query.prepare("SELECT * FROM Computers ORDER BY Type");
-        query.bindValue("Type", QString::fromStdString("*"));
-        query.exec();
-        while(query.next())
-        {
-            Computers* pComputers = new Computers();
-            pComputers -> name = query.value("Name").toString().toStdString();
-            pComputers -> year = query.value("Year").toUInt();
-            pComputers -> type = query.value("Type").toUInt();
+            pComputers -> type = query.value("Type").toString().toStdString();
             pComputers -> built = query.value("Build").toBool();
             comp.push_back(pComputers);
         }

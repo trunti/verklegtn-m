@@ -1,5 +1,6 @@
 #include "domain.h"
 #include "data/scientists.h"
+#include "data/computers.h"
 
 Domain::Domain()
 {
@@ -11,19 +12,19 @@ void Domain::SortScientists(char select){
     switch (select) {
     case '1':
         SortByName();
-        dipslayvectorS();
+        displayvectorS();
         break;
     case '2':
         SortByNameB();
-        dipslayvectorS();
+        displayvectorS();
         break;
     case '3':
         SortByGenderM();
-        dipslayvectorS();
+        displayvectorS();
         break;
     case '4':
         SortByGenderF();
-        dipslayvectorS();
+        displayvectorS();
     default:
         break;
     }
@@ -33,11 +34,19 @@ void Domain::SortScientists(char select){
 void SortComputers(){
 
 }
-void Domain::dipslayvectorS(){
+void Domain::displayvectorS(){
     for(unsigned int i = 0; i < scient.size(); i++){
         cout << scient[i] -> name << " ";
         cout << scient[i] -> gender << " ";
         cout << scient[i] -> born << " ";
         cout << scient[i] -> died << endl;
+    }
+}
+void Domain::displayvectorC(){
+    for(unsigned int i = 0; i < comp.size(); i++){
+        cout << comp[i] -> name << " ";
+        cout << comp[i] -> year << " ";
+        cout << comp[i] -> type << " ";
+        cout << comp[i] -> built << endl;
     }
 }

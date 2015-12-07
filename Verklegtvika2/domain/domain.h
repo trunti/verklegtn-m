@@ -4,15 +4,14 @@
 #include "data/data.h"
 #include <vector>
 using namespace std;
-class Scientists;
 class Domain:Data
 {
 public:
     Domain();
     void SortScientists(char select);
     void SortComputers();
-    void dipslayvectorS();
-    vector<Scientists*> blah;
+    void displayvectorS();
+    void displayvectorC();
 
 };
 

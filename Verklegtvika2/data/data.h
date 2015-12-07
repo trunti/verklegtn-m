@@ -25,13 +25,10 @@ public:
     QString dbName = "database.sqlite";
     void clearvector();
     void close();
-    void SortByName();
-    void SortByNameB();
-    void SortByGenderF();
-    void SortByGenderM();
-    void SortByCpuName();
+    void SortSci(QString str);
     void openDatabase();
-    void SortByCpuNameD();
+    void SortByCpuName();
+    void SortByCpuNameA();
     void SortByCpuYear();
     void SortByCpuYearD();
     void SortByCpuType();

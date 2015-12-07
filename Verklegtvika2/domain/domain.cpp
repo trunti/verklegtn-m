@@ -11,19 +11,19 @@ void Domain::SortScientists(char select){
     clearvector();
     switch (select) {
     case '1':
-        SortByName();
+        SortSci("Select * FROM Persons Order By Name");
         displayvectorS();
         break;
     case '2':
-        SortByNameB();
+        SortSci("SELECT * FROM Persons ORDER BY Name DESC");
         displayvectorS();
         break;
     case '3':
-        SortByGenderM();
+        SortSci("SELECT * FROM Persons ORDER BY Gender");
         displayvectorS();
         break;
     case '4':
-        SortByGenderF();
+        SortSci("SELECT * FROM Persons ORDER BY Gender DESC");
         displayvectorS();
     default:
         break;

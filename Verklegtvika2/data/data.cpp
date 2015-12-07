@@ -24,11 +24,11 @@ void Data::close(){
     db.removeDatabase(connection);
 }
 
-void Data::SortByName()
+void Data::SortSci(QString str)
 {
     openDatabase();
         QSqlQuery query(db);
-        query.prepare("SELECT * FROM Persons ORDER BY Name");
+        query.prepare(str);
         query.bindValue("Name", QString::fromStdString("*"));
         query.exec();
         while(query.next())
@@ -41,57 +41,7 @@ void Data::SortByName()
                 scient.push_back(pScientist);
             }
 }
-void Data::SortByNameB()
-{
-    openDatabase();
-        QSqlQuery query(db);
-        query.prepare("SELECT * FROM Persons ORDER BY Name DESC");
-        query.bindValue("Name", QString::fromStdString("*"));
-        query.exec();
-        while(query.next())
-            {
-                Scientists* pScientist = new Scientists();
-                pScientist -> name = query.value("Name").toString().toStdString();
-                pScientist -> gender = query.value("Gender").toString().toStdString();
-                pScientist -> born = query.value("Born").toUInt();
-                pScientist -> died = query.value("Died").toUInt();
-                scient.push_back(pScientist);
-            }
-}
-void Data::SortByGenderF()
-{
-    openDatabase();
-        QSqlQuery query(db);
-        query.prepare("SELECT * FROM Persons ORDER BY Gender");
-        query.bindValue("Gender", QString::fromStdString("*"));
-        query.exec();
-        while(query.next())
-            {
-                Scientists* pScientist = new Scientists();
-                pScientist -> name = query.value("Name").toString().toStdString();
-                pScientist -> gender = query.value("Gender").toString().toStdString();
-                pScientist -> born = query.value("Born").toUInt();
-                pScientist -> died = query.value("Died").toUInt();
-                scient.push_back(pScientist);
-            }
-}
-void Data::SortByGenderM()
-{
-    openDatabase();
-        QSqlQuery query(db);
-        query.prepare("SELECT * FROM Persons ORDER BY Gender DESC");
-        query.bindValue("Gender", QString::fromStdString("*"));
-        query.exec();
-        while(query.next())
-            {
-                Scientists* pScientist = new Scientists();
-                pScientist -> name = query.value("Name").toString().toStdString();
-                pScientist -> gender = query.value("Gender").toString().toStdString();
-                pScientist -> born = query.value("Born").toUInt();
-                pScientist -> died = query.value("Died").toUInt();
-                scient.push_back(pScientist);
-            }
-}
+
 void Data::SortByCpuName()
 {
     openDatabase();
@@ -109,7 +59,7 @@ void Data::SortByCpuName()
             comp.push_back(pComputers);
         }
 }
-void Data::SortByCpuNameD()
+void Data::SortByCpuNameA()
 {
     openDatabase();
         QSqlQuery query(db);

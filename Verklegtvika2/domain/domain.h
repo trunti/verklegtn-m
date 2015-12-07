@@ -9,7 +9,7 @@ class Domain:Data
 public:
     Domain();
     void SortScientists(char select);
-    void SortComputers();
+    void SortComputers(char select);
     void displayvectorS();
     void displayvectorC();
 

@@ -27,7 +27,7 @@ public:
     void close();
     void SortSci(QString str);
     void openDatabase();
-    void SortByCpuName();
+    void SortCpu(QString str);
     void SortByCpuNameA();
     void SortByCpuYear();
     void SortByCpuYearD();

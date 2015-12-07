@@ -15,6 +15,7 @@ void Data::openDatabase()
 }
 void Data::clearvector(){
     scient.clear();
+    comp.clear();
 }
 void Data::close(){
     QString connection;
@@ -42,11 +43,11 @@ void Data::SortSci(QString str)
             }
 }
 
-void Data::SortByCpuName()
+void Data::SortCpu(QString str)
 {
     openDatabase();
         QSqlQuery query(db);
-        query.prepare("SELECT * FROM Computers ORDER BY Name");
+        query.prepare(str);
         query.bindValue("Name", QString::fromStdString("*"));
         query.exec();
         while(query.next())

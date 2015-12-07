@@ -160,22 +160,26 @@ void UI::listComputers()
     case '1':
         cleanScreen();
         cout << "################## COMPUTERS (A-Z) ###################" << endl << endl;
-        cout << "Skipta mer ut fyrir fallid sem  synir tolvur i stafrofsrod" << endl;
+        SortComputers(selection);
+        mainMenu();
         break;
     case '2':
         cleanScreen();
         cout << "################## COMPUTERS (Z-A) ###################" << endl << endl;
-        cout << "Skipta mer ut fyrir fallid sem  sýnir tolvur i ofugri stafrofsrod" << endl;
+        SortComputers(selection);
+        mainMenu();
         break;
     case '3':
         cleanScreen();
         cout << "################## COMPUTERS BY YEAR #################" << endl << endl;
-        cout << "Skipta mer tu fyrir fallid sem synir tolvur eftir byggingar ari" << endl;
+        SortComputers(selection);
+        mainMenu();
         break;
     case '4':
         cleanScreen();
         cout << "################## COMPUTERS (...) ###################" << endl << endl;
-        cout << "Skipta mer ut fyrir fallid sem synir tolvur eftir..." << endl;
+        SortComputers(selection);
+        mainMenu();
         break;
     case 'm':
     case 'M':

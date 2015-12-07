@@ -13,6 +13,16 @@ void Data::openDatabase()
     db.setDatabaseName(dbName);
     db.open();
 }
+void Data::clearvector(){
+    scient.clear();
+}
+void Data::close(){
+    QString connection;
+    connection = db.connectionName();
+    db.close();
+    db = QSqlDatabase();
+    db.removeDatabase(connection);
+}
 
 void Data::SortByName()
 {
@@ -23,10 +33,12 @@ void Data::SortByName()
         query.exec();
         while(query.next())
             {
-                name = query.value("Name").toString().toStdString();
-                gender = query.value("Gender").toString().toStdString();
-                born = query.value("Born").toUInt();
-                died = query.value("Died").toUInt();
+                Scientists* pScientist = new Scientists();
+                pScientist -> name = query.value("Name").toString().toStdString();
+                pScientist -> gender = query.value("Gender").toString().toStdString();
+                pScientist -> born = query.value("Born").toUInt();
+                pScientist -> died = query.value("Died").toUInt();
+                scient.push_back(pScientist);
             }
 }
 void Data::SortByNameB()

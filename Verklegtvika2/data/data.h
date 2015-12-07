@@ -23,6 +23,7 @@ public:
     Data();
     QSqlDatabase db;
     QString dbName = "database.sqlite";
+    void clearvector();
     void close();
     void SortByName();
     void SortByNameB();

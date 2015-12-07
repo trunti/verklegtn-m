@@ -98,30 +98,34 @@ void UI::listScientists()
         cleanScreen();
         cout << "################## SCIENTISTS (A-Z) ##################" << endl << endl;
         SortScientists(selection);
+        mainMenu();
         break;
     case '2':
         cleanScreen();
         cout << "################## SCIENTISTS (Z-A) ##################" << endl << endl;
-        cout << "Skipta mer ut fyrir fallid sem  sýnir vísindamenn i ofugri stafrofsrod" << endl;
+        SortScientists(selection);
+        mainMenu();
         break;
     case '3':
         cleanScreen();
         cout << "################## SCIENTISTS (M-F) ##################" << endl << endl;
-        cout << "Skipta mer ut fyrir fallid sem synir visindamenn eftir kyni, kk-kvk" << endl;
+        SortScientists(selection);
+        mainMenu();
         break;
     case '4':
         cleanScreen();
         cout << "################## SCIENTISTS (F-M) ##################" << endl << endl;
-        cout << "Skipta mer ut fyrir fallid sem synir visindamenn eftir kyni, kvk-kk" << endl;
+        SortScientists(selection);
+        mainMenu();
         break;
     case '5':
         cleanScreen();
         cout << "################## SCIENTISTS (...) ##################" << endl << endl;
-        cout << "Skipta mer ut fyrir fallid sem synir visindamenn eftir..." << endl;
+        SortScientists(selection);
+        mainMenu();
         break;
     case 'm':
     case 'M':
-        cleanScreen();
         mainMenu();
         break;
     case 'q':

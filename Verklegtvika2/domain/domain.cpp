@@ -7,15 +7,27 @@ Domain::Domain()
 }
 
 void Domain::SortScientists(char select){
+    clearvector();
     switch (select) {
     case '1':
-        cout << "blah";
+        SortByName();
+        dipslayvectorS();
+        break;
+    case '2':
         SortByNameB();
         dipslayvectorS();
         break;
+    case '3':
+        SortByGenderM();
+        dipslayvectorS();
+        break;
+    case '4':
+        SortByGenderF();
+        dipslayvectorS();
     default:
         break;
     }
+    close();
 }
 
 void SortComputers(){

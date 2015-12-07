@@ -91,12 +91,13 @@ void UI::listScientists()
     cout << "Selection: ";
     cin >> selection;
 
+
     switch (selection)
     {
     case '1':
         cleanScreen();
         cout << "################## SCIENTISTS (A-Z) ##################" << endl << endl;
-        cout << "Skipta mer ut fyrir fallid sem  synir visindamenn i stafrofsrod" << endl;
+        SortScientists(selection);
         break;
     case '2':
         cleanScreen();

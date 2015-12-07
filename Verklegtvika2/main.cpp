@@ -4,8 +4,8 @@
 int main()
 {
     Data data;
-    //UI ui;
-    //ui.mainMenu();
-    data.SortByNameB();
+    UI ui;
+    ui.mainMenu();
+
     return 0;
 }

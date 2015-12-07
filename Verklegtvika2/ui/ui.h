@@ -1,9 +1,9 @@
 #ifndef UI_H
 #define UI_H
-
+#include "domain/domain.h"
 // UI klasinn sér um samskipti við notenda og sækir upplýsingar í Domain klasann.
 
-class UI
+class UI : Domain
 {
 public:
     UI();

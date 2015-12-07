@@ -48,10 +48,8 @@ void Data::SortByNameB()
                 pScientist -> born = query.value("Born").toUInt();
                 pScientist -> died = query.value("Died").toUInt();
                 scient.push_back(pScientist);
+                cout << scient[1] -> name;
             }
-        for(unsigned int i = 0; i < scient.size(); i++){
-            cout << scient[i] -> name << endl;
-        }
 }
 void Data::SortByGenderF()
 {
@@ -65,10 +63,12 @@ void Data::SortByGenderF()
         query.exec();
         while(query.next())
             {
-                name = query.value("Name").toString().toStdString();
-                gender = query.value("Gender").toString().toStdString();
-                born = query.value("Born").toUInt();
-                died = query.value("Died").toUInt();
+                Scientists* pScientist = new Scientists();
+                pScientist -> name = query.value("Name").toString().toStdString();
+                pScientist -> gender = query.value("Gender").toString().toStdString();
+                pScientist -> born = query.value("Born").toUInt();
+                pScientist -> died = query.value("Died").toUInt();
+                scient.push_back(pScientist);
             }
 }
 void Data::SortByGenderM()
@@ -83,10 +83,12 @@ void Data::SortByGenderM()
         query.exec();
         while(query.next())
             {
-                name = query.value("Name").toString().toStdString();
-                gender = query.value("Gender").toString().toStdString();
-                born = query.value("Born").toUInt();
-                died = query.value("Died").toUInt();
+                Scientists* pScientist = new Scientists();
+                pScientist -> name = query.value("Name").toString().toStdString();
+                pScientist -> gender = query.value("Gender").toString().toStdString();
+                pScientist -> born = query.value("Born").toUInt();
+                pScientist -> died = query.value("Died").toUInt();
+                scient.push_back(pScientist);
             }
 }
 void Data::SortByCpuName()
@@ -97,12 +99,16 @@ void Data::SortByCpuName()
         query.bindValue("Name", QString::fromStdString("*"));
         query.bindValue("Year", QString::fromStdString("*"));
         query.bindValue("Type", QString::fromStdString("*"));
+        query.bindValue("Build", QString::fromStdString("*"));
         query.exec();
         while(query.next())
         {
-            name = query.value("Name").toString().toStdString();
-            year = query.value("Year").toUInt();
-            type = query.value("Type").toString().toStdString();
+            Computers* pComputers = new Computers();
+            pComputers -> name = query.value("Name").toString().toStdString();
+            pComputers -> year = query.value("Year").toUInt();
+            pComputers -> type = query.value("Type").toUInt();
+            pComputers -> built = query.value("Build").toBool();
+            comp.push_back(pComputers);
         }
 }
 void Data::SortByCpuNameD()
@@ -113,12 +119,16 @@ void Data::SortByCpuNameD()
         query.bindValue("Name", QString::fromStdString("*"));
         query.bindValue("Year", QString::fromStdString("*"));
         query.bindValue("Type", QString::fromStdString("*"));
+        query.bindValue("Build", QString::fromStdString("*"));
         query.exec();
         while(query.next())
         {
-            name = query.value("Name").toString().toStdString();
-            year = query.value("Year").toUInt();
-            type = query.value("Type").toString().toStdString();
+            Computers* pComputers = new Computers();
+            pComputers -> name = query.value("Name").toString().toStdString();
+            pComputers -> year = query.value("Year").toUInt();
+            pComputers -> type = query.value("Type").toUInt();
+            pComputers -> built = query.value("Build").toBool();
+            comp.push_back(pComputers);
         }
 }
 void Data::SortByCpuYear()
@@ -129,12 +139,16 @@ void Data::SortByCpuYear()
         query.bindValue("Name", QString::fromStdString("*"));
         query.bindValue("Year", QString::fromStdString("*"));
         query.bindValue("Type", QString::fromStdString("*"));
+        query.bindValue("Build", QString::fromStdString("*"));
         query.exec();
         while(query.next())
         {
-            name = query.value("Name").toString().toStdString();
-            year = query.value("Year").toUInt();
-            type = query.value("Type").toString().toStdString();
+            Computers* pComputers = new Computers();
+            pComputers -> name = query.value("Name").toString().toStdString();
+            pComputers -> year = query.value("Year").toUInt();
+            pComputers -> type = query.value("Type").toUInt();
+            pComputers -> built = query.value("Build").toBool();
+            comp.push_back(pComputers);
         }
 }
 void Data::SortByCpuYearD()
@@ -145,12 +159,16 @@ void Data::SortByCpuYearD()
         query.bindValue("Name", QString::fromStdString("*"));
         query.bindValue("Year", QString::fromStdString("*"));
         query.bindValue("Type", QString::fromStdString("*"));
+        query.bindValue("Build", QString::fromStdString("*"));
         query.exec();
         while(query.next())
         {
-            name = query.value("Name").toString().toStdString();
-            year = query.value("Year").toUInt();
-            type = query.value("Type").toString().toStdString();
+            Computers* pComputers = new Computers();
+            pComputers -> name = query.value("Name").toString().toStdString();
+            pComputers -> year = query.value("Year").toUInt();
+            pComputers -> type = query.value("Type").toUInt();
+            pComputers -> built = query.value("Build").toBool();
+            comp.push_back(pComputers);
         }
 }
 void Data::SortByCpuType()
@@ -161,11 +179,15 @@ void Data::SortByCpuType()
         query.bindValue("Name", QString::fromStdString("*"));
         query.bindValue("Year", QString::fromStdString("*"));
         query.bindValue("Type", QString::fromStdString("*"));
+        query.bindValue("Build", QString::fromStdString("*"));
         query.exec();
         while(query.next())
         {
-            name = query.value("Name").toString().toStdString();
-            year = query.value("Year").toUInt();
-            type = query.value("Type").toString().toStdString();
+            Computers* pComputers = new Computers();
+            pComputers -> name = query.value("Name").toString().toStdString();
+            pComputers -> year = query.value("Year").toUInt();
+            pComputers -> type = query.value("Type").toUInt();
+            pComputers -> built = query.value("Build").toBool();
+            comp.push_back(pComputers);
         }
 }

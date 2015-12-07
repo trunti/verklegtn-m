@@ -15,6 +15,7 @@
 using namespace std;
 
 class Scientists;
+class Computers;
 
 class Data
 {
@@ -33,6 +34,7 @@ public:
     void SortByCpuYearD();
     void SortByCpuType();
     vector<Scientists*> scient;
+    vector<Computers*> comp;
 private:
     int born, died, year;
     string name, gender, type;

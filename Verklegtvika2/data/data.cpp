@@ -114,7 +114,6 @@ void Data::SortByCpuNameD()
             name = query.value("Name").toString().toStdString();
             year = query.value("Year").toUInt();
             type = query.value("Type").toString().toStdString();
-             cout << name << endl;
         }
 }
 void Data::SortByCpuYear()
@@ -147,6 +146,21 @@ void Data::SortByCpuYearD()
             name = query.value("Name").toString().toStdString();
             year = query.value("Year").toUInt();
             type = query.value("Type").toString().toStdString();
-            cout << year << endl;
+        }
+}
+void Data::SortByCpuType()
+{
+    openDatabase();
+        QSqlQuery query(db);
+        query.prepare("SELECT * FROM Computers ORDER BY Type");
+        query.bindValue("Name", QString::fromStdString("*"));
+        query.bindValue("Year", QString::fromStdString("*"));
+        query.bindValue("Type", QString::fromStdString("*"));
+        query.exec();
+        while(query.next())
+        {
+            name = query.value("Name").toString().toStdString();
+            year = query.value("Year").toUInt();
+            type = query.value("Type").toString().toStdString();
         }
 }

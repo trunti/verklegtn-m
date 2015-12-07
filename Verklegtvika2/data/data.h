@@ -30,6 +30,7 @@ public:
     void SortByCpuNameD();
     void SortByCpuYear();
     void SortByCpuYearD();
+    void SortByCpuType();
 private:
     int born, died, year;
     string name, gender, type;

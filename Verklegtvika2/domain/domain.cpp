@@ -64,7 +64,7 @@ void Domain::DisplayVectorS(){
     cout << "Name" << "\t\t\t\t" << "Gender" << "\t\t" << "Born" << "\t" << "Dead" << endl;
     cout << "------------------------------------------------------------------" << endl;
     for(unsigned int i = 0; i < scient.size(); i++){
-        cout << "| ";
+        cout << "  ";
         cout << scient[i] -> name << "\t";
         if(scient[i] -> name.size() < 22){
             cout << "\t";
@@ -79,7 +79,7 @@ void Domain::DisplayVectorS(){
         }else{
         cout << scient[i] -> died;
         }
-        cout << "\t |" << endl;
+        cout << "\t  " << endl;
         cout << "------------------------------------------------------------------" << endl;
 
     }
@@ -88,7 +88,7 @@ void Domain::DisplayVectorC(){
     cout << "Name" << "\t\t\t" << "Year" << "\t" << "Type" << "\t\t\t" << "Built" << endl;
     cout << "------------------------------------------------------------------" << endl;
     for(unsigned int i = 0; i < comp.size(); i++){
-        cout << "| ";
+        cout << "  ";
         cout << comp[i] -> name << "\t";
         if(comp[i] -> name.size() < 16)
             cout << "\t";

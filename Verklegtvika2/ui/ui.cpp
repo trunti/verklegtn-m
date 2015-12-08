@@ -16,7 +16,7 @@ void UI::mainMenu()
 {
     cout << "########## THE COMPUTER SCIENTISTS DATABASE ##########" << endl;
     cout << endl;
-    cout << "Please select 1-5 (You can always press Q to quit): " << endl;
+    cout << "Please select 1-6 (You can always press Q to quit): " << endl;
     cout << endl;
     cout << "1: See list of scientists in the database." << endl;
     cout << "2: See list of computers in the database." << endl;

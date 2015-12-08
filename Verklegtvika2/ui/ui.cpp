@@ -8,15 +8,12 @@
 
 using namespace std;
 
-UI::UI()
-{
+UI::UI(){
 
 }
 
 void UI::mainMenu()
 {
-    char selection;
-
     cout << "########## THE COMPUTER SCIENTISTS DATABASE ##########" << endl;
     cout << endl;
     cout << "Please select 1-5 (You can always press Q to quit): " << endl;
@@ -28,9 +25,7 @@ void UI::mainMenu()
     cout << "5: Search for scientists or computer." << endl;
     cout << "6: Get a random computer or scientist." << endl;
 
-    cout << endl;
-    cout << "Selection: ";
-    cin >> selection;
+    InputForSelection();
 
     switch (selection)
     {
@@ -76,15 +71,12 @@ void UI::mainMenu()
     }
 }
 
-void UI::cleanScreen()
-{
+void UI::cleanScreen(){
     system("CLS");
 }
 
 void UI::listScientists()
 {
-    char selection;
-
     cout << "How should the list be sorted: " << endl << endl;
     cout << "1: By name (A-Z)" << endl;
     cout << "2: By name (Z-A)" << endl;
@@ -96,9 +88,7 @@ void UI::listScientists()
     cout << "8: By death year desc" << endl;
     cout << endl << "You can press 'M' to go back to MAIN or 'Q' to QUIT." << endl;
 
-    cout << endl;
-    cout << "Selection: ";
-    cin >> selection;
+    InputForSelection();
     cleanScreen();
 
     switch (selection)
@@ -146,45 +136,23 @@ void UI::listScientists()
 
 void UI::listScientistsRepeat()
 {
-    char selection;
-
     cout << endl << "Do you want to sort again? (Y/N)" << endl;
     cout << "You can press M to go back to the menu and Q to quit!" << endl;
 
-    cout << endl;
-    cout << "Selection: ";
-    cin >> selection;
+    InputForSelection();
 
-    switch (selection)
+    if(selection == 'y' || selection == 'Y')
     {
-    case 'Y':
-    case 'y':
         cleanScreen();
         cout << "##################### SCIENTISTS #####################" << endl << endl;
         listScientists();
-        break;
-    case 'N':
-    case 'n':
-    case 'm':
-    case 'M':
-        cleanScreen();
-        mainMenu();
-        break;
-    case 'q':
-    case 'Q': return exit (-1);
-        break;
-    default:
-        cleanScreen();
-        cout << "Error: Invalid choice, try again!" << endl << endl;
-        listScientistsRepeat();
-        break;
     }
+    SwitchForSelection();
+        listScientistsRepeat();
 }
 
 void UI::listComputers()
 {
-    char selection;
-
     cout << "How should the list be sorted: " << endl << endl;
     cout << "1: By name (A-Z)" << endl;
     cout << "2: By name (Z-A)" << endl;
@@ -194,9 +162,7 @@ void UI::listComputers()
 
     cout << endl << "You can press 'M' for MAIN or 'Q' to QUIT." << endl;
 
-    cout << endl;
-    cout << "Selection: ";
-    cin >> selection;
+   InputForSelection();
     cleanScreen();
 
     switch (selection)
@@ -236,45 +202,23 @@ void UI::listComputers()
 
 void UI::listComputersRepeat()
 {
-    char selection;
-
     cout << endl << "Do you want to sort again? (Y/N)" << endl;
     cout << "You can press M to go back to the menu and Q to quit!" << endl;
 
-    cout << endl;
-    cout << "Selection: ";
-    cin >> selection;
+    InputForSelection();
 
     switch (selection)
     {
-    case 'Y':
-    case 'y':
         cleanScreen();
         cout << "##################### COMPUTERS ######################" << endl << endl;
         listComputers();
-        break;
-    case 'N':
-    case 'n':
-    case 'm':
-    case 'M':
-        cleanScreen();
-        mainMenu();
-        break;
-    case 'q':
-    case 'Q': return exit (-1);
-        break;
-    default:
-        cleanScreen();
-        cout << "Error: Invalid choice, try again!" << endl << endl;
-        listComputersRepeat();
-        break;
     }
+    SwitchForSelection();
+        listComputersRepeat();
 }
 
 void UI::listRelationship()
 {
-    char selection;
-
     cout << "How should the list be sorted: " << endl << endl;
 
     cout << "1: Select computer to see the scientist behinde the machine." << endl;
@@ -284,9 +228,7 @@ void UI::listRelationship()
 
     cout << endl << "You can press 'M' for MAIN or 'Q' to QUIT." << endl;
 
-    cout << endl;
-    cout << "Selection: ";
-    cin >> selection;
+    InputForSelection();
 
     switch (selection)
     {
@@ -318,8 +260,7 @@ void UI::listRelationship()
     }
 }
 
-void UI::selectComputerID()
-{
+void UI::selectComputerID(){
     int id;
 
     cout << "ID: ";
@@ -328,8 +269,7 @@ void UI::selectComputerID()
 
 }
 
-void UI::selectSientistID()
-{
+void UI::selectSientistID(){
     int id;
 
     cout << "ID: ";
@@ -337,43 +277,21 @@ void UI::selectSientistID()
     cout << "Skipta mer ut fyrir fallid sem synir visindamann og vensladar tolvur" << endl;
 }
 void UI::RepeatRandom(){
-    char selection;
-
     cout << endl << "Another random scientist or computer? (Y/N)" << endl;
     cout << "You can press M to go back to the menu and Q to quit!" << endl;
 
-    cout << endl;
-    cout << "Selection: ";
-    cin >> selection;
+    InputForSelection();
 
-    switch (selection)
+    if(selection == 'y' || selection == 'Y')
     {
-    case 'Y':
-    case 'y':
         cleanScreen();
         cout << "####################### RANDOM #######################" << endl << endl;
         RandomCorS();
-        break;
-    case 'N':
-    case 'n':
-    case 'm':
-    case 'M':
-        cleanScreen();
-        mainMenu();
-        break;
-    case 'q':
-    case 'Q': return exit (-1);
-        break;
-    default:
-        cleanScreen();
-        cout << "Error: Invalid choice, try again!" << endl << endl;
-        RepeatRandom();
-        break;
     }
+    SwitchForSelection();
+    RepeatRandom();
 }
 void UI::RandomCorS(){
-    char selection;
-
     cout << "Want a random computer or scientist: " << endl << endl;
 
     cout << "1: Random computer." << endl;
@@ -382,9 +300,7 @@ void UI::RandomCorS(){
 
     cout << endl << "You can press 'M' for MAIN or 'Q' to QUIT." << endl;
 
-    cout << endl;
-    cout << "Selection: ";
-    cin >> selection;
+    InputForSelection();
     switch (selection)
     {
     case '1':
@@ -415,15 +331,11 @@ void UI::RandomCorS(){
 }
 void UI::WhatToAdd()
 {
-    char selection;
-
     cout << "Which to you want to add?" << endl;
     cout << "1. Add a scientist to the database" << endl;
     cout << "2. Add a computer to the database" << endl;
 
-    cout << endl;
-    cout << "Selection: ";
-    cin >> selection;
+    InputForSelection();
 
     switch(selection)
     {
@@ -502,7 +414,6 @@ void UI::InputInfoComputer()
 }
 void UI::Search()
 {
-    char selection;
     string s;
     cout << "########## SEARCH DATABASE ##########" << endl;
     cout << endl;
@@ -517,9 +428,7 @@ void UI::Search()
     cout << "7: To search for computer type." << endl;
     cout << "8: To search for if computer was build." << endl;
 
-    cout << endl;
-    cout << "Selection: ";
-    cin >> selection;
+    InputForSelection();
 
     switch (selection){
     case '1':
@@ -564,22 +473,23 @@ void UI::Search()
 
 void UI::SearchRepeat()
 {
-    char selection;
-
     cout << endl << "Do you want to search again? (Y/N)" << endl;
     cout << "You can press M to go back to the menu and Q to quit!" << endl;
 
-    cout << endl;
-    cout << "Selection: ";
-    cin >> selection;
+    InputForSelection();
 
-    switch (selection)
+    if(selection == 'y' || selection == 'Y')
     {
-    case 'Y':
-    case 'y':
         cleanScreen();
         Search();
-        break;
+    }
+    SwitchForSelection();
+    SearchRepeat();
+}
+void UI::SwitchForSelection()
+{
+    switch (selection)
+    {
     case 'N':
     case 'n':
     case 'm':
@@ -593,7 +503,10 @@ void UI::SearchRepeat()
     default:
         cleanScreen();
         cout << "Error: Invalid choice, try again!" << endl << endl;
-        SearchRepeat();
-        break;
     }
+}
+void UI::InputForSelection(){
+    cout << endl;
+    cout << "Selection: ";
+    cin >> selection;
 }

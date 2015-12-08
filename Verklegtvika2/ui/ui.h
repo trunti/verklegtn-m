@@ -10,6 +10,7 @@ public:
     void mainMenu();            // Aðalvalmynd - Býður notenda uppá að velja aðgerðir
     void cleanScreen();         // Hreinsar allt sem er á skjánum
 private:
+    char selection;
     void listScientists();      // Valmynd - Býður uppá mismunandi valmöguleika til að sýna vísindamenn í gagnagrunni.
     void listScientistsRepeat();// Valmynd - Spyr hvort eigi að endurtaka fallið.
     void listComputers();       // Valmynd - Býður uppá mismunandi valmöguleika til að sýna tölvur í gagnagrunni.
@@ -24,6 +25,8 @@ private:
     void WhatToAdd();           // Adda Scientist eda tolvu
     void Search();
     void SearchRepeat();
+    void SwitchForSelection();
+    void InputForSelection();
 };
 
 

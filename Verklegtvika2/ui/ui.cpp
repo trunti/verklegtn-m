@@ -167,6 +167,8 @@ void UI::listComputers()
     cout << "1: By name (A-Z)" << endl;
     cout << "2: By name (Z-A)" << endl;
     cout << "3: By build year" << endl;
+    cout << "4: By build year DESC" << endl;
+    cout << "5: By type" << endl;
 
     cout << endl << "You can press 'M' for MAIN or 'Q' to QUIT." << endl;
 
@@ -185,6 +187,12 @@ void UI::listComputers()
         break;
     case '3':
         cout << "################## COMPUTERS BY YEAR #################" << endl << endl;
+        break;
+    case '4':
+        cout << "################ COMPUTERS BY YEAR DESC ##############" << endl << endl;
+        break;
+    case '5':
+        cout << "################## COMPUTERS BY TYPE #################" << endl << endl;
         break;
     case 'm':
     case 'M':

@@ -49,6 +49,11 @@ void Domain::SortComputers(char select){
     case '4':
         SortCpu("SELECT * FROM Computers ORDER BY Year DESC");
         displayvectorC();
+        break;
+    case '5':
+        SortCpu("SELECT * FROM Computers ORDER BY Type");
+        displayvectorC();
+        break;
     default:
         break;
     }

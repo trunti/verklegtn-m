@@ -22,6 +22,8 @@ private:
     void InputInfoScientist();      // Setja nýjann tölvunarfræðing inn í gagnagrunninn frá notanda
     void InputInfoComputer();       // Setja nýjan tölvu inn í gagnagrunninn frá notanda
     void WhatToAdd();           // Adda Scientist eda tolvu
+    void Search();
+    void SearchRepeat();
 };
 
 

@@ -58,7 +58,7 @@ void UI::mainMenu()
         cleanScreen();
         cout << "####################### SEARCH #######################" << endl << endl;
         cout << "Skipta mer ut fyrir fallid sem leitar i gagnagrunninum." << endl;
-        SearchinPersons();
+        Search();
         break;
     case '6':
         cleanScreen();
@@ -499,4 +499,101 @@ void UI::InputInfoComputer()
     }
 
     InputComputer(Name, Year, Type, Wasbuilt);
+}
+void UI::Search()
+{
+    char selection;
+    string s;
+    cout << "########## SEARCH DATABASE ##########" << endl;
+    cout << endl;
+    cout << "Please select 1-8 (You can always press Q to quit): " << endl;
+    cout << endl;
+    cout << "1: To search for scientists name." << endl;
+    cout << "2: To search for scientists gender." << endl;
+    cout << "3: To search for scientists death year." << endl;
+    cout << "4: To search for scientists birth year." << endl;
+    cout << "5: To search for computer name." << endl;
+    cout << "6: To search for computer build year." << endl;
+    cout << "7: To search for computer type." << endl;
+    cout << "8: To search for if computer was build." << endl;
+
+    cout << endl;
+    cout << "Selection: ";
+    cin >> selection;
+
+    switch (selection){
+    case '1':
+        cout << "################## SCIENTISTS NAME ##################" << endl << endl;
+        break;
+    case '2':
+        cout << "################## SCIENTISTS GENDER ##################" << endl << endl;
+        break;
+    case '3':
+        cout << "################## SCIENTISTS DEATH YEAR ##################" << endl << endl;
+        break;
+    case '4':
+        cout << "################## SCIENTISTS BIRTH YEAR ##################" << endl << endl;
+        break;
+    case '5':
+            cout << "################## COMPUTER NAME ##################" << endl << endl;
+            break;
+    case '6':
+            cout << "################## COMPUTER BUILD ##################" << endl << endl;
+            break;
+    case '7':
+            cout << "################## COMPUTER TYPE ##################" << endl << endl;
+            break;
+    case '8':
+            cout << "################## COMPUTER BUILD ##################" << endl << endl;
+            break;
+    case 'm':
+    case 'M':
+        mainMenu();
+        break;
+    case 'q':
+    case 'Q': return exit (-1);
+        break;
+    default:
+        cleanScreen();
+        cout << "Error: Invalid choice, try again!" << endl << endl;
+        break;
+    }
+    SearchinPersons(selection);
+    SearchRepeat();
+}
+
+void UI::SearchRepeat()
+{
+    char selection;
+
+    cout << endl << "Do you want to search again? (Y/N)" << endl;
+    cout << "You can press M to go back to the menu and Q to quit!" << endl;
+
+    cout << endl;
+    cout << "Selection: ";
+    cin >> selection;
+
+    switch (selection)
+    {
+    case 'Y':
+    case 'y':
+        cleanScreen();
+        Search();
+        break;
+    case 'N':
+    case 'n':
+    case 'm':
+    case 'M':
+        cleanScreen();
+        mainMenu();
+        break;
+    case 'q':
+    case 'Q': return exit (-1);
+        break;
+    default:
+        cleanScreen();
+        cout << "Error: Invalid choice, try again!" << endl << endl;
+        SearchRepeat();
+        break;
+    }
 }

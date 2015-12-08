@@ -134,13 +134,10 @@ void Domain::RandomSciorComp(char select){
     }
     close();
 }
-void Domain::SearchinPersons()
+void Domain::SearchinPersons(char select)
 {
     clearvector();
-    char c;
-    cout << "Enter c: ";
-    cin >> c;
-    switch (c) {
+    switch (select) {
     case '1':
         SearchForSci("SELECT * FROM Persons WHERE Name LIKE '%'||:Name||'%'");
         DisplayVectorS();

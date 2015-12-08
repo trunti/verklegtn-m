@@ -413,3 +413,59 @@ void UI::RandomCorS(){
         break;
     }
 }
+void UI::InputScientist()
+{
+    string Name, Gender;
+    int Born, Died;
+
+    cout << "Enter the name: ";
+    getline(cin, Name);
+    cout << "Enter gender: ";
+    cin >> Gender;
+    cout << "Born: ";
+    cin >> Born;
+    cout << "Year of death: ";
+    cin >> Died;
+}
+void UI::InputComputer()
+{
+    string Name, Type, Wasbuilt;
+    int Year, choice;
+
+    cout << "Name of computer: ";
+    getline(cin, Name);
+    cout << "Was it built? Yes or No ";
+    cin >> Wasbuilt;
+    if(Wasbuilt == "Yes")
+    {
+        cout << "What year was it built? ";
+        cin >> Year;
+        cout << "What type of computer is it?";
+        cout << "1. Mechanical";
+        cout << "2. Transitor";
+        cout << "3. Electronic";
+        cout << "4. Electro-Mechanical";
+        cin >> choice;
+
+        switch(choice)
+        {
+        case 1:
+            Type = "Mechanical";
+            break;
+        case 2:
+            Type = "Transitor";
+            break;
+        case 3:
+            Type = "Electronic";
+            break;
+        case 4:
+            Type = "Electro-Mechanical";
+            break;
+        }
+    }
+    else
+    {
+        Year = 0;
+        Type = "An idea";
+    }
+}

@@ -23,9 +23,24 @@ void Domain::SortScientists(char select){
         DisplayVectorS();
         break;
     case '4':
-
         SortSci("SELECT * FROM Persons ORDER BY Gender DESC");
         DisplayVectorS();
+    case '5':
+            SortSci("SELECT * FROM Persons ORDER BY Born");
+            DisplayVectorS();
+            break;
+    case '6':
+            SortSci("SELECT * FROM Persons ORDER BY Born DESC");
+            DisplayVectorS();
+            break;
+    case '7':
+            SortSci("SELECT * FROM Persons ORDER BY Died");
+            DisplayVectorS();
+            break;
+    case '8':
+            SortSci("SELECT * FROM Persons ORDER BY Died DESC");
+            DisplayVectorS();
+            break;
     default:
         break;
     }

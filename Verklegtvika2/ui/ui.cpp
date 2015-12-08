@@ -90,7 +90,10 @@ void UI::listScientists()
     cout << "2: By name (Z-A)" << endl;
     cout << "3: By gender (M/F)" << endl;
     cout << "4: By gender (F/M)" << endl;
-
+    cout << "5: By birth year" << endl;
+    cout << "6: By birth year desc" << endl;
+    cout << "7: By death year" << endl;
+    cout << "8: By death year desc" << endl;
     cout << endl << "You can press 'M' to go back to MAIN or 'Q' to QUIT." << endl;
 
     cout << endl;
@@ -112,6 +115,18 @@ void UI::listScientists()
     case '4':
         cout << "################## SCIENTISTS (F-M) ##################" << endl << endl;
         break;
+    case '5':
+            cout << "################## SCIENTISTS (by birth year) ##################" << endl << endl;
+            break;
+    case '6':
+            cout << "################## SCIENTISTS (by birth year desc) ##################" << endl << endl;
+            break;
+    case '7':
+            cout << "################## SCIENTISTS (death year) ##################" << endl << endl;
+            break;
+    case '8':
+            cout << "################## SCIENTISTS (death year desc) ##################" << endl << endl;
+            break;
     case 'm':
     case 'M':
         mainMenu();

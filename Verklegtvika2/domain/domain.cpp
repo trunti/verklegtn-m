@@ -99,7 +99,11 @@ void Domain::DisplayVectorC(){
         cout << comp[i] -> type << "\t";
         if(comp[i] -> type.size() < 13)
             cout << "\t";
-        cout << comp[i] -> built << endl;
+        if(comp[i] -> built){
+            cout << "Yes!" << endl;
+        }else{
+            cout << "No!" << endl;
+        }
     cout << "------------------------------------------------------------------" << endl;
     }
 }

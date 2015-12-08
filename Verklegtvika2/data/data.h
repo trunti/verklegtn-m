@@ -30,7 +30,8 @@ public:
     void SortCpu(QString str);
     void GetRandomScientist();
     void GetRandomComputer();
-    void Search();
+    void SearchForSci(QString str);
+    void SearchForCom(QString str);
     vector<Scientists*> scient;
     vector<Computers*> comp;
 private:

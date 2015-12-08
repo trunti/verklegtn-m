@@ -13,7 +13,7 @@ public:
     void DisplayVectorS();
     void DisplayVectorC();
     void RandomSciorComp(char select);
-
+    void SearchinPersons();
 };
 
 #endif // DOMAIN_H

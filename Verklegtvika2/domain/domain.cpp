@@ -115,3 +115,41 @@ void Domain::RandomSciorComp(char select){
     }
     close();
 }
+void Domain::SearchinPersons()
+{
+    clearvector();
+    char c;
+    cout << "Enter c: ";
+    cin >> c;
+    switch (c) {
+    case '1':
+        SearchForSci("SELECT * FROM Persons WHERE Name LIKE '%'||:Name||'%'");
+        DisplayVectorS();
+        break;
+    case '2':
+        SearchForSci("SELECT * FROM Persons WHERE Gender LIKE '%'||:Gender||'%'");
+        DisplayVectorS();
+    case '3':
+        SearchForSci("SELECT * FROM Persons WHERE Died LIKE '%'||:Died||'%'");
+        DisplayVectorS();
+    case '4':
+        SearchForSci("SELECT * FROM Persons WHERE Born LIKE '%'||:Born||'%'");
+        DisplayVectorS();
+    case '5':
+        SearchForCom("SELECT * FROM Computers WHERE Name LIKE '%'||:Name||'%'");
+        DisplayVectorC();
+        break;
+    case '6':
+        SearchForCom("SELECT * FROM Computers WHERE Year LIKE '%'||:Year||'%'");
+        DisplayVectorC();
+    case '7':
+        SearchForCom("SELECT * FROM Computers WHERE Type LIKE '%'||:Type||'%'");
+        DisplayVectorC();
+    case '8':
+        SearchForCom("SELECT * FROM Computers WHERE Build LIKE '%'||:Build||'%'");
+        DisplayVectorC();
+    default:
+        break;
+    }
+
+}

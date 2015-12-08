@@ -58,6 +58,7 @@ void UI::mainMenu()
         cleanScreen();
         cout << "####################### SEARCH #######################" << endl << endl;
         cout << "Skipta mer ut fyrir fallid sem leitar i gagnagrunninum." << endl;
+        SearchinPersons();
         break;
     case '6':
         cleanScreen();

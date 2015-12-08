@@ -7,9 +7,6 @@ int main()
 {
     Data data;
     UI ui;
-    Scientists sci;
-    Computers com;
-    com.addComputer();
     ui.mainMenu();
 
     return 0;

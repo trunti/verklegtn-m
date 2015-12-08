@@ -16,15 +16,22 @@ void Computers::addComputer()
    cin >> year;
    cout << "Type: ";
    cin >> type;
-   cout << "Build: ";
+   cout << "Was it built? Yes or No?: ";
    cin >> built;
 
       QSqlQuery query;
-       query.prepare("INSERT INTO Computers (Name, Gender, Born, Died) VALUES (:Name, :Year, :Type, :Build)");
+       query.prepare("INSERT INTO Computers (Name, Year, Type, Build) VALUES (:Name, :Year, :Type, :Build)");
        query.bindValue(":Name", QString::fromStdString(name));
        query.bindValue(":Year", QString::number(year));
        query.bindValue(":Type", QString::fromStdString(type));
-       query.bindValue(":Died", QString::number(built));
+       if(built == "Yes")
+       {
+           query.bindValue(":Build", QString::number(1));
+       }
+       if(built == "No")
+       {
+           query.bindValue(":Build", QString::number(0));
+       }
        query.exec();
        data.close();
 }

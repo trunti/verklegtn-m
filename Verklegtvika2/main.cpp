@@ -9,7 +9,7 @@ int main()
     UI ui;
     Scientists sci;
     Computers com;
-    //com.addComputer();
+    com.addComputer();
     ui.mainMenu();
 
     return 0;

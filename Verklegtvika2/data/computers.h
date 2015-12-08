@@ -20,7 +20,7 @@ public:
     string name;
     int year;
     string type;
-    bool built;
+    string built;
 };
 
 #endif // COMPUTERS_H

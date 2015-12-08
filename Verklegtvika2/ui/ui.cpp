@@ -52,7 +52,7 @@ void UI::mainMenu()
     case '4':
         cleanScreen();
         cout << "################## ADD TO DATABASE ###################" << endl << endl;
-        cout << "Skipta mer ut fyrir fallid sem baetir vid gagnagrunnin"  << endl;
+        WhatToAdd();
         break;
     case '5':
         cleanScreen();
@@ -413,10 +413,34 @@ void UI::RandomCorS(){
         break;
     }
 }
+void UI::WhatToAdd()
+{
+    char selection;
+
+    cout << "Which to you want to add?" << endl;
+    cout << "1. Add a scientist to the database" << endl;
+    cout << "2. Add a computer to the database" << endl;
+
+    cout << endl;
+    cout << "Selection: ";
+    cin >> selection;
+
+    switch(selection)
+    {
+    case '1':
+        InputScientist();
+        break;
+    case '2':
+        InputComputer();
+        break;
+    }
+}
 void UI::InputScientist()
 {
     string Name, Gender;
     int Born, Died;
+
+    cin.ignore();
 
     cout << "Enter the name: ";
     getline(cin, Name);
@@ -426,11 +450,14 @@ void UI::InputScientist()
     cin >> Born;
     cout << "Year of death: ";
     cin >> Died;
+
 }
 void UI::InputComputer()
 {
     string Name, Type, Wasbuilt;
     int Year, choice;
+
+    cin.ignore();
 
     cout << "Name of computer: ";
     getline(cin, Name);
@@ -466,6 +493,6 @@ void UI::InputComputer()
     else
     {
         Year = 0;
-        Type = "An idea";
+        Type = "An idea, wasn't built";
     }
 }

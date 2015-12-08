@@ -32,6 +32,8 @@ public:
     void GetRandomComputer();
     void SearchForSci(QString str);
     void SearchForCom(QString str);
+    void AddScientist(string name, string gender, int born, int died);
+    void AddComputer(string name, int year, string type, string wasbuilt);
     vector<Scientists*> scient;
     vector<Computers*> comp;
 private:

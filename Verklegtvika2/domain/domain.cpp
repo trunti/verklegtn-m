@@ -170,5 +170,12 @@ void Domain::SearchinPersons()
     default:
         break;
     }
-
+}
+void Domain::InputScientist(string name, string gender, int born, int died)
+{
+    AddScientist(name, gender, born, died);
+}
+void Domain::InputComputer(string name, int year, string type, string wasbuilt)
+{
+    AddComputer(name, year, type, wasbuilt);
 }

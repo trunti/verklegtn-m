@@ -21,6 +21,7 @@ private:
     void RepeatRandom();        // Valmynd - Spyr hvort eigi að fá annan random, fara í Main eða hætta
     void InputScientist();      // Setja nýjann tölvunarfræðing inn í gagnagrunninn frá notanda
     void InputComputer();       // Setja nýjan tölvu inn í gagnagrunninn frá notanda
+    void WhatToAdd();           // Adda Scientist eda tolvu
 };
 
 

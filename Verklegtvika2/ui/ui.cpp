@@ -127,6 +127,7 @@ void UI::listScientistsRepeat()
     char selection;
 
     cout << endl << "Do you want to sort again? (Y/N)" << endl;
+    cout << "You can press M to go back to the menu and Q to quit!" << endl;
 
     cout << endl;
     cout << "Selection: ";
@@ -208,6 +209,7 @@ void UI::listComputersRepeat()
     char selection;
 
     cout << endl << "Do you want to sort again? (Y/N)" << endl;
+    cout << "You can press M to go back to the menu and Q to quit!" << endl;
 
     cout << endl;
     cout << "Selection: ";

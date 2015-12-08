@@ -28,6 +28,8 @@ public:
     void SortSci(QString str);
     void openDatabase();
     void SortCpu(QString str);
+    void GetRandomScientist();
+    void GetRandomComputer();
     void Search();
     vector<Scientists*> scient;
     vector<Computers*> comp;

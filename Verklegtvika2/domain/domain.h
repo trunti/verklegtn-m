@@ -10,8 +10,9 @@ public:
     Domain();
     void SortScientists(char select);
     void SortComputers(char select);
-    void displayvectorS();
-    void displayvectorC();
+    void DisplayVectorS();
+    void DisplayVectorC();
+    void RandomSciorComp(char select);
 
 };
 

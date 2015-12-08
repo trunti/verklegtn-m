@@ -26,6 +26,7 @@ void UI::mainMenu()
     cout << "3: See relationship between computers and scientists" << endl;
     cout << "4: Add new computer or scientists to database. " << endl;
     cout << "5: Search for scientists or computer." << endl;
+    cout << "6: Get a random computer or scientist." << endl;
 
     cout << endl;
     cout << "Selection: ";
@@ -57,6 +58,11 @@ void UI::mainMenu()
         cleanScreen();
         cout << "####################### SEARCH #######################" << endl << endl;
         cout << "Skipta mer ut fyrir fallid sem leitar i gagnagrunninum." << endl;
+        break;
+    case '6':
+        cleanScreen();
+        cout << "####################### RANDOM #######################" << endl << endl;
+        RandomCorS();
         break;
     case 'q':
     case 'Q': return exit (-1);
@@ -314,5 +320,80 @@ void UI::selectSientistID()
     cin >> id;
     cout << "Skipta mer ut fyrir fallid sem synir visindamann og vensladar tolvur" << endl;
 }
+void UI::RepeatRandom(){
+    char selection;
+
+    cout << endl << "Another random scientist or computer? (Y/N)" << endl;
+    cout << "You can press M to go back to the menu and Q to quit!" << endl;
+
+    cout << endl;
+    cout << "Selection: ";
+    cin >> selection;
+
+    switch (selection)
+    {
+    case 'Y':
+    case 'y':
+        cleanScreen();
+        cout << "####################### RANDOM #######################" << endl << endl;
+        RandomCorS();
+        break;
+    case 'N':
+    case 'n':
+    case 'm':
+    case 'M':
+        cleanScreen();
+        mainMenu();
+        break;
+    case 'q':
+    case 'Q': return exit (-1);
+        break;
+    default:
+        cleanScreen();
+        cout << "Error: Invalid choice, try again!" << endl << endl;
+        RepeatRandom();
+        break;
+    }
+}
+void UI::RandomCorS(){
+    char selection;
+
+    cout << "Want a random computer or scientist: " << endl << endl;
+
+    cout << "1: Random computer." << endl;
+    cout << "2: Random scientist." << endl;
 
 
+    cout << endl << "You can press 'M' for MAIN or 'Q' to QUIT." << endl;
+
+    cout << endl;
+    cout << "Selection: ";
+    cin >> selection;
+    switch (selection)
+    {
+    case '1':
+        cleanScreen();
+        cout << "################### RANDOM COMPUTER ###################" << endl << endl;
+        RandomSciorComp(selection);
+        RepeatRandom();
+        break;
+    case '2':
+        cleanScreen();
+        cout << "################### RANDOM SCIENTIST ##################" << endl << endl;
+        RandomSciorComp(selection);
+        RepeatRandom();
+    case 'm':
+    case 'M':
+        cleanScreen();
+        mainMenu();
+        break;
+    case 'q':
+    case 'Q': return exit (-1);
+        break;
+    default:
+        cleanScreen();
+        cout << "Error: Invalid choice, try again!" << endl << endl;
+        RandomCorS();
+        break;
+    }
+}

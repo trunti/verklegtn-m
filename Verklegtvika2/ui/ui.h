@@ -19,8 +19,8 @@ private:
     void selectSientistID();    // Býður uppá að velja tölvu og athugar hvort ID sé í gagnagrunni, skilar ID til baka ef það finnst.
     void RandomCorS();          // Velur hvort þú viljir random tölvu eða nörd
     void RepeatRandom();        // Valmynd - Spyr hvort eigi að fá annan random, fara í Main eða hætta
-    void InputScientist();      // Setja nýjann tölvunarfræðing inn í gagnagrunninn frá notanda
-    void InputComputer();       // Setja nýjan tölvu inn í gagnagrunninn frá notanda
+    void InputInfoScientist();      // Setja nýjann tölvunarfræðing inn í gagnagrunninn frá notanda
+    void InputInfoComputer();       // Setja nýjan tölvu inn í gagnagrunninn frá notanda
     void WhatToAdd();           // Adda Scientist eda tolvu
 };
 

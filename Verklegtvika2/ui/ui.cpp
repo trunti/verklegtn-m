@@ -428,14 +428,14 @@ void UI::WhatToAdd()
     switch(selection)
     {
     case '1':
-        InputScientist();
+        InputInfoScientist();
         break;
     case '2':
-        InputComputer();
+        InputInfoComputer();
         break;
     }
 }
-void UI::InputScientist()
+void UI::InputInfoScientist()
 {
     string Name, Gender;
     int Born, Died;
@@ -451,8 +451,10 @@ void UI::InputScientist()
     cout << "Year of death: ";
     cin >> Died;
 
+    InputScientist(Name, Gender, Born, Died);
+
 }
-void UI::InputComputer()
+void UI::InputInfoComputer()
 {
     string Name, Type, Wasbuilt;
     int Year, choice;
@@ -495,4 +497,6 @@ void UI::InputComputer()
         Year = 0;
         Type = "An idea, wasn't built";
     }
+
+    InputComputer(Name, Year, Type, Wasbuilt);
 }

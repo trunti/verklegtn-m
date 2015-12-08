@@ -25,27 +25,27 @@ struct Connections {
 class Data
 {
 public:
-    Data();
-    QSqlDatabase db;
-    QString dbName = "database.sqlite";
-    void clearvector();
-    void close();
-    void SortSci(QString str);
-    void openDatabase();
-    void SortCpu(QString str);
-    void GetRandomScientist();
-    void GetRandomComputer();
-    void SearchForSci(QString str);
-    void SearchForCom(QString str);
-    void AddScientist(string name, string gender, int born, int died);
-    void AddComputer(string name, int year, string type, string wasbuilt);
-    void Connect();
-    vector<Connections> Relation;
-    vector<Scientists*> scient;
-    vector<Computers*> comp;
+   Data();
+   QSqlDatabase db;
+   QString dbName = "database.sqlite";
+   void clearvector();                 //Hreinsar út af skjá
+   void close();                       //Lokar gagnagrunn
+   void SortSci(QString str);          //Tekur við skipun frá domain um það hvernig eigi að flokka vísindamenn í gagnagrunni
+   void openDatabase();                //Opnar gagnargrunn
+   void SortCpu(QString str);          //Tekur við skipun frá domain um hvernig eigi að flokka tölvur í gagnagrunni
+   void GetRandomScientist();          //Sækir vísindamann af handahófi úr gagnagrunni
+   void GetRandomComputer();           //Sækir tölvu af handahófi úr gagnagrunni
+   void SearchForSci(QString str);     //Tekur við skipun frá domain og vinnur úr henni í gagnagrunni við leit að ákv. vísindamanni
+   void SearchForCom(QString str);     //Tekur við skipun frá domain og vinnur úr henni í gagnagrunni við leit að ákv. tölvu
+   void AddScientist(string name, string gender, int born, int died);      // Flytur upplýsingar um nýjann vísindamann inn í gagnagrunn
+   void AddComputer(string name, int year, string type, string wasbuilt);  // Flytur upplýsingar um nýjann tölvur inn í gagnagrunn
+   void Connect();
+   vector<Connections> Relation;
+   vector<Scientists*> scient;
+   vector<Computers*> comp;
 private:
-    int born, died, year;
-    string name, gender, type, str;
+   int born, died, year;
+   string name, gender, type, str;
 };
 
 #endif // DATA_H

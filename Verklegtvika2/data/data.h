@@ -17,6 +17,11 @@ using namespace std;
 class Scientists;
 class Computers;
 
+struct Connections {
+   string Sciname;
+   string Compname;
+};
+
 class Data
 {
 public:
@@ -34,6 +39,8 @@ public:
     void SearchForCom(QString str);
     void AddScientist(string name, string gender, int born, int died);
     void AddComputer(string name, int year, string type, string wasbuilt);
+    void Connect();
+    vector<Connections> Relation;
     vector<Scientists*> scient;
     vector<Computers*> comp;
 private:

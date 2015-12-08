@@ -11,11 +11,11 @@ void Domain::SortScientists(char select){
     clearvector();
     switch (select) {
     case '1':
-        SortSci("Select * FROM Persons Order By Name");
+        SortSci("Select * FROM Persons Order By pName");
         DisplayVectorS();
         break;
     case '2':
-        SortSci("SELECT * FROM Persons ORDER BY Name DESC");
+        SortSci("SELECT * FROM Persons ORDER BY pName DESC");
         DisplayVectorS();
         break;
     case '3':
@@ -25,22 +25,23 @@ void Domain::SortScientists(char select){
     case '4':
         SortSci("SELECT * FROM Persons ORDER BY Gender DESC");
         DisplayVectorS();
+        break;
     case '5':
-            SortSci("SELECT * FROM Persons ORDER BY Born");
-            DisplayVectorS();
-            break;
+        SortSci("SELECT * FROM Persons ORDER BY Born");
+        DisplayVectorS();
+        break;
     case '6':
-            SortSci("SELECT * FROM Persons ORDER BY Born DESC");
-            DisplayVectorS();
-            break;
+        SortSci("SELECT * FROM Persons ORDER BY Born DESC");
+        DisplayVectorS();
+        break;
     case '7':
-            SortSci("SELECT * FROM Persons ORDER BY Died");
-            DisplayVectorS();
-            break;
+        SortSci("SELECT * FROM Persons ORDER BY Died");
+        DisplayVectorS();
+        break;
     case '8':
-            SortSci("SELECT * FROM Persons ORDER BY Died DESC");
-            DisplayVectorS();
-            break;
+        SortSci("SELECT * FROM Persons ORDER BY Died DESC");
+        DisplayVectorS();
+        break;
     default:
         break;
     }
@@ -139,18 +140,21 @@ void Domain::SearchinPersons(char select)
     clearvector();
     switch (select) {
     case '1':
-        SearchForSci("SELECT * FROM Persons WHERE Name LIKE '%'||:Name||'%'");
+        SearchForSci("SELECT * FROM Persons WHERE pName LIKE '%'||:Name||'%'");
         DisplayVectorS();
         break;
     case '2':
         SearchForSci("SELECT * FROM Persons WHERE Gender LIKE '%'||:Gender||'%'");
         DisplayVectorS();
+        break;
     case '3':
         SearchForSci("SELECT * FROM Persons WHERE Died LIKE '%'||:Died||'%'");
         DisplayVectorS();
+        break;
     case '4':
         SearchForSci("SELECT * FROM Persons WHERE Born LIKE '%'||:Born||'%'");
         DisplayVectorS();
+        break;
     case '5':
         SearchForCom("SELECT * FROM Computers WHERE Name LIKE '%'||:Name||'%'");
         DisplayVectorC();
@@ -158,15 +162,20 @@ void Domain::SearchinPersons(char select)
     case '6':
         SearchForCom("SELECT * FROM Computers WHERE Year LIKE '%'||:Year||'%'");
         DisplayVectorC();
+        break;
     case '7':
         SearchForCom("SELECT * FROM Computers WHERE Type LIKE '%'||:Type||'%'");
         DisplayVectorC();
+        break;
     case '8':
         SearchForCom("SELECT * FROM Computers WHERE Build LIKE '%'||:Build||'%'");
         DisplayVectorC();
+        break;
     default:
+        cout << "Invalid choice!";
         break;
     }
+    close();
 }
 void Domain::InputScientist(string name, string gender, int born, int died)
 {

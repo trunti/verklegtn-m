@@ -35,7 +35,7 @@ void Data::SortSci(QString str)
         while(query.next())
             {
                 Scientists* pScientist = new Scientists();
-                pScientist -> name = query.value("Name").toString().toStdString();
+                pScientist -> name = query.value("pName").toString().toStdString();
                 pScientist -> gender = query.value("Gender").toString().toStdString();
                 pScientist -> born = query.value("Born").toUInt();
                 pScientist -> died = query.value("Died").toUInt();
@@ -69,7 +69,7 @@ void Data::GetRandomScientist(){
         while(query.next())
             {
                 Scientists* pScientist = new Scientists();
-                pScientist -> name = query.value("Name").toString().toStdString();
+                pScientist -> name = query.value("pName").toString().toStdString();
                 pScientist -> gender = query.value("Gender").toString().toStdString();
                 pScientist -> born = query.value("Born").toUInt();
                 pScientist -> died = query.value("Died").toUInt();
@@ -108,7 +108,7 @@ void Data::SearchForSci(QString str)
         while(query.next())
         {
             Scientists* pScientist = new Scientists();
-            pScientist -> name = query.value("Name").toString().toStdString();
+            pScientist -> name = query.value("pName").toString().toStdString();
             pScientist -> gender = query.value("Gender").toString().toStdString();
             pScientist -> born = query.value("Born").toUInt();
             pScientist -> died = query.value("Died").toUInt();
@@ -163,11 +163,34 @@ void Data::AddScientist(string name, string gender, int born, int died)
     openDatabase();
 
       QSqlQuery query;
-      query.prepare("INSERT INTO Persons (Name, Gender, Born, Died) VALUES (:Name, :Gender, :Born, :Died)");
+      query.prepare("INSERT INTO Persons (pName, Gender, Born, Died) VALUES (:Name, :Gender, :Born, :Died)");
       query.bindValue(":Name", QString::fromStdString(name));
       query.bindValue(":Gender", QString::fromStdString(gender));
       query.bindValue(":Born", QString::number(born));
       query.bindValue(":Died", QString::number(died));
       query.exec();
+      close();
+}
+void Data::Connect()
+{
+   Connections connect;
+  openDatabase();
+      QSqlQuery query(db);
+      query.prepare("select p.pname, c.name from Connections con join persons p on p.id = con.persons_id join computers c on c.id = con.computers_id");
+      query.bindValue("con.persons_id", QString::fromStdString("*"));
+      query.bindValue("con.computers_id", QString::fromStdString("*"));
+      query.exec();
+      while(query.next())
+      {
+
+          connect.Sciname = query.value("pname").toString().toStdString();
+          connect.Compname = query.value("name").toString().toStdString();
+          Relation.push_back(connect);
+      }
+      for(unsigned int i = 0;i < Relation.size();i++)
+      {
+          cout << Relation[i].Sciname << " ";
+          cout << Relation[i].Compname << endl;
+      }
       close();
 }

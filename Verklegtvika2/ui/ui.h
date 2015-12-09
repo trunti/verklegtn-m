@@ -11,6 +11,7 @@ public:
     void cleanScreen();         // Hreinsar allt sem er á skjánum
 private:
     char selection;
+    string searchv;
     void listScientists();      // Valmynd - Býður uppá mismunandi valmöguleika til að sýna vísindamenn í gagnagrunni.
     void listScientistsRepeat();// Valmynd - Spyr hvort eigi að endurtaka fallið.
     void listComputers();       // Valmynd - Býður uppá mismunandi valmöguleika til að sýna tölvur í gagnagrunni.
@@ -30,6 +31,7 @@ private:
     void AddToDatabaseRepeat();
     void ConnectComputer();
     void ConnectScientist();
+    void SearchInput();
 };
 
 

@@ -423,7 +423,6 @@ void UI::InputInfoComputer()
 }
 void UI::Search()
 {
-    string s;
     cout << "########## SEARCH DATABASE ##########" << endl;
     cout << endl;
     cout << "Please select 1-8 (You can always press Q to quit): " << endl;
@@ -438,32 +437,40 @@ void UI::Search()
     cout << "8: To search for if computer was build." << endl;
 
     InputForSelection();
-
+    cleanScreen();
     switch (selection){
     case '1':
         cout << "################## SCIENTISTS NAME ##################" << endl << endl;
+        SearchInput();
         break;
     case '2':
         cout << "################## SCIENTISTS GENDER ##################" << endl << endl;
+        SearchInput();
         break;
     case '3':
         cout << "################## SCIENTISTS DEATH YEAR ##################" << endl << endl;
+        SearchInput();
         break;
     case '4':
         cout << "################## SCIENTISTS BIRTH YEAR ##################" << endl << endl;
+        SearchInput();
         break;
     case '5':
-            cout << "################## COMPUTER NAME ##################" << endl << endl;
-            break;
+        cout << "################## COMPUTER NAME ##################" << endl << endl;
+        SearchInput();
+        break;
     case '6':
-            cout << "################## COMPUTER BUILD ##################" << endl << endl;
-            break;
+        cout << "################## COMPUTER YEAR ##################" << endl << endl;
+        SearchInput();
+        break;
     case '7':
-            cout << "################## COMPUTER TYPE ##################" << endl << endl;
-            break;
+        cout << "################## COMPUTER TYPE ##################" << endl << endl;
+        SearchInput();
+        break;
     case '8':
-            cout << "################## COMPUTER BUILD ##################" << endl << endl;
-            break;
+        cout << "################## COMPUTER BUILD ##################" << endl << endl;
+        SearchInput();
+        break;
     case 'm':
     case 'M':
         mainMenu();
@@ -476,7 +483,7 @@ void UI::Search()
         cout << "Error: Invalid choice, try again!" << endl << endl;
         break;
     }
-    SearchinPersons(selection);
+    SearchinPersons(selection, searchv);
     SearchRepeat();
 }
 
@@ -531,4 +538,8 @@ void UI::AddToDatabaseRepeat(){
     }
     SwitchForSelection();
     AddToDatabaseRepeat();
+}
+void UI::SearchInput(){
+    cout << "Enter search value: ";
+    cin >> searchv;
 }

@@ -16,7 +16,7 @@ public:
     void DisplayVectorS();                      // Prentar út vísindamenn eftir ósk notenda.
     void DisplayVectorC();                      // Prentar út tölvur eftir ósk notenda.
     void RandomSciorComp(char select);          // Prentar út tölvu eða vísindamann af handahófi.
-    void SearchinPersons(char select);                     // Leitar að vísindamanni í gagnagrunni.
+    void SearchinPersons(char select, string searchv);                     // Leitar að vísindamanni í gagnagrunni.
     void DisplayVectorConnection();             // Prentar út tengingarnar á milli vísindamanna og tölva.
     void SeeConnections(char select);           // Sýnir tengingar á milli vísindamanna og tölva af beiðni notanda.
     void InputScientist(string name, string gender, int born, int died); //Flytur a milli UI og Datalayer fyrir Scientist

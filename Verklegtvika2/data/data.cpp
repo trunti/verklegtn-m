@@ -95,18 +95,16 @@ void Data::GetRandomComputer(){
             comp.push_back(pComputers);
         }
 }
-void Data::SearchForSci(QString str)
+void Data::SearchForSci(QString str, string searchv)
 {
     openDatabase();
         QSqlQuery query(db);
-        string s;
-        cout << "Enter s: ";
-        cin >> s;
+
         query.prepare(str);
-        query.bindValue(":Name", QString::fromStdString(s));
-        query.bindValue(":Gender", QString::fromStdString(s));
-        query.bindValue(":Died", QString::fromStdString(s));
-        query.bindValue(":Born", QString::fromStdString(s));
+        query.bindValue(":Name", QString::fromStdString(searchv));
+        query.bindValue(":Gender", QString::fromStdString(searchv));
+        query.bindValue(":Died", QString::fromStdString(searchv));
+        query.bindValue(":Born", QString::fromStdString(searchv));
         query.exec();
         while(query.next())
         {
@@ -118,18 +116,16 @@ void Data::SearchForSci(QString str)
             scient.push_back(pScientist);
         }
 }
-void Data::SearchForCom(QString str)
+void Data::SearchForCom(QString str, string searchv)
 {
     openDatabase();
         QSqlQuery query(db);
-        string s;
-        cout << "Enter s: ";
-        cin >> s;
+
         query.prepare(str);
-        query.bindValue(":Name", QString::fromStdString(s));
-        query.bindValue(":Type", QString::fromStdString(s));
-        query.bindValue(":Year", QString::fromStdString(s));
-        query.bindValue(":Build", QString::fromStdString(s));
+        query.bindValue(":Name", QString::fromStdString(searchv));
+        query.bindValue(":Type", QString::fromStdString(searchv));
+        query.bindValue(":Year", QString::fromStdString(searchv));
+        query.bindValue(":Build", QString::fromStdString(searchv));
         query.exec();
         while(query.next())
         {

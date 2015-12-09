@@ -135,40 +135,40 @@ void Domain::RandomSciorComp(char select){
     }
     close();
 }
-void Domain::SearchinPersons(char select)
+void Domain::SearchinPersons(char select, string searchv)
 {
     clearvector();
     switch (select) {
     case '1':
-        SearchForSci("SELECT * FROM Persons WHERE pName LIKE '%'||:Name||'%'");
+        SearchForSci("SELECT * FROM Persons WHERE pName LIKE '%'||:Name||'%'", searchv);
         DisplayVectorS();
         break;
     case '2':
-        SearchForSci("SELECT * FROM Persons WHERE Gender LIKE '%'||:Gender||'%'");
+        SearchForSci("SELECT * FROM Persons WHERE Gender LIKE '%'||:Gender||'%'", searchv);
         DisplayVectorS();
         break;
     case '3':
-        SearchForSci("SELECT * FROM Persons WHERE Died LIKE '%'||:Died||'%'");
+        SearchForSci("SELECT * FROM Persons WHERE Died LIKE '%'||:Died||'%'", searchv);
         DisplayVectorS();
         break;
     case '4':
-        SearchForSci("SELECT * FROM Persons WHERE Born LIKE '%'||:Born||'%'");
+        SearchForSci("SELECT * FROM Persons WHERE Born LIKE '%'||:Born||'%'", searchv);
         DisplayVectorS();
         break;
     case '5':
-        SearchForCom("SELECT * FROM Computers WHERE Name LIKE '%'||:Name||'%'");
+        SearchForCom("SELECT * FROM Computers WHERE Name LIKE '%'||:Name||'%'", searchv);
         DisplayVectorC();
         break;
     case '6':
-        SearchForCom("SELECT * FROM Computers WHERE Year LIKE '%'||:Year||'%'");
+        SearchForCom("SELECT * FROM Computers WHERE Year LIKE '%'||:Year||'%'", searchv);
         DisplayVectorC();
         break;
     case '7':
-        SearchForCom("SELECT * FROM Computers WHERE Type LIKE '%'||:Type||'%'");
+        SearchForCom("SELECT * FROM Computers WHERE Type LIKE '%'||:Type||'%'", searchv);
         DisplayVectorC();
         break;
     case '8':
-        SearchForCom("SELECT * FROM Computers WHERE Build LIKE '%'||:Build||'%'");
+        SearchForCom("SELECT * FROM Computers WHERE Build LIKE '%'||:Build||'%'", searchv);
         DisplayVectorC();
         break;
     default:

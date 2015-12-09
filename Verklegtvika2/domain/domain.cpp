@@ -11,35 +11,35 @@ void Domain::SortScientists(char select){
     clearvector();
     switch (select) {
     case '1':
-        SortSci("Select * FROM Persons Order By pName");
+        GetScientists("Select * FROM Persons Order By pName");
         DisplayVectorS();
         break;
     case '2':
-        SortSci("SELECT * FROM Persons ORDER BY pName DESC");
+        GetScientists("SELECT * FROM Persons ORDER BY pName DESC");
         DisplayVectorS();
         break;
     case '3':
-        SortSci("SELECT * FROM Persons ORDER BY Gender");
+        GetScientists("SELECT * FROM Persons ORDER BY Gender");
         DisplayVectorS();
         break;
     case '4':
-        SortSci("SELECT * FROM Persons ORDER BY Gender DESC");
+        GetScientists("SELECT * FROM Persons ORDER BY Gender DESC");
         DisplayVectorS();
         break;
     case '5':
-        SortSci("SELECT * FROM Persons ORDER BY Born");
+        GetScientists("SELECT * FROM Persons ORDER BY Born");
         DisplayVectorS();
         break;
     case '6':
-        SortSci("SELECT * FROM Persons ORDER BY Born DESC");
+        GetScientists("SELECT * FROM Persons ORDER BY Born DESC");
         DisplayVectorS();
         break;
     case '7':
-        SortSci("SELECT * FROM Persons ORDER BY Died");
+        GetScientists("SELECT * FROM Persons ORDER BY Died");
         DisplayVectorS();
         break;
     case '8':
-        SortSci("SELECT * FROM Persons ORDER BY Died DESC");
+        GetScientists("SELECT * FROM Persons ORDER BY Died DESC");
         DisplayVectorS();
         break;
     default:
@@ -52,23 +52,23 @@ void Domain::SortComputers(char select){
     clearvector();
     switch (select) {
     case '1':
-        SortCpu("SELECT * FROM Computers ORDER BY Name");
+        GetComputers("SELECT * FROM Computers ORDER BY Name");
         DisplayVectorC();
         break;
     case '2':
-        SortCpu("SELECT * FROM Computers ORDER BY Name DESC");
+        GetComputers("SELECT * FROM Computers ORDER BY Name DESC");
         DisplayVectorC();
         break;
     case '3':
-        SortCpu("SELECT * FROM Computers ORDER BY Year");
+        GetComputers("SELECT * FROM Computers ORDER BY Year");
         DisplayVectorC();
         break;
     case '4':
-        SortCpu("SELECT * FROM Computers ORDER BY Year DESC");
+        GetComputers("SELECT * FROM Computers ORDER BY Year DESC");
         DisplayVectorC();
         break;
     case '5':
-        SortCpu("SELECT * FROM Computers ORDER BY Type");
+        GetComputers("SELECT * FROM Computers ORDER BY Type");
         DisplayVectorC();
         break;
     default:
@@ -79,6 +79,7 @@ void Domain::SortComputers(char select){
 void Domain::DisplayVectorS(){
     cout << "Name" << "\t\t\t\t" << "Gender" << "\t\t" << "Born" << "\t" << "Dead" << endl;
     cout << "------------------------------------------------------------------" << endl;
+
     for(unsigned int i = 0; i < scient.size(); i++){
         cout << "  ";
         cout << scient[i] -> name << "\t";
@@ -92,7 +93,8 @@ void Domain::DisplayVectorS(){
         cout << scient[i] -> born << "\t";
         if(scient[i] -> died == 0){
             cout << "Alive!";
-        }else{
+        }
+        else{
         cout << scient[i] -> died;
         }
         cout << "\t  " << endl;
@@ -106,18 +108,21 @@ void Domain::DisplayVectorC(){
     for(unsigned int i = 0; i < comp.size(); i++){
         cout << "  ";
         cout << comp[i] -> name << "\t";
-        if(comp[i] -> name.size() < 16)
+        if(comp[i] -> name.size() < 16){
             cout << "\t";
             if(comp[i] -> name.size() < 6){
                     cout << "\t";
             }
+        }
         cout << comp[i] -> year << "\t";
         cout << comp[i] -> type << "\t";
-        if(comp[i] -> type.size() < 13)
+        if(comp[i] -> type.size() < 13){
             cout << "\t";
+        }
         if(comp[i] -> built){
             cout << "Yes!" << endl;
-        }else{
+        }
+        else{
             cout << "No!" << endl;
         }
     cout << "------------------------------------------------------------------" << endl;
@@ -222,6 +227,7 @@ bool Domain::CorrectComputer(string name,int year){
 void Domain::SeeConnections(char select){
     clearvector();
     Connect();
+
     if(select == '1'){
         OnlyCompName();
     }
@@ -234,30 +240,42 @@ void Domain::SeeConnections(char select){
     close();
 }
 void Domain::OnlyCompName(){
-    SortCpu("SELECT * From Computers");
+    GetComputers("SELECT * From Computers");
+
     for(unsigned int i = 0; i < comp.size(); i++){
+        cout << "--------------------------------------------" << endl;
         cout << i+1 << "\t" << comp[i] -> name << endl;
     }
     close();
 }
 void Domain::OnlySciName(){
-    SortSci("SELECT * From Persons");
+    GetScientists("SELECT * From Persons");
+
     for(unsigned int i = 0; i < scient.size(); i++){
+        cout << "--------------------------------------------" << endl;
         cout << i+1 << ".\t" << scient[i] -> name << endl;
     }
     close();
 }
 void Domain::DisplayVectorConnection(){
     for(unsigned int i = 0; i < Relation.size(); i++){
-        cout << Relation[i].Sciname << " ";
+        cout << "--------------------------------------------------" << endl;
+        cout << Relation[i].Sciname << "\t";
+        if(Relation[i].Sciname.size() < 23){
+            cout << "\t";
+            if(Relation[i].Sciname.size() < 16){
+                    cout << "\t";
+            }
+        }
         cout << Relation[i].Compname << endl;
     }
 }
 void Domain::FindConnection(int numb, bool compconnection){
     clearvector();
     bool found = false;
+
     if(compconnection){
-        SortCpu("SELECT * From Computers");
+        GetComputers("SELECT * From Computers");
         Connect();
         cout << comp[numb - 1] -> name << " is connected to: " << endl;
         for(unsigned int i = 0; i < Relation.size(); i++){
@@ -269,7 +287,7 @@ void Domain::FindConnection(int numb, bool compconnection){
         }
     }
     if(!compconnection){
-        SortSci("SELECT * From Persons");
+        GetScientists("SELECT * From Persons");
         Connect();
         cout << scient[numb - 1] -> name << " is connceted to: " << endl;
         for(unsigned int i = 0; i < Relation.size(); i++){

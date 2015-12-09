@@ -105,17 +105,17 @@ void UI::listScientists()
         cout << "################## SCIENTISTS (F-M) ##################" << endl << endl;
         break;
     case '5':
-            cout << "################## SCIENTISTS (by birth year) ##################" << endl << endl;
-            break;
+        cout << "################## SCIENTISTS (by birth year) ##################" << endl << endl;
+        break;
     case '6':
-            cout << "################## SCIENTISTS (by birth year desc) ##################" << endl << endl;
-            break;
+        cout << "################## SCIENTISTS (by birth year desc) ##################" << endl << endl;
+        break;
     case '7':
-            cout << "################## SCIENTISTS (death year) ##################" << endl << endl;
-            break;
+        cout << "################## SCIENTISTS (death year) ##################" << endl << endl;
+        break;
     case '8':
-            cout << "################## SCIENTISTS (death year desc) ##################" << endl << endl;
-            break;
+        cout << "################## SCIENTISTS (death year desc) ##################" << endl << endl;
+        break;
     case 'm':
     case 'M':
         mainMenu();
@@ -147,7 +147,7 @@ void UI::listScientistsRepeat()
         listScientists();
     }
     SwitchForSelection();
-        listScientistsRepeat();
+    listScientistsRepeat();
 }
 
 void UI::listComputers()
@@ -162,41 +162,41 @@ void UI::listComputers()
     cout << endl << "You can press 'M' for MAIN or 'Q' to QUIT." << endl;
 
    InputForSelection();
-    cleanScreen();
+   cleanScreen();
 
-    switch (selection)
-    {
-    case '1':
-        cout << "################## COMPUTERS (A-Z) ###################" << endl << endl;
-        break;
-    case '2':
-        cout << "################## COMPUTERS (Z-A) ###################" << endl << endl;
-        break;
-    case '3':
-        cout << "################## COMPUTERS BY YEAR #################" << endl << endl;
-        break;
-    case '4':
-        cout << "################ COMPUTERS BY YEAR DESC ##############" << endl << endl;
-        break;
-    case '5':
-        cout << "################## COMPUTERS BY TYPE #################" << endl << endl;
-        break;
-    case 'm':
-    case 'M':
-        cleanScreen();
-        mainMenu();
-        break;
-    case 'q':
-    case 'Q': return exit (-1);
-        break;
-    default:
-        cleanScreen();
-        cout << "Error: Invalid choice, try again!" << endl << endl;
-        listComputers();
-        break;
-    }
-    SortComputers(selection);
-    listComputersRepeat();
+   switch (selection)
+   {
+   case '1':
+       cout << "################## COMPUTERS (A-Z) ###################" << endl << endl;
+       break;
+   case '2':
+       cout << "################## COMPUTERS (Z-A) ###################" << endl << endl;
+       break;
+   case '3':
+       cout << "################## COMPUTERS BY YEAR #################" << endl << endl;
+       break;
+   case '4':
+       cout << "################ COMPUTERS BY YEAR DESC ##############" << endl << endl;
+       break;
+   case '5':
+       cout << "################## COMPUTERS BY TYPE #################" << endl << endl;
+       break;
+   case 'm':
+   case 'M':
+       cleanScreen();
+       mainMenu();
+       break;
+   case 'q':
+   case 'Q': return exit (-1);
+       break;
+   default:
+       cleanScreen();
+       cout << "Error: Invalid choice, try again!" << endl << endl;
+       listComputers();
+       break;
+   }
+   SortComputers(selection);
+   listComputersRepeat();
 }
 
 void UI::listComputersRepeat()
@@ -213,7 +213,7 @@ void UI::listComputersRepeat()
         listComputers();
     }
     SwitchForSelection();
-        listComputersRepeat();
+    listComputersRepeat();
 }
 
 void UI::listRelationship()
@@ -302,7 +302,6 @@ void UI::RandomCorS(){
     cout << "1: Random computer." << endl;
     cout << "2: Random scientist." << endl;
 
-
     cout << endl << "You can press 'M' for MAIN or 'Q' to QUIT." << endl;
 
     InputForSelection();
@@ -374,7 +373,8 @@ void UI::InputInfoScientist()
 
     if(CorrectScientist(Name,Gender,Born,Died)){
         InputScientist(Name, Gender, Born, Died);
-    }else{
+    }
+    else{
         cout << endl;
         cout << "Something went wrong!" << endl;
         cout << "Make sure you put in the right information!" << endl;
@@ -429,7 +429,8 @@ void UI::InputInfoComputer()
 
     if(CorrectComputer(Name,Year)){
         InputComputer(Name, Year, Type, Wasbuilt);
-    }else{
+    }
+    else{
         cout << endl;
         cout << "Something went wrong!" << endl;
         cout << "Make sure you put in the right information!" << endl;

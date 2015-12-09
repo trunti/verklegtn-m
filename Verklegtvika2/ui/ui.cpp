@@ -379,14 +379,15 @@ void UI::InputInfoComputer(){
     getline(cin, Name);
     cout << "Was it built(Yes/No)? ";
     cin >> Wasbuilt;
-    if(Wasbuilt == "Yes"){
+    if(Wasbuilt == "Yes" || Wasbuilt == "yes"){
         cout << "What year was it built? ";
         cin >> Year;
-        cout << "What type of computer is it?";
-        cout << "1. Mechanical";
-        cout << "2. Transitor";
-        cout << "3. Electronic";
-        cout << "4. Electro-Mechanical";
+        cout << "What type of computer is it?" << endl;
+        cout << "1. Mechanical" << endl;
+        cout << "2. Transitor" << endl;
+        cout << "3. Electronic" << endl;
+        cout << "4. Electro-Mechanical" << endl;
+        cout << "Select a type: ";
         cin >> choice;
 
         switch(choice){

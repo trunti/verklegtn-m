@@ -185,3 +185,22 @@ void Domain::InputComputer(string name, int year, string type, string wasbuilt)
 {
     AddComputer(name, year, type, wasbuilt);
 }
+void Domain::SeeConnections(char select){
+    clearvector();
+    Connect();
+    if(select == '1'){
+
+    }
+    if(select == '2'){
+
+    }
+    if(select == '3'){
+        DisplayVectorConnection();
+    }
+}
+void Domain::DisplayVectorConnection(){
+    for(unsigned int i = 0; i < Relation.size(); i++){
+        cout << Relation[i].Sciname << " ";
+        cout << Relation[i].Compname << endl;
+    }
+}

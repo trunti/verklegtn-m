@@ -235,14 +235,14 @@ void UI::listRelationship()
     case '1':
         cleanScreen();
         cout << "################## FAMOUS COMPUTERS ##################" << endl << endl;
-        cout << "Skipta mer ut fyrir fallid sem synir lista af tölvum og ID numer" << endl;
-        selectComputerID();
         break;
     case '2':
         cleanScreen();
         cout << "################## FAMOUS SCIENTISTS #################" << endl << endl;
-        cout << "Skipta mer ut fyrir fallid sem  sýnir lista af visindamonnum og ID numer" << endl;
-        selectSientistID();
+        break;
+    case '3':
+        cleanScreen();
+        cout << "################## All CONNECTIONS #################" << endl << endl;
         break;
     case 'm':
     case 'M':
@@ -258,6 +258,7 @@ void UI::listRelationship()
         listRelationship();
         break;
     }
+    SeeConnections(selection);
 }
 
 void UI::selectComputerID(){

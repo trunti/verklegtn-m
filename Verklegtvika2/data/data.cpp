@@ -16,6 +16,7 @@ void Data::openDatabase()
 void Data::clearvector(){
     scient.clear();
     comp.clear();
+    Relation.clear();
 }
 void Data::close(){
     QString connection;
@@ -186,11 +187,6 @@ void Data::Connect()
           connect.Sciname = query.value("pname").toString().toStdString();
           connect.Compname = query.value("name").toString().toStdString();
           Relation.push_back(connect);
-      }
-      for(unsigned int i = 0;i < Relation.size();i++)
-      {
-          cout << Relation[i].Sciname << " ";
-          cout << Relation[i].Compname << endl;
       }
       close();
 }

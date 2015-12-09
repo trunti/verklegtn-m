@@ -52,7 +52,6 @@ void UI::mainMenu()
     case '5':
         cleanScreen();
         cout << "####################### SEARCH #######################" << endl << endl;
-        cout << "Skipta mer ut fyrir fallid sem leitar i gagnagrunninum." << endl;
         Search();
         break;
     case '6':
@@ -438,8 +437,6 @@ void UI::InputInfoComputer()
 }
 void UI::Search()
 {
-    cout << "########## SEARCH DATABASE ##########" << endl;
-    cout << endl;
     cout << "Please select 1-8 (You can always press Q to quit): " << endl;
     cout << endl;
     cout << "1: To search for scientists name." << endl;
@@ -449,7 +446,7 @@ void UI::Search()
     cout << "5: To search for computer name." << endl;
     cout << "6: To search for computer build year." << endl;
     cout << "7: To search for computer type." << endl;
-    cout << "8: To search for if computer was build." << endl;
+    cout << "8: To search for if computer was built." << endl;
 
     InputForSelection();
     cleanScreen();
@@ -483,7 +480,7 @@ void UI::Search()
         SearchInput();
         break;
     case '8':
-        cout << "################## COMPUTER BUILD ##################" << endl << endl;
+        cout << "################## COMPUTER BUILT ##################" << endl << endl;
         SearchInput();
         break;
     case 'm':

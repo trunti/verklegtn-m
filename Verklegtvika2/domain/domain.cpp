@@ -248,7 +248,6 @@ void Domain::OnlySciName(){
     close();
 }
 void Domain::DisplayVectorConnection(){
-    Connect();
     for(unsigned int i = 0; i < Relation.size(); i++){
         cout << Relation[i].Sciname << " ";
         cout << Relation[i].Compname << endl;

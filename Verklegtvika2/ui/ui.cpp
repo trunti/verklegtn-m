@@ -207,7 +207,7 @@ void UI::listComputersRepeat()
 
     InputForSelection();
 
-    switch (selection)
+    if(selection == 'y' || selection == 'Y')
     {
         cleanScreen();
         cout << "##################### COMPUTERS ######################" << endl << endl;

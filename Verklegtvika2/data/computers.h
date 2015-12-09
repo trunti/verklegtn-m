@@ -6,7 +6,7 @@ using namespace std;
 class Computers
 {
 public:
-    Computers();
+    Computers();            // Sjálfgefinn smiður.
     string name;
     int year;
     string type;

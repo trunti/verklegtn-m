@@ -8,7 +8,8 @@
 
 using namespace std;
 
-UI::UI(){
+UI::UI()
+{
     mainMenu();
 }
 
@@ -264,6 +265,7 @@ void UI::listRelationship()
     }
     ConnectionsRepeat();
 }
+
 void UI::ConnectComputer()
 {
     int Comp;
@@ -275,6 +277,7 @@ void UI::ConnectComputer()
     FindConnection(Comp,comp);
 
 }
+
 void UI::ConnectScientist()
 {
     int Scient;
@@ -525,6 +528,7 @@ void UI::SearchRepeat()
     SwitchForSelection();
     SearchRepeat();
 }
+
 void UI::SwitchForSelection()
 {
     switch (selection){
@@ -566,6 +570,7 @@ void UI::AddToDatabaseRepeat()
     SwitchForSelection();
     AddToDatabaseRepeat();
 }
+
 void UI::SearchInput()
 {
     cout << "Enter search value: ";

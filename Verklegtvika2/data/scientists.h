@@ -6,7 +6,7 @@ using namespace std;
 class Scientists
 {
 public:
-    Scientists();
+    Scientists();          // Sjálfgefinn smiður.
     string name;
     string gender;
     int born;

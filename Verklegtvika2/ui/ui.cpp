@@ -336,6 +336,7 @@ void UI::WhatToAdd()
     cout << "2. Add a computer to the database" << endl;
 
     InputForSelection();
+    cleanScreen();
 
     switch(selection)
     {
@@ -355,6 +356,8 @@ void UI::InputInfoScientist()
 
     cin.ignore();
 
+    cout << "################### ADDING SCIENTIST ##################" << endl << endl;
+
     cout << "Enter the name: ";
     getline(cin, Name);
     cout << "Enter gender: ";
@@ -373,6 +376,8 @@ void UI::InputInfoComputer()
     int Year, choice;
 
     cin.ignore();
+
+    cout << "################### ADDING COMPUTER ##################" << endl << endl;
 
     cout << "Name of computer: ";
     getline(cin, Name);
@@ -512,7 +517,7 @@ void UI::InputForSelection(){
     cin >> selection;
 }
 void UI::AddToDatabaseRepeat(){
-    cout << endl << "Do you want to search again? (Y/N)" << endl;
+    cout << endl << "Do you want to add person or computer? (Y/N)" << endl;
     cout << "You can press M to go back to the menu and Q to quit!" << endl;
 
     InputForSelection();

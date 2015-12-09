@@ -32,6 +32,7 @@ private:
     void ConnectComputer();
     void ConnectScientist();
     void SearchInput();
+    void ConnectionsRepeat();
 };
 
 

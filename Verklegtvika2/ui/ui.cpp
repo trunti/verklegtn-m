@@ -221,7 +221,7 @@ void UI::listRelationship()
 {
     cout << "How should the list be sorted: " << endl << endl;
 
-    cout << "1: Select computer to see the scientist behinde the machine." << endl;
+    cout << "1: Select computer to see the scientist behind the machine." << endl;
     cout << "2: Select scientist to see his machines." << endl;
     cout << "3: Display full list." << endl;
 
@@ -263,12 +263,14 @@ void UI::listRelationship()
         listRelationship();
         break;
     }
+    ConnectionsRepeat();
 }
 void UI::ConnectComputer(){
     int Comp;
     int a = 1;
     cout << "What computer? ";
     cin >> Comp;
+    cout << endl;
     FindConnection(Comp,a);
 
 }
@@ -277,6 +279,7 @@ void UI::ConnectScientist(){
     int a = 0;
     cout << "What Scientist? ";
     cin >> Scient;
+    cout << endl;
     FindConnection(Scient,a);
 }
 void UI::RepeatRandom(){
@@ -542,4 +545,19 @@ void UI::AddToDatabaseRepeat(){
 void UI::SearchInput(){
     cout << "Enter search value: ";
     cin >> searchv;
+}
+void UI::ConnectionsRepeat()
+{
+    cout << endl << "Do you want to see more connections? (Y/N)" << endl;
+    cout << "You can press M to go back to the menu and Q to quit!" << endl;
+
+    InputForSelection();
+
+    if(selection == 'y' || selection == 'Y')
+    {
+        cleanScreen();
+        listRelationship();
+    }
+    SwitchForSelection();
+    SearchRepeat();
 }

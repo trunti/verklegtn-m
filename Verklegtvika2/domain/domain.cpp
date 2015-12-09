@@ -225,22 +225,24 @@ void Domain::FindConnection(int numb, int a){
     if(a == 1){
         SortCpu("SELECT * From Computers");
         Connect();
+        cout << comp[numb - 1] -> name << " is connected to: " << endl;
         for(unsigned int i = 0; i < Relation.size(); i++){
             if(comp[numb - 1] -> name == Relation[i].Compname){
-                cout << endl;
-                cout << Relation[i].Sciname;
+                cout << "--------------------------------------------" << endl;
+                cout << Relation[i].Sciname << endl;
             }
         }
     }
     if(a == 0){
         SortSci("SELECT * From Persons");
         Connect();
+        cout << scient[numb - 1] -> name << " is connceted to: " << endl;
         for(unsigned int i = 0; i < Relation.size(); i++){
-            if(comp[numb - 1] -> name == Relation[i].Sciname){
-                cout << endl;
-                cout << Relation[i].Compname;
+            if(scient[numb - 1] -> name == Relation[i].Sciname)
+                cout << "--------------------------------------------" << endl;
+                cout << Relation[i].Compname << endl;
             }
         }
-    }
 }
+
 

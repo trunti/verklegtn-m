@@ -1,4 +1,4 @@
-#include "ui/ui.h"
+ #include "ui/ui.h"
 #include "domain/domain.h"
 
 #include <string>
@@ -13,7 +13,7 @@ UI::UI(){
 }
 
 void UI::mainMenu(){
-    cout << "########## THE COMPUTER SCIENTISTS DATABASE ##########" << endl;
+    cout << "################ THE COMPUTER SCIENTISTS DATABASE #################" << endl;
     cout << endl;
     cout << "Please select 1-6 (You can always press Q to quit): " << endl;
     cout << endl;
@@ -29,32 +29,32 @@ void UI::mainMenu(){
     switch (selection){
     case '1':
         cleanScreen();
-        cout << "##################### SCIENTISTS #####################" << endl << endl;
+        cout << "########################### SCIENTISTS ############################" << endl << endl;
         listScientists();
         break;
     case '2':
         cleanScreen();
-        cout << "##################### COMPUTERS ######################" << endl << endl;
+        cout << "########################### COMPUTERS ############################" << endl << endl;
         listComputers();
         break;
     case '3':
         cleanScreen();
-        cout << "#### RELATIONSHIP BTWEEN COMPUTERS AND SCIENTISTS ####" << endl << endl;
+        cout << "########## RELATIONSHIP BTWEEN COMPUTERS AND SCIENTISTS ##########" << endl << endl;
         listRelationship();
         break;
     case '4':
         cleanScreen();
-        cout << "################## ADD TO DATABASE ###################" << endl << endl;
+        cout << "######################### ADD TO DATABASE #########################" << endl << endl;
         WhatToAdd();
         break;
     case '5':
         cleanScreen();
-        cout << "####################### SEARCH #######################" << endl << endl;
+        cout << "############################# SEARCH #############################" << endl << endl;
         Search();
         break;
     case '6':
         cleanScreen();
-        cout << "####################### RANDOM #######################" << endl << endl;
+        cout << "############################## RANDOM #############################" << endl << endl;
         RandomCorS();
         break;
     case 'q':
@@ -89,28 +89,28 @@ void UI::listScientists(){
 
     switch (selection){
     case '1':
-        cout << "################## SCIENTISTS (A-Z) ##################" << endl << endl;
+        cout << "################## SCIENTISTS (A-Z) ###############################" << endl << endl;
         break;
     case '2':
-        cout << "################## SCIENTISTS (Z-A) ##################" << endl << endl;
+        cout << "################## SCIENTISTS (Z-A) ###############################" << endl << endl;
         break;
     case '3':
-        cout << "################## SCIENTISTS (M-F) ##################" << endl << endl;
+        cout << "################## SCIENTISTS (M-F) ###############################" << endl << endl;
         break;
     case '4':
-        cout << "################## SCIENTISTS (F-M) ##################" << endl << endl;
+        cout << "################## SCIENTISTS (F-M) ###############################" << endl << endl;
         break;
     case '5':
-        cout << "################## SCIENTISTS (by birth year) ##################" << endl << endl;
+        cout << "################## SCIENTISTS (by birth year) #####################" << endl << endl;
         break;
     case '6':
-        cout << "################## SCIENTISTS (by birth year desc) ##################" << endl << endl;
+        cout << "################## SCIENTISTS (by birth year desc) ################" << endl << endl;
         break;
     case '7':
-        cout << "################## SCIENTISTS (death year) ##################" << endl << endl;
+        cout << "################## SCIENTISTS (death year) ########################" << endl << endl;
         break;
     case '8':
-        cout << "################## SCIENTISTS (death year desc) ##################" << endl << endl;
+        cout << "################## SCIENTISTS (death year desc) ###################" << endl << endl;
         break;
     case 'm':
     case 'M':
@@ -137,7 +137,7 @@ void UI::listScientistsRepeat(){
 
     if(selection == 'y' || selection == 'Y'){
         cleanScreen();
-        cout << "##################### SCIENTISTS #####################" << endl << endl;
+        cout << "##################### SCIENTISTS ##################################" << endl << endl;
         listScientists();
     }
     SwitchForSelection();
@@ -159,19 +159,19 @@ void UI::listComputers(){
 
    switch (selection){
    case '1':
-       cout << "################## COMPUTERS (A-Z) ###################" << endl << endl;
+       cout << "################## COMPUTERS (A-Z) ################################" << endl << endl;
        break;
    case '2':
-       cout << "################## COMPUTERS (Z-A) ###################" << endl << endl;
+       cout << "################## COMPUTERS (Z-A) ################################" << endl << endl;
        break;
    case '3':
-       cout << "################## COMPUTERS BY YEAR #################" << endl << endl;
+       cout << "################## COMPUTERS BY YEAR ##############################" << endl << endl;
        break;
    case '4':
-       cout << "################ COMPUTERS BY YEAR DESC ##############" << endl << endl;
+       cout << "################## COMPUTERS BY YEAR DESC #########################" << endl << endl;
        break;
    case '5':
-       cout << "################## COMPUTERS BY TYPE #################" << endl << endl;
+       cout << "################## COMPUTERS BY TYPE ##############################" << endl << endl;
        break;
    case 'm':
    case 'M':
@@ -199,7 +199,7 @@ void UI::listComputersRepeat(){
 
     if(selection == 'y' || selection == 'Y'){
         cleanScreen();
-        cout << "##################### COMPUTERS ######################" << endl << endl;
+        cout << "##################### COMPUTERS ###################################" << endl << endl;
         listComputers();
     }
     SwitchForSelection();
@@ -221,19 +221,19 @@ void UI::listRelationship(){
     switch (selection){
     case '1':
         cleanScreen();
-        cout << "################## FAMOUS COMPUTERS ##################" << endl << endl;
+        cout << "################## FAMOUS COMPUTERS ###############################" << endl << endl;
         SeeConnections(selection);
         ConnectComputer();
         break;
     case '2':
         cleanScreen();
-        cout << "################## FAMOUS SCIENTISTS #################" << endl << endl;
+        cout << "################## FAMOUS SCIENTISTS ##############################" << endl << endl;
         SeeConnections(selection);
         ConnectScientist();
         break;
     case '3':
         cleanScreen();
-        cout << "################## All CONNECTIONS #################" << endl << endl;
+        cout << "################## All CONNECTIONS ################################" << endl << endl;
         SeeConnections(selection);
         break;
     case 'm':
@@ -279,7 +279,7 @@ void UI::RepeatRandom(){
 
     if(selection == 'y' || selection == 'Y'){
         cleanScreen();
-        cout << "####################### RANDOM #######################" << endl << endl;
+        cout << "####################### RANDOM ####################################" << endl << endl;
         RandomCorS();
     }
     SwitchForSelection();
@@ -297,13 +297,13 @@ void UI::RandomCorS(){
     switch (selection){
     case '1':
         cleanScreen();
-        cout << "################### RANDOM COMPUTER ###################" << endl << endl;
+        cout << "################### RANDOM COMPUTER ###############################" << endl << endl;
         RandomSciorComp(selection);
         RepeatRandom();
         break;
     case '2':
         cleanScreen();
-        cout << "################### RANDOM SCIENTIST ##################" << endl << endl;
+        cout << "################### RANDOM SCIENTIST #############################" << endl << endl;
         RandomSciorComp(selection);
         RepeatRandom();
     case 'm':
@@ -345,8 +345,7 @@ void UI::InputInfoScientist(){
     int Born, Died;
 
     cin.ignore();
-
-    cout << "################### ADDING SCIENTIST ##################" << endl << endl;
+    cout << "###################### ADDING SCIENTIST ###########################" << endl << endl;
 
     cout << "Enter the name: ";
     getline(cin, Name);
@@ -372,9 +371,7 @@ void UI::InputInfoComputer(){
     int Year, choice;
 
     cin.ignore();
-
-    cout << "################### ADDING COMPUTER ##################" << endl << endl;
-
+    cout << "######################## ADDING COMPUTER ##########################" << endl << endl;
     cout << "Name of computer: ";
     getline(cin, Name);
     cout << "Was it built(Yes/No)? ";
@@ -435,27 +432,27 @@ void UI::Search(){
     cleanScreen();
     switch (selection){
     case '1':
-        cout << "################## SCIENTISTS NAME ##################" << endl << endl;
+        cout << "################## SCIENTISTS NAME ################################" << endl << endl;
         SearchInput();
         break;
     case '2':
-        cout << "################## SCIENTISTS GENDER ##################" << endl << endl;
+        cout << "################## SCIENTISTS GENDER ##############################" << endl << endl;
         SearchInput();
         break;
     case '3':
-        cout << "################## SCIENTISTS DEATH YEAR ##################" << endl << endl;
+        cout << "################## SCIENTISTS DEATH YEAR ##########################" << endl << endl;
         SearchInput();
         break;
     case '4':
-        cout << "################## SCIENTISTS BIRTH YEAR ##################" << endl << endl;
+        cout << "################## SCIENTISTS BIRTH YEAR ##########################" << endl << endl;
         SearchInput();
         break;
     case '5':
-        cout << "################## COMPUTER NAME ##################" << endl << endl;
+        cout << "################## COMPUTER NAME ##################################" << endl << endl;
         SearchInput();
         break;
     case '6':
-        cout << "################## COMPUTER YEAR ##################" << endl << endl;
+        cout << "################## COMPUTER YEAR #######$$$$$$$$$$$$$$$$###########" << endl << endl;
         SearchInput();
         break;
     case '7':

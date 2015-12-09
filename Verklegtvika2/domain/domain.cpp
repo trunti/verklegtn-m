@@ -188,15 +188,34 @@ void Domain::InputComputer(string name, int year, string type, string wasbuilt)
 void Domain::SeeConnections(char select){
     clearvector();
     Connect();
+    SortSci("SELECT * From Persons");
+    close();
+    SortCpu("SELECT * From Computers");
     if(select == '1'){
+        for(unsigned int i = 0; i < comp.size(); i++){
+            cout << i+1 << "\t" << comp[i] -> name << endl;
+        }
+        int blah;
+        cout << "input blah plox";
+        cin >> blah;
+        cout << comp[blah - 1] -> name << endl;
+        for(unsigned int i = 0; i < Relation.size(); i++){
+            if(comp[blah - 1] -> name == Relation[i].Compname){
+                cout << endl;
+                cout << Relation[i].Sciname;
+            }
+        }
 
     }
     if(select == '2'){
-
+        for(unsigned int i = 0; i < scient.size(); i++){
+            cout << i+1 << ".\t" << scient[i] -> name << endl;
+        }
     }
     if(select == '3'){
         DisplayVectorConnection();
     }
+    close();
 }
 void Domain::DisplayVectorConnection(){
     for(unsigned int i = 0; i < Relation.size(); i++){

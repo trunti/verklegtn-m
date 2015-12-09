@@ -19,8 +19,8 @@ private:
     void listRelationship();    // Valmynd - Býður upp á mismunandi valmöguleika til að skoða tengsl milli vísindamanna og tölva
     void RandomCorS();          // Velur hvort þú viljir random tölvu eða nörd
     void RepeatRandom();        // Valmynd - Spyr hvort eigi að fá annan random, fara í Main eða hætta
-    void InputInfoScientist();      // Setja nýjann tölvunarfræðing inn í gagnagrunninn frá notanda
-    void InputInfoComputer();       // Setja nýjan tölvu inn í gagnagrunninn frá notanda
+    void InputInfoScientist();  // Setja nýjann tölvunarfræðing inn í gagnagrunninn frá notanda
+    void InputInfoComputer();   // Setja nýjan tölvu inn í gagnagrunninn frá notanda
     void WhatToAdd();           // Adda Scientist eda tolvu
     void Search();
     void SearchRepeat();

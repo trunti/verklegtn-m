@@ -7,9 +7,11 @@ Domain::Domain()
 
 }
 
-void Domain::SortScientists(char select){
+void Domain::SortScientists(char select)
+{
     clearvector();
-    switch (select) {
+    switch (select)
+    {
     case '1':
         GetScientists("Select * FROM Persons Order By pName");
         DisplayVectorS();
@@ -47,9 +49,11 @@ void Domain::SortScientists(char select){
     }
 }
 
-void Domain::SortComputers(char select){
+void Domain::SortComputers(char select)
+{
     clearvector();
-    switch (select) {
+    switch (select)
+    {
     case '1':
         GetComputers("SELECT * FROM Computers ORDER BY Name");
         DisplayVectorC();
@@ -74,16 +78,21 @@ void Domain::SortComputers(char select){
         break;
     }
 }
-void Domain::DisplayVectorS(){
+
+void Domain::DisplayVectorS()
+{
     cout << "Name" << "\t\t\t\t" << "Gender" << "\t\t" << "Born" << "\t" << "Dead" << endl;
     cout << "------------------------------------------------------------------" << endl;
 
-    for(unsigned int i = 0; i < scient.size(); i++){
+    for(unsigned int i = 0; i < scient.size(); i++)
+    {
         cout << "  ";
         cout << scient[i] -> name << "\t";
-        if(scient[i] -> name.size() < 22){
+        if(scient[i] -> name.size() < 22)
+        {
             cout << "\t";
-            if(scient[i] -> name.size() < 14){
+            if(scient[i] -> name.size() < 14)
+            {
                     cout << "\t";
             }
         }
@@ -100,43 +109,57 @@ void Domain::DisplayVectorS(){
 
     }
 }
-void Domain::DisplayVectorC(){
+
+void Domain::DisplayVectorC()
+{
     cout << "Name" << "\t\t\t" << "Year" << "\t" << "Type" << "\t\t\t" << "Built" << endl;
     cout << "------------------------------------------------------------------" << endl;
-    for(unsigned int i = 0; i < comp.size(); i++){
+    for(unsigned int i = 0; i < comp.size(); i++)
+    {
         cout << "  ";
         cout << comp[i] -> name << "\t";
-        if(comp[i] -> name.size() < 16){
+        if(comp[i] -> name.size() < 16)
+        {
             cout << "\t";
-            if(comp[i] -> name.size() < 6){
+            if(comp[i] -> name.size() < 6)
+            {
                     cout << "\t";
             }
         }
         cout << comp[i] -> year << "\t";
         cout << comp[i] -> type << "\t";
-        if(comp[i] -> type.size() < 13){
+        if(comp[i] -> type.size() < 13)
+        {
             cout << "\t";
         }
-        if(comp[i] -> built){
+        if(comp[i] -> built)
+        {
             cout << "Yes!" << endl;
         }
-        else{
+        else
+        {
             cout << "No!" << endl;
         }
     cout << "------------------------------------------------------------------" << endl;
     }
 }
-void Domain::RandomSciorComp(char select){
+
+void Domain::RandomSciorComp(char select)
+{
     clearvector();
-    if(select == '1'){
+    if(select == '1')
+
+    {
         GetRandomComputer();
         DisplayVectorC();
     }
-    if(select == '2'){
+    if(select == '2')
+    {
         GetRandomScientist();
         DisplayVectorS();
     }
 }
+
 void Domain::SearchinPersons(char select, string searchv)
 {
     clearvector();
@@ -178,24 +201,32 @@ void Domain::SearchinPersons(char select, string searchv)
         break;
     }
 }
+
 void Domain::InputScientist(string name, string gender, int born, int died)
 {
         AddScientist(name, gender, born, died);
 }
-bool Domain::CorrectScientist(string name,string gender,int byear, int dyear){
-    if(name == ""){
+
+bool Domain::CorrectScientist(string name,string gender,int byear, int dyear)
+{
+    if(name == "")
+    {
         return false;
     }
-    if(gender != "Male" || gender != "Female"){
+    if(gender != "Male" || gender != "Female")
+    {
         return false;
     }
-    if(byear > dyear){
+    if(byear > dyear)
+    {
         return false;
     }
-    if(byear <= 1500){
+    if(byear <= 1500)
+    {
         return false;
     }
-    if(dyear > 2015){
+    if(dyear > 2015)
+    {
         return false;
     }
 
@@ -206,8 +237,11 @@ void Domain::InputComputer(string name, int year, string type, string wasbuilt)
 {
     AddComputer(name, year, type, wasbuilt);
 }
-bool Domain::CorrectComputer(string name,int year){
-    if(name == ""){
+
+bool Domain::CorrectComputer(string name,int year)
+{
+    if(name == "")
+    {
         return false;
     }
     if(year == 0){
@@ -220,78 +254,102 @@ bool Domain::CorrectComputer(string name,int year){
     return true;
 }
 
-void Domain::SeeConnections(char select){
+void Domain::SeeConnections(char select)
+{
     clearvector();
     Connect();
 
-    if(select == '1'){
+    if(select == '1')
+    {
         OnlyCompName();
     }
-    if(select == '2'){
+    if(select == '2')
+    {
         OnlySciName();
     }
-    if(select == '3'){
+    if(select == '3')
+    {
         DisplayVectorConnection();
     }
 }
-void Domain::OnlyCompName(){
+
+void Domain::OnlyCompName()
+{
     GetComputers("SELECT * From Computers");
 
-    for(unsigned int i = 0; i < comp.size(); i++){
+    for(unsigned int i = 0; i < comp.size(); i++)
+    {
         cout << "--------------------------------------------" << endl;
         cout << i+1 << "\t" << comp[i] -> name << endl;
     }
 }
-void Domain::OnlySciName(){
+
+void Domain::OnlySciName()
+{
     GetScientists("SELECT * From Persons");
 
-    for(unsigned int i = 0; i < scient.size(); i++){
+    for(unsigned int i = 0; i < scient.size(); i++)
+    {
         cout << "--------------------------------------------" << endl;
         cout << i+1 << ".\t" << scient[i] -> name << endl;
     }
 }
-void Domain::DisplayVectorConnection(){
-    for(unsigned int i = 0; i < Relation.size(); i++){
+
+void Domain::DisplayVectorConnection()
+{
+    for(unsigned int i = 0; i < Relation.size(); i++)
+    {
         cout << "--------------------------------------------------" << endl;
         cout << Relation[i].Sciname << "\t";
-        if(Relation[i].Sciname.size() < 23){
+        if(Relation[i].Sciname.size() < 23)
+        {
             cout << "\t";
-            if(Relation[i].Sciname.size() < 16){
+            if(Relation[i].Sciname.size() < 16)
+            {
                     cout << "\t";
             }
         }
         cout << Relation[i].Compname << endl;
     }
 }
-void Domain::FindConnection(int numb, bool compconnection){
+
+void Domain::FindConnection(int numb, bool compconnection)
+{
     clearvector();
     bool found = false;
 
-    if(compconnection){
+    if(compconnection)
+    {
         GetComputers("SELECT * From Computers");
         Connect();
         cout << comp[numb - 1] -> name << " is connected to: " << endl;
-        for(unsigned int i = 0; i < Relation.size(); i++){
-            if(comp[numb - 1] -> name == Relation[i].Compname){
+        for(unsigned int i = 0; i < Relation.size(); i++)
+        {
+            if(comp[numb - 1] -> name == Relation[i].Compname)
+            {
                 cout << "--------------------------------------------" << endl;
                 cout << Relation[i].Sciname << endl;
                 found = true;
             }
         }
     }
-    if(!compconnection){
+    if(!compconnection)
+    {
         GetScientists("SELECT * From Persons");
         Connect();
         cout << scient[numb - 1] -> name << " is connceted to: " << endl;
-        for(unsigned int i = 0; i < Relation.size(); i++){
-            if(scient[numb - 1] -> name == Relation[i].Sciname){
+        for(unsigned int i = 0; i < Relation.size(); i++)
+        {
+            if(scient[numb - 1] -> name == Relation[i].Sciname)
+            {
                 cout << "--------------------------------------------" << endl;
                 cout << Relation[i].Compname << endl;
                 found = true;
             }
         }
     }
-    if(!found){
+    if(!found)
+    {
         cout << "--------------------------------------------" << endl;
         cout << "Not connected to anything!" << endl;
     }

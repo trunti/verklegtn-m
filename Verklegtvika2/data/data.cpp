@@ -13,7 +13,9 @@ void Data::openDatabase()
     db.setDatabaseName(dbName);
     db.open();
 }
-void Data::clearvector(){
+
+void Data::clearvector()
+{
     scient.clear();
     comp.clear();
     Relation.clear();
@@ -26,7 +28,8 @@ void Data::close(){
     db.removeDatabase(connection);
 }
 
-void Data::GetScientists(QString str){
+void Data::GetScientists(QString str)
+{
     openDatabase();
     QSqlQuery query(db);
     query.prepare(str);
@@ -43,7 +46,8 @@ void Data::GetScientists(QString str){
     close();
 }
 
-void Data::GetComputers(QString str){
+void Data::GetComputers(QString str)
+{
     openDatabase();
     QSqlQuery query(db);
     query.prepare(str);
@@ -60,7 +64,9 @@ void Data::GetComputers(QString str){
     }
     close();
 }
-void Data::GetRandomScientist(){
+
+void Data::GetRandomScientist()
+{
     openDatabase();
     QSqlQuery query(db);
     query.prepare("Select * FROM Persons ORDER BY RANDOM() LIMIT 1");
@@ -78,7 +84,9 @@ void Data::GetRandomScientist(){
     }
     close();
 }
-void Data::GetRandomComputer(){
+
+void Data::GetRandomComputer()
+{
     openDatabase();
     QSqlQuery query(db);
     query.prepare("Select * FROM Computers ORDER BY RANDOM() LIMIT 1");
@@ -95,7 +103,9 @@ void Data::GetRandomComputer(){
     }
     close();
 }
-void Data::SearchForSci(QString str, string searchv){
+
+void Data::SearchForSci(QString str, string searchv)
+{
     openDatabase();
     QSqlQuery query(db);
     query.prepare(str);
@@ -115,7 +125,9 @@ void Data::SearchForSci(QString str, string searchv){
     }
     close();
 }
-void Data::SearchForCom(QString str, string searchv){
+
+void Data::SearchForCom(QString str, string searchv)
+{
     openDatabase();
     QSqlQuery query(db);
     query.prepare(str);
@@ -135,7 +147,9 @@ void Data::SearchForCom(QString str, string searchv){
     }
     close();
 }
-void Data::AddComputer(string name, int year, string type, string wasbuilt){
+
+void Data::AddComputer(string name, int year, string type, string wasbuilt)
+{
     openDatabase();
     QSqlQuery query;
     query.prepare("INSERT INTO Computers (Name, Year, Type, Build) VALUES (:Name, :Year, :Type, :Build)");
@@ -152,7 +166,9 @@ void Data::AddComputer(string name, int year, string type, string wasbuilt){
     query.exec();
     close();
 }
-void Data::AddScientist(string name, string gender, int born, int died){
+
+void Data::AddScientist(string name, string gender, int born, int died)
+{
     openDatabase();
     QSqlQuery query;
     query.prepare("INSERT INTO Persons (pName, Gender, Born, Died) VALUES (:Name, :Gender, :Born, :Died)");
@@ -163,7 +179,9 @@ void Data::AddScientist(string name, string gender, int born, int died){
     query.exec();
     close();
 }
-void Data::Connect(){
+
+void Data::Connect()
+{
     Connections connect;
     openDatabase();
     QSqlQuery query(db);

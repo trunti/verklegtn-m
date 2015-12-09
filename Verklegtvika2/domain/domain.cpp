@@ -220,9 +220,10 @@ void Domain::DisplayVectorConnection(){
         cout << Relation[i].Compname << endl;
     }
 }
-void Domain::FindConnection(int numb, int a){
+void Domain::FindConnection(int numb, bool compconnection){
     clearvector();
-    if(a == 1){
+    bool found = false;
+    if(compconnection){
         SortCpu("SELECT * From Computers");
         Connect();
         cout << comp[numb - 1] -> name << " is connected to: " << endl;
@@ -230,19 +231,26 @@ void Domain::FindConnection(int numb, int a){
             if(comp[numb - 1] -> name == Relation[i].Compname){
                 cout << "--------------------------------------------" << endl;
                 cout << Relation[i].Sciname << endl;
+                found = true;
             }
         }
     }
-    if(a == 0){
+    if(!compconnection){
         SortSci("SELECT * From Persons");
         Connect();
         cout << scient[numb - 1] -> name << " is connceted to: " << endl;
         for(unsigned int i = 0; i < Relation.size(); i++){
-            if(scient[numb - 1] -> name == Relation[i].Sciname)
+            if(scient[numb - 1] -> name == Relation[i].Sciname){
                 cout << "--------------------------------------------" << endl;
                 cout << Relation[i].Compname << endl;
+                found = true;
             }
         }
+    }
+    if(!found){
+        cout << "--------------------------------------------" << endl;
+        cout << "Not connected to anything!" << endl;
+    }
 }
 
 

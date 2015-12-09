@@ -23,7 +23,7 @@ public:
     void InputComputer(string name, int year, string type, string wasbuilt);  //Fltur a milli UI og Datalayer fyrir Computer
     void OnlyCompName();
     void OnlySciName();
-    void FindConnection(int numb,int a);
+    void FindConnection(int numb, bool compconnection);
 };
 
 #endif // DOMAIN_H

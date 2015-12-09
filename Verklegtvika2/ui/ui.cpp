@@ -267,20 +267,20 @@ void UI::listRelationship()
 }
 void UI::ConnectComputer(){
     int Comp;
-    int a = 1;
-    cout << "What computer? ";
+    bool comp = true;
+    cout << "Choose a number to get connection! ";
     cin >> Comp;
     cout << endl;
-    FindConnection(Comp,a);
+    FindConnection(Comp,comp);
 
 }
 void UI::ConnectScientist(){
     int Scient;
-    int a = 0;
-    cout << "What Scientist? ";
+    bool sci = false;
+    cout << "Choose a number to get connection! ";
     cin >> Scient;
     cout << endl;
-    FindConnection(Scient,a);
+    FindConnection(Scient,sci);
 }
 void UI::RepeatRandom(){
     cout << endl << "Another random scientist or computer? (Y/N)" << endl;

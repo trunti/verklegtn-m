@@ -24,6 +24,8 @@ public:
     void OnlyCompName();
     void OnlySciName();
     void FindConnection(int numb, bool compconnection);
+    bool CorrectScientist(string name,string gender,int byear, int dyear);
+    bool CorrectComputer(string name, int year);
 };
 
 #endif // DOMAIN_H

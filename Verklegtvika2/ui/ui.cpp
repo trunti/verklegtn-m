@@ -9,7 +9,7 @@
 using namespace std;
 
 UI::UI(){
-
+    mainMenu();
 }
 
 void UI::mainMenu()
@@ -366,14 +366,20 @@ void UI::InputInfoScientist()
 
     cout << "Enter the name: ";
     getline(cin, Name);
-    cout << "Enter gender: ";
+    cout << "Enter gender(Male/Female): ";
     cin >> Gender;
     cout << "Born: ";
     cin >> Born;
     cout << "Year of death: ";
     cin >> Died;
 
-    InputScientist(Name, Gender, Born, Died);
+    if(CorrectScientist(Name,Gender,Born,Died)){
+        InputScientist(Name, Gender, Born, Died);
+    }else{
+        cout << endl;
+        cout << "Something went wrong!" << endl;
+        cout << "Make sure you put in the right information!" << endl;
+    }
 
 }
 void UI::InputInfoComputer()
@@ -387,7 +393,7 @@ void UI::InputInfoComputer()
 
     cout << "Name of computer: ";
     getline(cin, Name);
-    cout << "Was it built? Yes or No ";
+    cout << "Was it built(Yes/No)? ";
     cin >> Wasbuilt;
     if(Wasbuilt == "Yes")
     {
@@ -422,7 +428,13 @@ void UI::InputInfoComputer()
         Type = "An idea, wasn't built";
     }
 
-    InputComputer(Name, Year, Type, Wasbuilt);
+    if(CorrectComputer(Name,Year)){
+        InputComputer(Name, Year, Type, Wasbuilt);
+    }else{
+        cout << endl;
+        cout << "Something went wrong!" << endl;
+        cout << "Make sure you put in the right information!" << endl;
+    }
 }
 void UI::Search()
 {

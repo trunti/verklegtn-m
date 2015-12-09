@@ -179,12 +179,46 @@ void Domain::SearchinPersons(char select, string searchv)
 }
 void Domain::InputScientist(string name, string gender, int born, int died)
 {
-    AddScientist(name, gender, born, died);
+        AddScientist(name, gender, born, died);
 }
+bool Domain::CorrectScientist(string name,string gender,int byear, int dyear){
+    if(name == ""){
+        return false;
+    }
+    if(gender != "Male" || gender != "Female"){
+        return false;
+    }
+    if(byear > dyear){
+        return false;
+    }
+    if(byear <= 1500){
+        return false;
+    }
+    if(dyear > 2015){
+        return false;
+    }
+
+    return true;
+}
+
 void Domain::InputComputer(string name, int year, string type, string wasbuilt)
 {
     AddComputer(name, year, type, wasbuilt);
 }
+bool Domain::CorrectComputer(string name,int year){
+    if(name == ""){
+        return false;
+    }
+    if(year == 0){
+        return true;
+    }
+    if(year <= 1500 || year > 2015){
+        return false;
+    }
+
+    return true;
+}
+
 void Domain::SeeConnections(char select){
     clearvector();
     Connect();

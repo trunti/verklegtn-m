@@ -346,6 +346,7 @@ void UI::WhatToAdd()
         InputInfoComputer();
         break;
     }
+    AddToDatabaseRepeat();
 }
 void UI::InputInfoScientist()
 {
@@ -509,4 +510,17 @@ void UI::InputForSelection(){
     cout << endl;
     cout << "Selection: ";
     cin >> selection;
+}
+void UI::AddToDatabaseRepeat(){
+    cout << endl << "Do you want to search again? (Y/N)" << endl;
+    cout << "You can press M to go back to the menu and Q to quit!" << endl;
+
+    InputForSelection();
+
+    if(selection == 'y' || selection == 'Y'){
+        cleanScreen();
+        WhatToAdd();
+    }
+    SwitchForSelection();
+    AddToDatabaseRepeat();
 }

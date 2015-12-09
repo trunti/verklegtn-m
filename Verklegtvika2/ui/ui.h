@@ -27,6 +27,7 @@ private:
     void SearchRepeat();
     void SwitchForSelection();
     void InputForSelection();
+    void AddToDatabaseRepeat();
 };
 
 

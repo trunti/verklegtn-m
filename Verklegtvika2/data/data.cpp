@@ -42,6 +42,7 @@ void Data::SortSci(QString str)
                 pScientist -> died = query.value("Died").toUInt();
                 scient.push_back(pScientist);
             }
+        close();
 }
 
 void Data::SortCpu(QString str)
@@ -60,6 +61,7 @@ void Data::SortCpu(QString str)
             pComputers -> built = query.value("Build").toBool();
             comp.push_back(pComputers);
         }
+        close();
 }
 void Data::GetRandomScientist(){
     openDatabase();

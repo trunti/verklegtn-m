@@ -188,38 +188,59 @@ void Domain::InputComputer(string name, int year, string type, string wasbuilt)
 void Domain::SeeConnections(char select){
     clearvector();
     Connect();
-    SortSci("SELECT * From Persons");
-    close();
-    SortCpu("SELECT * From Computers");
     if(select == '1'){
-        for(unsigned int i = 0; i < comp.size(); i++){
-            cout << i+1 << "\t" << comp[i] -> name << endl;
-        }
-        int blah;
-        cout << "input blah plox";
-        cin >> blah;
-        cout << comp[blah - 1] -> name << endl;
-        for(unsigned int i = 0; i < Relation.size(); i++){
-            if(comp[blah - 1] -> name == Relation[i].Compname){
-                cout << endl;
-                cout << Relation[i].Sciname;
-            }
-        }
-
+        OnlyCompName();
     }
     if(select == '2'){
-        for(unsigned int i = 0; i < scient.size(); i++){
-            cout << i+1 << ".\t" << scient[i] -> name << endl;
-        }
+        OnlySciName();
     }
     if(select == '3'){
         DisplayVectorConnection();
     }
     close();
 }
+void Domain::OnlyCompName(){
+    SortCpu("SELECT * From Computers");
+    for(unsigned int i = 0; i < comp.size(); i++){
+        cout << i+1 << "\t" << comp[i] -> name << endl;
+    }
+    close();
+}
+void Domain::OnlySciName(){
+    SortSci("SELECT * From Persons");
+    for(unsigned int i = 0; i < scient.size(); i++){
+        cout << i+1 << ".\t" << scient[i] -> name << endl;
+    }
+    close();
+}
 void Domain::DisplayVectorConnection(){
+    Connect();
     for(unsigned int i = 0; i < Relation.size(); i++){
         cout << Relation[i].Sciname << " ";
         cout << Relation[i].Compname << endl;
     }
 }
+void Domain::FindConnection(int numb, int a){
+    clearvector();
+    if(a == 1){
+        SortCpu("SELECT * From Computers");
+        Connect();
+        for(unsigned int i = 0; i < Relation.size(); i++){
+            if(comp[numb - 1] -> name == Relation[i].Compname){
+                cout << endl;
+                cout << Relation[i].Sciname;
+            }
+        }
+    }
+    if(a == 0){
+        SortSci("SELECT * From Persons");
+        Connect();
+        for(unsigned int i = 0; i < Relation.size(); i++){
+            if(comp[numb - 1] -> name == Relation[i].Sciname){
+                cout << endl;
+                cout << Relation[i].Compname;
+            }
+        }
+    }
+}
+

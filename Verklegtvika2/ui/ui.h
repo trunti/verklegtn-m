@@ -28,6 +28,8 @@ private:
     void SwitchForSelection();
     void InputForSelection();
     void AddToDatabaseRepeat();
+    void ConnectComputer();
+    void ConnectScientist();
 };
 
 

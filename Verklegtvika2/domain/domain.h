@@ -21,6 +21,9 @@ public:
     void SeeConnections(char select);           // Sýnir tengingar á milli vísindamanna og tölva af beiðni notanda.
     void InputScientist(string name, string gender, int born, int died); //Flytur a milli UI og Datalayer fyrir Scientist
     void InputComputer(string name, int year, string type, string wasbuilt);  //Fltur a milli UI og Datalayer fyrir Computer
+    void OnlyCompName();
+    void OnlySciName();
+    void FindConnection(int numb,int a);
 };
 
 #endif // DOMAIN_H

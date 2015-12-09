@@ -235,14 +235,19 @@ void UI::listRelationship()
     case '1':
         cleanScreen();
         cout << "################## FAMOUS COMPUTERS ##################" << endl << endl;
+        SeeConnections(selection);
+        ConnectComputer();
         break;
     case '2':
         cleanScreen();
         cout << "################## FAMOUS SCIENTISTS #################" << endl << endl;
+        SeeConnections(selection);
+        ConnectScientist();
         break;
     case '3':
         cleanScreen();
         cout << "################## All CONNECTIONS #################" << endl << endl;
+        SeeConnections(selection);
         break;
     case 'm':
     case 'M':
@@ -258,24 +263,21 @@ void UI::listRelationship()
         listRelationship();
         break;
     }
-    SeeConnections(selection);
 }
-
-void UI::selectComputerID(){
-    int id;
-
-    cout << "ID: ";
-    cin >> id;
-    cout << "Skipta mer ut fyrir fallid sem synir tolvu og venslada visindamenn" << endl;
+void UI::ConnectComputer(){
+    int Comp;
+    int a = 1;
+    cout << "What computer? ";
+    cin >> Comp;
+    FindConnection(Comp,a);
 
 }
-
-void UI::selectSientistID(){
-    int id;
-
-    cout << "ID: ";
-    cin >> id;
-    cout << "Skipta mer ut fyrir fallid sem synir visindamann og vensladar tolvur" << endl;
+void UI::ConnectScientist(){
+    int Scient;
+    int a = 0;
+    cout << "What Scientist? ";
+    cin >> Scient;
+    FindConnection(Scient,a);
 }
 void UI::RepeatRandom(){
     cout << endl << "Another random scientist or computer? (Y/N)" << endl;

@@ -12,8 +12,7 @@ UI::UI(){
     mainMenu();
 }
 
-void UI::mainMenu()
-{
+void UI::mainMenu(){
     cout << "########## THE COMPUTER SCIENTISTS DATABASE ##########" << endl;
     cout << endl;
     cout << "Please select 1-6 (You can always press Q to quit): " << endl;
@@ -27,8 +26,7 @@ void UI::mainMenu()
 
     InputForSelection();
 
-    switch (selection)
-    {
+    switch (selection){
     case '1':
         cleanScreen();
         cout << "##################### SCIENTISTS #####################" << endl << endl;
@@ -74,8 +72,7 @@ void UI::cleanScreen(){
     system("CLS");
 }
 
-void UI::listScientists()
-{
+void UI::listScientists(){
     cout << "How should the list be sorted: " << endl << endl;
     cout << "1: By name (A-Z)" << endl;
     cout << "2: By name (Z-A)" << endl;
@@ -90,8 +87,7 @@ void UI::listScientists()
     InputForSelection();
     cleanScreen();
 
-    switch (selection)
-    {
+    switch (selection){
     case '1':
         cout << "################## SCIENTISTS (A-Z) ##################" << endl << endl;
         break;
@@ -133,15 +129,13 @@ void UI::listScientists()
     listScientistsRepeat();
 }
 
-void UI::listScientistsRepeat()
-{
+void UI::listScientistsRepeat(){
     cout << endl << "Do you want to sort again? (Y/N)" << endl;
     cout << "You can press M to go back to the menu and Q to quit!" << endl;
 
     InputForSelection();
 
-    if(selection == 'y' || selection == 'Y')
-    {
+    if(selection == 'y' || selection == 'Y'){
         cleanScreen();
         cout << "##################### SCIENTISTS #####################" << endl << endl;
         listScientists();
@@ -150,8 +144,7 @@ void UI::listScientistsRepeat()
     listScientistsRepeat();
 }
 
-void UI::listComputers()
-{
+void UI::listComputers(){
     cout << "How should the list be sorted: " << endl << endl;
     cout << "1: By name (A-Z)" << endl;
     cout << "2: By name (Z-A)" << endl;
@@ -164,8 +157,7 @@ void UI::listComputers()
    InputForSelection();
    cleanScreen();
 
-   switch (selection)
-   {
+   switch (selection){
    case '1':
        cout << "################## COMPUTERS (A-Z) ###################" << endl << endl;
        break;
@@ -199,15 +191,13 @@ void UI::listComputers()
    listComputersRepeat();
 }
 
-void UI::listComputersRepeat()
-{
+void UI::listComputersRepeat(){
     cout << endl << "Do you want to sort again? (Y/N)" << endl;
     cout << "You can press M to go back to the menu and Q to quit!" << endl;
 
     InputForSelection();
 
-    if(selection == 'y' || selection == 'Y')
-    {
+    if(selection == 'y' || selection == 'Y'){
         cleanScreen();
         cout << "##################### COMPUTERS ######################" << endl << endl;
         listComputers();
@@ -216,8 +206,7 @@ void UI::listComputersRepeat()
     listComputersRepeat();
 }
 
-void UI::listRelationship()
-{
+void UI::listRelationship(){
     cout << "How should the list be sorted: " << endl << endl;
 
     cout << "1: Select computer to see the scientist behind the machine." << endl;
@@ -229,8 +218,7 @@ void UI::listRelationship()
 
     InputForSelection();
 
-    switch (selection)
-    {
+    switch (selection){
     case '1':
         cleanScreen();
         cout << "################## FAMOUS COMPUTERS ##################" << endl << endl;
@@ -267,7 +255,8 @@ void UI::listRelationship()
 void UI::ConnectComputer(){
     int Comp;
     bool comp = true;
-    cout << "Choose a number to get connection! ";
+    cout << endl;
+    cout << "Select a number to get connection: ";
     cin >> Comp;
     cout << endl;
     FindConnection(Comp,comp);
@@ -276,7 +265,8 @@ void UI::ConnectComputer(){
 void UI::ConnectScientist(){
     int Scient;
     bool sci = false;
-    cout << "Choose a number to get connection! ";
+    cout << endl;
+    cout << "Select a number to get connection: ";
     cin >> Scient;
     cout << endl;
     FindConnection(Scient,sci);
@@ -287,8 +277,7 @@ void UI::RepeatRandom(){
 
     InputForSelection();
 
-    if(selection == 'y' || selection == 'Y')
-    {
+    if(selection == 'y' || selection == 'Y'){
         cleanScreen();
         cout << "####################### RANDOM #######################" << endl << endl;
         RandomCorS();
@@ -305,8 +294,7 @@ void UI::RandomCorS(){
     cout << endl << "You can press 'M' for MAIN or 'Q' to QUIT." << endl;
 
     InputForSelection();
-    switch (selection)
-    {
+    switch (selection){
     case '1':
         cleanScreen();
         cout << "################### RANDOM COMPUTER ###################" << endl << endl;
@@ -342,8 +330,7 @@ void UI::WhatToAdd()
     InputForSelection();
     cleanScreen();
 
-    switch(selection)
-    {
+    switch(selection){
     case '1':
         InputInfoScientist();
         break;
@@ -353,8 +340,7 @@ void UI::WhatToAdd()
     }
     AddToDatabaseRepeat();
 }
-void UI::InputInfoScientist()
-{
+void UI::InputInfoScientist(){
     string Name, Gender;
     int Born, Died;
 
@@ -381,8 +367,7 @@ void UI::InputInfoScientist()
     }
 
 }
-void UI::InputInfoComputer()
-{
+void UI::InputInfoComputer(){
     string Name, Type, Wasbuilt;
     int Year, choice;
 
@@ -394,8 +379,7 @@ void UI::InputInfoComputer()
     getline(cin, Name);
     cout << "Was it built(Yes/No)? ";
     cin >> Wasbuilt;
-    if(Wasbuilt == "Yes")
-    {
+    if(Wasbuilt == "Yes"){
         cout << "What year was it built? ";
         cin >> Year;
         cout << "What type of computer is it?";
@@ -405,8 +389,7 @@ void UI::InputInfoComputer()
         cout << "4. Electro-Mechanical";
         cin >> choice;
 
-        switch(choice)
-        {
+        switch(choice){
         case 1:
             Type = "Mechanical";
             break;
@@ -421,8 +404,7 @@ void UI::InputInfoComputer()
             break;
         }
     }
-    else
-    {
+    else{
         Year = 0;
         Type = "An idea, wasn't built";
     }
@@ -436,8 +418,7 @@ void UI::InputInfoComputer()
         cout << "Make sure you put in the right information!" << endl;
     }
 }
-void UI::Search()
-{
+void UI::Search(){
     cout << "Please select 1-8 (You can always press Q to quit): " << endl;
     cout << endl;
     cout << "1: To search for scientists name." << endl;
@@ -500,25 +481,21 @@ void UI::Search()
     SearchRepeat();
 }
 
-void UI::SearchRepeat()
-{
+void UI::SearchRepeat(){
     cout << endl << "Do you want to search again? (Y/N)" << endl;
     cout << "You can press M to go back to the menu and Q to quit!" << endl;
 
     InputForSelection();
 
-    if(selection == 'y' || selection == 'Y')
-    {
+    if(selection == 'y' || selection == 'Y'){
         cleanScreen();
         Search();
     }
     SwitchForSelection();
     SearchRepeat();
 }
-void UI::SwitchForSelection()
-{
-    switch (selection)
-    {
+void UI::SwitchForSelection(){
+    switch (selection){
     case 'N':
     case 'n':
     case 'm':
@@ -556,8 +533,7 @@ void UI::SearchInput(){
     cout << "Enter search value: ";
     cin >> searchv;
 }
-void UI::ConnectionsRepeat()
-{
+void UI::ConnectionsRepeat(){
     cout << endl << "Do you want to see more connections? (Y/N)" << endl;
     cout << "You can press M to go back to the menu and Q to quit!" << endl;
 

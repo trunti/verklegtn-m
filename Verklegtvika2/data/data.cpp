@@ -76,6 +76,7 @@ void Data::GetRandomScientist(){
         pScientist -> died = query.value("Died").toUInt();
         scient.push_back(pScientist);
     }
+    close();
 }
 void Data::GetRandomComputer(){
     openDatabase();
@@ -92,6 +93,7 @@ void Data::GetRandomComputer(){
         pComputers -> built = query.value("Build").toBool();
         comp.push_back(pComputers);
     }
+    close();
 }
 void Data::SearchForSci(QString str, string searchv){
     openDatabase();
@@ -111,6 +113,7 @@ void Data::SearchForSci(QString str, string searchv){
         pScientist -> died = query.value("Died").toUInt();
         scient.push_back(pScientist);
     }
+    close();
 }
 void Data::SearchForCom(QString str, string searchv){
     openDatabase();
@@ -130,6 +133,7 @@ void Data::SearchForCom(QString str, string searchv){
         pComputers -> built = query.value("Build").toBool();
         comp.push_back(pComputers);
     }
+    close();
 }
 void Data::AddComputer(string name, int year, string type, string wasbuilt){
     openDatabase();

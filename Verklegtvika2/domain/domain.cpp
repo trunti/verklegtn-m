@@ -45,7 +45,6 @@ void Domain::SortScientists(char select){
     default:
         break;
     }
-    close();
 }
 
 void Domain::SortComputers(char select){
@@ -74,7 +73,6 @@ void Domain::SortComputers(char select){
     default:
         break;
     }
-    close();
 }
 void Domain::DisplayVectorS(){
     cout << "Name" << "\t\t\t\t" << "Gender" << "\t\t" << "Born" << "\t" << "Dead" << endl;
@@ -138,7 +136,6 @@ void Domain::RandomSciorComp(char select){
         GetRandomScientist();
         DisplayVectorS();
     }
-    close();
 }
 void Domain::SearchinPersons(char select, string searchv)
 {
@@ -180,7 +177,6 @@ void Domain::SearchinPersons(char select, string searchv)
         cout << "Invalid choice!";
         break;
     }
-    close();
 }
 void Domain::InputScientist(string name, string gender, int born, int died)
 {
@@ -237,7 +233,6 @@ void Domain::SeeConnections(char select){
     if(select == '3'){
         DisplayVectorConnection();
     }
-    close();
 }
 void Domain::OnlyCompName(){
     GetComputers("SELECT * From Computers");
@@ -246,7 +241,6 @@ void Domain::OnlyCompName(){
         cout << "--------------------------------------------" << endl;
         cout << i+1 << "\t" << comp[i] -> name << endl;
     }
-    close();
 }
 void Domain::OnlySciName(){
     GetScientists("SELECT * From Persons");
@@ -255,7 +249,6 @@ void Domain::OnlySciName(){
         cout << "--------------------------------------------" << endl;
         cout << i+1 << ".\t" << scient[i] -> name << endl;
     }
-    close();
 }
 void Domain::DisplayVectorConnection(){
     for(unsigned int i = 0; i < Relation.size(); i++){

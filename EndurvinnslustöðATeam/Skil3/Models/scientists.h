@@ -1,11 +1,33 @@
-#ifndef SCIENTISTS_H
-#define SCIENTISTS_H
+#ifndef SCIENTIST_H
+#define SCIENTIST_H
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
 
 
-class Scientists
+class Scientist
 {
 public:
-    Scientists();
+    Scientist(int ID,string name, string gender, int Byear,int Dyear);
+    Scientist(int ID,string name, string gender, int Byear);
+
+    int getID();
+    string getName();
+    string getGender();
+    int getByear();
+    int getDyear();
+    string getAlive();
+
+private:
+    int ID;
+    string name;
+    string gender;
+    int Byear;
+    int Dyear;
+    string Alive;
+
 };
 
-#endif // SCIENTISTS_H
+#endif // SCIENTIST_H

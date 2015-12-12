@@ -1,11 +1,27 @@
-#ifndef SCIENTISTSREPOSITORIES_H
-#define SCIENTISTSREPOSITORIES_H
+#ifndef SCIENTISTREPOS_H
+#define SCIENTISTREPOS_H
+#include <iostream>
+#include <vector>
+#include <string>
+#include <QtSql>
+#include "Models/scientists.h"
 
 
-class Scientistsrepositories
+class Scientistrepositories
 {
 public:
-    Scientistsrepositories();
+    Scientistrepositories();
+
+    vector<Scientist> getAllScientists(string orderBy, bool orderAscending);
+    vector<Scientist> searchScientists(string searchString, string orderBy, bool orderAscending);
+    bool addScientist(Scientist scientist);
+    bool removeScientist(Scientist scientist);
+
+private:
+    vector<Scientist> queryStudents(string sqlQuery);
+
+    QSqlDatabase db;
+
 };
 
-#endif // SCIENTISTSREPOSITORIES_H
+#endif // SCIENTISTREPOS_H

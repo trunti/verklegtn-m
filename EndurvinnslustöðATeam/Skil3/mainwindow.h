@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "Services/scientistservice.h"
+#include <vector>
+
+using namespace std;
 
 namespace Ui {
 class MainWindow;
@@ -16,6 +20,11 @@ public:
     ~MainWindow();
 
 private:
+    void displayAllScientists();
+    void displayScientists(vector<Scientist> scientist);
+
+    Scientistservice scientistService;
+
     Ui::MainWindow *ui;
 };
 

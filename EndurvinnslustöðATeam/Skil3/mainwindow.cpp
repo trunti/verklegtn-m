@@ -30,15 +30,13 @@ void MainWindow::displayScientists(vector<Scientist> scientist)
 
     for (unsigned int row = 0; row < scientist.size(); row++)
     {
-        Scientist currentScientist = scientist[row];
+        Scientist currentScientist = scientist.at(row);
 
         QString name = QString::fromStdString(currentScientist.getName());
         QString gender = QString::fromStdString(currentScientist.getGender());
 
         ui->table_scientists->setItem(row, 0, new QTableWidgetItem(name));
         ui->table_scientists->setItem(row, 1, new QTableWidgetItem(gender));
-        ui->table_scientists->setItem(row, 2, new QTableWidgetItem(currentScientist.getByear()));
-        ui->table_scientists->setItem(row, 3, new QTableWidgetItem(currentScientist.getDyear()));
     }
 
     currentlyDisplayedScientist = scientist;
@@ -59,6 +57,5 @@ void MainWindow::displayComputers(vector<Computer> computer)
         Computer currentComputer = computer[i];
 
         ui->list_scient->addItem(QString::fromStdString(currentComputer.getName()));
-        ui->list_scient->addItem(QString::number(currentComputer.getYear()));
     }
 }

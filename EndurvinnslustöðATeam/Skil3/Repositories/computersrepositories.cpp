@@ -5,7 +5,7 @@
 Computersrepositories::Computersrepositories()
 {
     QString dbName = "database.sqlite";
-    db = QSqlDatabase::addDatabase("QSQLITE");
+    db = QSqlDatabase::addDatabase("QSQLITE","Comp");
     db.setDatabaseName(dbName);
 }
 
@@ -15,7 +15,7 @@ vector<Computer> Computersrepositories::getAllComputers(string orderBy, bool ord
 
     sqlQuery << "SELECT * FROM Computers ORDER BY " << orderBy << " " << ((orderAscending) ? "ASC" : "DESC");
 
-    return queryStudents(sqlQuery.str());
+    return queryComputer(sqlQuery.str());
 }
 
 vector<Computer> Computersrepositories::searchComputers(string searchString, string orderBy, bool orderAscending)
@@ -24,7 +24,7 @@ vector<Computer> Computersrepositories::searchComputers(string searchString, str
 
     sqlQuery << "SELECT * FROM Computers WHERE name LIKE '%" << searchString << "%' ORDER BY " << orderBy << " " << ((orderAscending) ? "ASC" : "DESC");
 
-    return queryStudents(sqlQuery.str());
+    return queryComputer(sqlQuery.str());
 }
 
 bool Computersrepositories::addComputer(Computer computer)
@@ -57,7 +57,7 @@ bool Computersrepositories::removeComputer(Computer computer)
     return success;
 }
 
-vector<Computer> Computersrepositories::queryStudents(string sqlQuery)
+vector<Computer> Computersrepositories::queryComputer(string sqlQuery)
 {
     db.open();
 

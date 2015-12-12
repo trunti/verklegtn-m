@@ -10,6 +10,7 @@ class Computer
 {
 public:
     Computer(int ID, string name, int year, string type, bool wasbuilt);
+    Computer(int ID, string name, string type);
 
     int getID();
     string getName();

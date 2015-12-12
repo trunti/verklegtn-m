@@ -18,7 +18,7 @@ public:
     bool removeComputer(Computer computer);
 
 private:
-    vector<Computer> queryStudents(string sqlQuery);
+    vector<Computer> queryComputer(string sqlQuery);
 
     QSqlDatabase db;
 };

@@ -18,7 +18,7 @@ public:
     bool removeScientist(Scientist scientist);
 
 private:
-    vector<Scientist> queryStudents(string sqlQuery);
+    vector<Scientist> queryScientist(string sqlQuery);
 
     QSqlDatabase db;
 

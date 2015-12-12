@@ -6,7 +6,7 @@ using namespace std;
 Scientistrepositories::Scientistrepositories()
 {
     QString dbName = "database.sqlite";
-    db = QSqlDatabase::addDatabase("QSQLITE");
+    db = QSqlDatabase::addDatabase("QSQLITE","Scient");
     db.setDatabaseName(dbName);
 }
 
@@ -16,7 +16,7 @@ vector<Scientist> Scientistrepositories::getAllScientists(string orderBy, bool o
 
     sqlQuery << "SELECT * FROM Persons ORDER BY " << orderBy << " " << ((orderAscending) ? "ASC" : "DESC");
 
-    return queryStudents(sqlQuery.str());
+    return queryScientist(sqlQuery.str());
 }
 
 vector<Scientist> Scientistrepositories::searchScientists(string searchString, string orderBy, bool orderAscending)
@@ -25,7 +25,7 @@ vector<Scientist> Scientistrepositories::searchScientists(string searchString, s
 
     sqlQuery << "SELECT * FROM Persons WHERE name LIKE '%" << searchString << "%' ORDER BY " << orderBy << " " << ((orderAscending) ? "ASC" : "DESC");
 
-    return queryStudents(sqlQuery.str());
+    return queryScientist(sqlQuery.str());
 }
 
 bool Scientistrepositories::addScientist(Scientist scientist)
@@ -58,7 +58,7 @@ bool Scientistrepositories::removeScientist(Scientist scientist)
     return success;
 }
 
-vector<Scientist> Scientistrepositories::queryStudents(string sqlQuery)
+vector<Scientist> Scientistrepositories::queryScientist(string sqlQuery)
 {
     db.open();
 

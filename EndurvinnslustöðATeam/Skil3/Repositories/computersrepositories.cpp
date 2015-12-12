@@ -34,7 +34,7 @@ bool Computersrepositories::addComputer(Computer computer)
     QSqlQuery query(db);
 
     stringstream sqlQuery;
-    sqlQuery << "INSERT INTO Computers (Name, Year, Type, Built) VALUES ('" << computer.getName() << "', " << computer.getType() << "', " << computer.getYear() << "', " << computer.getWasbuilt() << ")";
+    sqlQuery << "INSERT INTO Computers (Name, Year, Type, Build) VALUES ('" << computer.getName() << "', " << computer.getType() << "', " << computer.getYear() << "', " << computer.getWasbuilt() << ")";
 
     bool success = query.exec(QString::fromStdString(sqlQuery.str()));
 
@@ -72,7 +72,7 @@ vector<Computer> Computersrepositories::queryStudents(string sqlQuery)
         string name = query.value("Name").toString().toStdString();
         int year = query.value("Year").toString().toInt();
         string type = query.value("type").toString().toStdString();
-        bool wasbuilt = query.value("Built").toString().toInt();
+        bool wasbuilt = query.value("Build").toString().toInt();
 
         comp.push_back(Computer(id, name, year, type, wasbuilt));
     }

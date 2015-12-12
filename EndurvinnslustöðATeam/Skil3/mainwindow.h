@@ -30,6 +30,8 @@ private:
     Computerservice computerService;
 
     Ui::MainWindow *ui;
+
+    vector<Scientist> currentlyDisplayedScientist;
 };
 
 #endif // MAINWINDOW_H

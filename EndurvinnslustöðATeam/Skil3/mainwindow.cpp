@@ -7,7 +7,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    displayAllScientists();
+    //displayAllScientists();
+    displayAllComputers();
 }
 
 MainWindow::~MainWindow()
@@ -32,4 +33,22 @@ void MainWindow::displayScientists(vector<Scientist> scientist)
         ui->list_scient->addItem(QString::fromStdString(currentScientist.getName()));
     }
 
+}
+
+void MainWindow::displayAllComputers()
+{
+    vector<Computer> computer = computerService.getAllComputers("Name", true);
+    displayComputers(computer);
+}
+
+void MainWindow::displayComputers(vector<Computer> computer)
+{
+    ui->list_scient->clear();
+
+    for(unsigned int i = 0;i < computer.size();i++)
+    {
+        Computer currentComputer = computer[i];
+
+        ui->list_scient->addItem(QString::fromStdString(currentComputer.getName()));
+    }
 }

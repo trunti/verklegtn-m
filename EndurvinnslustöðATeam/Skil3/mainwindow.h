@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "Services/scientistservice.h"
+#include "Services/computerservice.h"
 #include <vector>
 
 using namespace std;
@@ -22,8 +23,11 @@ public:
 private:
     void displayAllScientists();
     void displayScientists(vector<Scientist> scientist);
+    void displayAllComputers();
+    void displayComputers(vector<Computer> computer);
 
     Scientistservice scientistService;
+    Computerservice computerService;
 
     Ui::MainWindow *ui;
 };

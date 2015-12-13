@@ -22,7 +22,7 @@ vector<Computer> Computersrepositories::searchComputers(string searchString, str
 {
     stringstream sqlQuery;
 
-    sqlQuery << "SELECT * FROM Computers WHERE name LIKE '%" << searchString << "%' ORDER BY " << orderBy << " " << ((orderAscending) ? "ASC" : "DESC");
+    sqlQuery << "SELECT * FROM Computers WHERE " << orderBy << " LIKE '%" << searchString << "%' ORDER BY " << orderBy << " " << ((orderAscending) ? "ASC" : "DESC");
 
     return queryComputer(sqlQuery.str());
 }

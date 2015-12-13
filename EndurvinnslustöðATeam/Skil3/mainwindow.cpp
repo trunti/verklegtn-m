@@ -7,9 +7,9 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->dropdown_order_by->addItem("Name");
-    ui->dropdown_order_by->addItem("Gender");
-    ui->dropdown_order_by->addItem("Birth Year");
-    ui->dropdown_order_by->addItem("Death Year");
+    ui->dropdown_order_by->addItem("Build year");
+    ui->dropdown_order_by->addItem("Type");
+    ui->dropdown_order_by->addItem("Built");
 
     ui->dropdown_order_by_ascending->addItem("Ascending");
     ui->dropdown_order_by_ascending->addItem("Descending");
@@ -93,19 +93,19 @@ string MainWindow::GetOrderBy()
     {
         return "Name";
     }
-    else if(CurrentOrderWanted == "Gender")
+    else if(CurrentOrderWanted == "Build year")
     {
-        return "Gender";
+        return "Year";
     }
-    else if(CurrentOrderWanted == "Birth Year")
+    else if(CurrentOrderWanted == "Type")
     {
-        return "Born";
+        return "Type";
     }
-    else if(CurrentOrderWanted == "Death Year")
+    else if(CurrentOrderWanted == "Built")
     {
-        return "Died";
+        return "Build";
     }
-    return "pName";
+    return "Name";
 }
 void MainWindow::on_Search_window_textChanged(const QString &arg1)
 {

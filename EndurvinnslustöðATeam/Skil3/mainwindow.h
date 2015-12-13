@@ -5,6 +5,7 @@
 #include "Services/scientistservice.h"
 #include "Services/computerservice.h"
 #include "Ui/scientistsdisplay.h"
+#include "Ui/computerdisplay.h"
 #include <vector>
 
 using namespace std;
@@ -22,13 +23,10 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_dropdown_order_by_currentIndexChanged(int index);
-
-    void on_Search_window_textChanged(const QString &arg1);
-
-    void on_dropdown_order_by_ascending_activated(const QString &arg1);
 
     void on_Button_Scientist_clicked();
+
+    void on_Buttin_Computer_clicked();
 
 private:
     string GetOrderBy();

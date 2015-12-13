@@ -8,6 +8,8 @@ INPUT(
 ./release\computersrepositories.o
 ./release\computerservice.o
 ./release\scientistsdisplay.o
+./release\computerdisplay.o
 ./release\moc_mainwindow.o
 ./release\moc_scientistsdisplay.o
+./release\moc_computerdisplay.o
 );

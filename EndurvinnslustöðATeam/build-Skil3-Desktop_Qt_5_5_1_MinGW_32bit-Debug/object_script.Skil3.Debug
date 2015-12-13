@@ -8,6 +8,8 @@ INPUT(
 ./debug\computersrepositories.o
 ./debug\computerservice.o
 ./debug\scientistsdisplay.o
+./debug\computerdisplay.o
 ./debug\moc_mainwindow.o
 ./debug\moc_scientistsdisplay.o
+./debug\moc_computerdisplay.o
 );

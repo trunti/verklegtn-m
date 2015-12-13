@@ -32,6 +32,7 @@ private:
     Ui::MainWindow *ui;
 
     vector<Scientist> currentlyDisplayedScientist;
+    vector<Computer> currentlyDisplayedComputer;
 };
 
 #endif // MAINWINDOW_H

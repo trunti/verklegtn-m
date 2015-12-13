@@ -17,26 +17,6 @@
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QTableWidget" name="table_scientists">
-      <row>
-       <property name="text">
-        <string>1</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>2</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>3</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>New Row</string>
-       </property>
-      </row>
       <column>
        <property name="text">
         <string>Name</string>
@@ -60,7 +40,28 @@
      </widget>
     </item>
     <item>
-     <widget class="QListWidget" name="list_scient"/>
+     <widget class="QTableWidget" name="table_computer">
+      <column>
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Year</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Type</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Built</string>
+       </property>
+      </column>
+     </widget>
     </item>
    </layout>
   </widget>

@@ -34,9 +34,13 @@ void MainWindow::displayScientists(vector<Scientist> scientist)
 
         QString name = QString::fromStdString(currentScientist.getName());
         QString gender = QString::fromStdString(currentScientist.getGender());
+        QString byear = QString::number(currentScientist.getByear());
+        QString dyear = QString::number(currentScientist.getDyear());
 
         ui->table_scientists->setItem(row, 0, new QTableWidgetItem(name));
         ui->table_scientists->setItem(row, 1, new QTableWidgetItem(gender));
+        ui->table_scientists->setItem(row, 2, new QTableWidgetItem(byear));
+        ui->table_scientists->setItem(row, 3, new QTableWidgetItem(dyear));
     }
 
     currentlyDisplayedScientist = scientist;
@@ -50,12 +54,22 @@ void MainWindow::displayAllComputers()
 
 void MainWindow::displayComputers(vector<Computer> computer)
 {
-    ui->list_scient->clear();
+    ui->table_computer->clearContents();
+    ui->table_computer->setRowCount(computer.size());
 
-    for(unsigned int i = 0;i < computer.size();i++)
+    for(unsigned int row = 0;row < computer.size();row++)
     {
-        Computer currentComputer = computer[i];
+        Computer currentComputer = computer.at(row);
 
-        ui->list_scient->addItem(QString::fromStdString(currentComputer.getName()));
+        QString name = QString::fromStdString(currentComputer.getName());
+        QString year = QString::number(currentComputer.getYear());
+        QString type = QString::fromStdString(currentComputer.getType());
+        QString wasbuilt = QString::number(currentComputer.getWasbuilt());
+
+        ui->table_computer->setItem(row, 0, new QTableWidgetItem(name));
+        ui->table_computer->setItem(row, 1, new QTableWidgetItem(year));
+        ui->table_computer->setItem(row, 2, new QTableWidgetItem(type));
+        ui->table_computer->setItem(row, 3, new QTableWidgetItem(wasbuilt));
     }
+    currentlyDisplayedComputer = computer;
 }

@@ -24,6 +24,7 @@ void MainWindow::displayAllScientists()
 
 void MainWindow::displayScientists(vector<Scientist> scientist)
 {
+    QString alive = "Alive!";
     ui->table_scientists->clearContents();
 
     ui->table_scientists->setRowCount(scientist.size());
@@ -40,7 +41,14 @@ void MainWindow::displayScientists(vector<Scientist> scientist)
         ui->table_scientists->setItem(row, 0, new QTableWidgetItem(name));
         ui->table_scientists->setItem(row, 1, new QTableWidgetItem(gender));
         ui->table_scientists->setItem(row, 2, new QTableWidgetItem(byear));
-        ui->table_scientists->setItem(row, 3, new QTableWidgetItem(dyear));
+        if(dyear == "2016")
+        {
+            ui->table_scientists->setItem(row, 3, new QTableWidgetItem(alive));
+        }
+        else
+        {
+            ui->table_scientists->setItem(row, 3, new QTableWidgetItem(dyear));
+        }
     }
 
     currentlyDisplayedScientist = scientist;
@@ -59,6 +67,8 @@ void MainWindow::displayComputers(vector<Computer> computer)
 
     for(unsigned int row = 0;row < computer.size();row++)
     {
+        QString notbuilt = "Not built!";
+        QString built = "Yes!";
         Computer currentComputer = computer.at(row);
 
         QString name = QString::fromStdString(currentComputer.getName());
@@ -67,9 +77,17 @@ void MainWindow::displayComputers(vector<Computer> computer)
         QString wasbuilt = QString::number(currentComputer.getWasbuilt());
 
         ui->table_computer->setItem(row, 0, new QTableWidgetItem(name));
-        ui->table_computer->setItem(row, 1, new QTableWidgetItem(year));
         ui->table_computer->setItem(row, 2, new QTableWidgetItem(type));
-        ui->table_computer->setItem(row, 3, new QTableWidgetItem(wasbuilt));
+        if(year == "0" && wasbuilt == "0")
+        {
+            ui->table_computer->setItem(row, 1, new QTableWidgetItem(notbuilt));
+            ui->table_computer->setItem(row, 3, new QTableWidgetItem(notbuilt));
+        }
+        else
+        {
+            ui->table_computer->setItem(row, 1, new QTableWidgetItem(year));
+            ui->table_computer->setItem(row, 3, new QTableWidgetItem(built));
+        }
     }
     currentlyDisplayedComputer = computer;
 }

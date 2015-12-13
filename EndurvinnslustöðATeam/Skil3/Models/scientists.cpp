@@ -6,7 +6,14 @@ Scientist::Scientist(int ID, string name, string gender, int Byear, int Dyear)
     this->name = name;
     this->gender = gender;
     this->Byear = Byear;
-    this->Dyear = Dyear;
+    if(Dyear == 0)
+    {
+        this->Dyear = 2016;
+    }
+    else
+    {
+        this->Dyear = Dyear;
+    }
 }
 Scientist::Scientist(int ID, string name, string gender, int Byear)
 {

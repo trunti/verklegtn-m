@@ -103,15 +103,15 @@ string ScientistsDisplay::GetOrderBy()
     return "pName";
 }
 
+void ScientistsDisplay::on_dropdown_order_by_ascending_activated(const QString &arg1)
+{
+    on_Search_window_textChanged("");
+}
+
 void ScientistsDisplay::on_Search_window_textChanged(const QString &arg1)
 {
     string Input = ui->Search_window->text().toStdString();
 
     vector<Scientist> scientist = scientistService.searchScientists(Input, GetOrderBy(), orderByAscending());
     displayScientists(scientist);
-}
-
-void ScientistsDisplay::on_dropdown_order_by_ascending_activated(const QString &arg1)
-{
-    on_Search_window_textChanged("");
 }

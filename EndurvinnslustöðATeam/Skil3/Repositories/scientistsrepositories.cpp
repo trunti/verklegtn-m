@@ -23,7 +23,7 @@ vector<Scientist> Scientistrepositories::searchScientists(string searchString, s
 {
     stringstream sqlQuery;
 
-    sqlQuery << "SELECT * FROM Persons WHERE name LIKE '%" << searchString << "%' ORDER BY " << orderBy << " " << ((orderAscending) ? "ASC" : "DESC");
+    sqlQuery << "SELECT * FROM Persons WHERE pname LIKE '%" << searchString << "%' ORDER BY " << orderBy << " " << ((orderAscending) ? "ASC" : "DESC");
 
     return queryScientist(sqlQuery.str());
 }

@@ -23,9 +23,9 @@ public:
 private slots:
     void on_dropdown_order_by_currentIndexChanged(int index);
 
+    void on_dropdown_order_by_ascending_activated(const QString &arg1);
     void on_Search_window_textChanged(const QString &arg1);
 
-    void on_dropdown_order_by_ascending_activated(const QString &arg1);
 private:
     string GetOrderBy();
     void displayAllScientists();

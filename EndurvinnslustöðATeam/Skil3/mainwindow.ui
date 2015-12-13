@@ -16,6 +16,19 @@
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
+     <widget class="QLineEdit" name="Search_window"/>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QComboBox" name="dropdown_order_by"/>
+      </item>
+      <item>
+       <widget class="QComboBox" name="dropdown_order_by_ascending"/>
+      </item>
+     </layout>
+    </item>
+    <item>
      <widget class="QTableWidget" name="table_scientists">
       <column>
        <property name="text">

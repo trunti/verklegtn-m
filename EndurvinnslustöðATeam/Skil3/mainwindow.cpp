@@ -7,6 +7,14 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    ui->dropdown_order_by->addItem("Name");
+    ui->dropdown_order_by->addItem("Gender");
+    ui->dropdown_order_by->addItem("Birth Year");
+    ui->dropdown_order_by->addItem("Death Year");
+
+    ui->dropdown_order_by_ascending->addItem("Ascending");
+    ui->dropdown_order_by_ascending->addItem("Descending");
+
     displayAllScientists();
     displayAllComputers();
 }
@@ -18,7 +26,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::displayAllScientists()
 {
-    vector<Scientist> scientist = scientistService.getAllScientists("pName", true);
+    vector<Scientist> scientist = scientistService.getAllScientists(GetOrderBy(), orderByAscending());
     displayScientists(scientist);
 }
 
@@ -56,7 +64,7 @@ void MainWindow::displayScientists(vector<Scientist> scientist)
 
 void MainWindow::displayAllComputers()
 {
-    vector<Computer> computer = computerService.getAllComputers("Name", true);
+    vector<Computer> computer = computerService.getAllComputers(GetOrderBy(), orderByAscending());
     displayComputers(computer);
 }
 
@@ -90,4 +98,59 @@ void MainWindow::displayComputers(vector<Computer> computer)
         }
     }
     currentlyDisplayedComputer = computer;
+}
+
+bool MainWindow::orderByAscending()
+{
+    string AscText = ui->dropdown_order_by_ascending->currentText().toStdString();
+
+    if(AscText == "Ascending")
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+void MainWindow::on_dropdown_order_by_currentIndexChanged(int index)
+{
+    on_Search_window_textChanged("");
+}
+
+string MainWindow::GetOrderBy()
+{
+    string CurrentOrderWanted = ui->dropdown_order_by->currentText().toStdString();
+
+    if(CurrentOrderWanted == "Name")
+    {
+        return "pName";
+    }
+    else if(CurrentOrderWanted == "Gender")
+    {
+        return "Gender";
+    }
+    else if(CurrentOrderWanted == "Birth Year")
+    {
+        return "Born";
+    }
+    else if(CurrentOrderWanted == "Death Year")
+    {
+        return "Died";
+    }
+    return "pName";
+}
+
+void MainWindow::on_Search_window_textChanged(const QString &arg1)
+{
+    string Input = ui->Search_window->text().toStdString();
+
+    vector<Scientist> scientist = scientistService.searchScientists(Input, GetOrderBy(), orderByAscending());
+    displayScientists(scientist);
+}
+
+void MainWindow::on_dropdown_order_by_ascending_activated(const QString &arg1)
+{
+    on_Search_window_textChanged("");
 }

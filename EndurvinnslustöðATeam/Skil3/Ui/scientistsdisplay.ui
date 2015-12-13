@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ScientistsDisplay</class>
+ <widget class="QDialog" name="ScientistsDisplay">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>581</width>
+    <height>429</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QComboBox" name="dropdown_order_by"/>
+     </item>
+     <item>
+      <widget class="QComboBox" name="dropdown_order_by_ascending"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="Search_window">
+     <property name="placeholderText">
+      <string>Search</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="table_scientists">
+     <column>
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Gender</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Year Born</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Year Died</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

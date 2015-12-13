@@ -14,43 +14,37 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
-     <widget class="QLineEdit" name="Search_window"/>
+     <layout class="QHBoxLayout" name="horizontalLayout"/>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
+     <widget class="QPushButton" name="Button_Scientist">
+      <property name="text">
+       <string>Scientists</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QComboBox" name="dropdown_order_by"/>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QComboBox" name="dropdown_order_by"/>
+        </item>
+        <item>
+         <widget class="QComboBox" name="dropdown_order_by_ascending"/>
+        </item>
+       </layout>
       </item>
       <item>
-       <widget class="QComboBox" name="dropdown_order_by_ascending"/>
+       <widget class="QLineEdit" name="Search_window">
+        <property name="placeholderText">
+         <string>Search</string>
+        </property>
+       </widget>
       </item>
      </layout>
-    </item>
-    <item>
-     <widget class="QTableWidget" name="table_scientists">
-      <column>
-       <property name="text">
-        <string>Name</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Gender</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Year Born</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Year Died</string>
-       </property>
-      </column>
-     </widget>
     </item>
     <item>
      <widget class="QTableWidget" name="table_computer">
@@ -84,7 +78,7 @@
      <x>0</x>
      <y>0</y>
      <width>602</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

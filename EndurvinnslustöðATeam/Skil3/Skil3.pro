@@ -19,7 +19,8 @@ SOURCES += main.cpp\
     Services/scientistservice.cpp \
     Models/computers.cpp \
     Repositories/computersrepositories.cpp \
-    Services/computerservice.cpp
+    Services/computerservice.cpp \
+    Ui/scientistsdisplay.cpp
 
 HEADERS  += mainwindow.h \
     Models/scientists.h \
@@ -27,6 +28,8 @@ HEADERS  += mainwindow.h \
     Services/scientistservice.h \
     Models/computers.h \
     Repositories/computersrepositories.h \
-    Services/computerservice.h
+    Services/computerservice.h \
+    Ui/scientistsdisplay.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    Ui/scientistsdisplay.ui

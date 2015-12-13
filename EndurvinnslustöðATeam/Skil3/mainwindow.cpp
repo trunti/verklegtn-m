@@ -6,7 +6,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
     ui->dropdown_order_by->addItem("Name");
     ui->dropdown_order_by->addItem("Gender");
     ui->dropdown_order_by->addItem("Birth Year");
@@ -15,7 +14,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->dropdown_order_by_ascending->addItem("Ascending");
     ui->dropdown_order_by_ascending->addItem("Descending");
 
-    displayAllScientists();
     displayAllComputers();
 }
 
@@ -24,43 +22,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::displayAllScientists()
-{
-    vector<Scientist> scientist = scientistService.getAllScientists(GetOrderBy(), orderByAscending());
-    displayScientists(scientist);
-}
-
-void MainWindow::displayScientists(vector<Scientist> scientist)
-{
-    QString alive = "Alive!";
-    ui->table_scientists->clearContents();
-
-    ui->table_scientists->setRowCount(scientist.size());
-
-    for (unsigned int row = 0; row < scientist.size(); row++)
-    {
-        Scientist currentScientist = scientist.at(row);
-
-        QString name = QString::fromStdString(currentScientist.getName());
-        QString gender = QString::fromStdString(currentScientist.getGender());
-        QString byear = QString::number(currentScientist.getByear());
-        QString dyear = QString::number(currentScientist.getDyear());
-
-        ui->table_scientists->setItem(row, 0, new QTableWidgetItem(name));
-        ui->table_scientists->setItem(row, 1, new QTableWidgetItem(gender));
-        ui->table_scientists->setItem(row, 2, new QTableWidgetItem(byear));
-        if(dyear == "2016")
-        {
-            ui->table_scientists->setItem(row, 3, new QTableWidgetItem(alive));
-        }
-        else
-        {
-            ui->table_scientists->setItem(row, 3, new QTableWidgetItem(dyear));
-        }
-    }
-
-    currentlyDisplayedScientist = scientist;
-}
 
 void MainWindow::displayAllComputers()
 {
@@ -100,6 +61,11 @@ void MainWindow::displayComputers(vector<Computer> computer)
     currentlyDisplayedComputer = computer;
 }
 
+void MainWindow::on_Button_Scientist_clicked()
+{
+    ScientistsDisplay scientdisplay;
+    scientdisplay.exec();
+}
 bool MainWindow::orderByAscending()
 {
     string AscText = ui->dropdown_order_by_ascending->currentText().toStdString();
@@ -125,7 +91,7 @@ string MainWindow::GetOrderBy()
 
     if(CurrentOrderWanted == "Name")
     {
-        return "pName";
+        return "Name";
     }
     else if(CurrentOrderWanted == "Gender")
     {
@@ -141,15 +107,13 @@ string MainWindow::GetOrderBy()
     }
     return "pName";
 }
-
 void MainWindow::on_Search_window_textChanged(const QString &arg1)
 {
     string Input = ui->Search_window->text().toStdString();
 
-    vector<Scientist> scientist = scientistService.searchScientists(Input, GetOrderBy(), orderByAscending());
-    displayScientists(scientist);
+    vector<Computer> comp = computerService.searchComputers(Input, GetOrderBy(), orderByAscending());
+    displayComputers(comp);
 }
-
 void MainWindow::on_dropdown_order_by_ascending_activated(const QString &arg1)
 {
     on_Search_window_textChanged("");

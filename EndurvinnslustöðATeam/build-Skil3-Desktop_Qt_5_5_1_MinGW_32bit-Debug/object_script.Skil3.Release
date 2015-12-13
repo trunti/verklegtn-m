@@ -1,0 +1,13 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\scientists.o
+./release\scientistsrepositories.o
+./release\scientistservice.o
+./release\computers.o
+./release\computersrepositories.o
+./release\computerservice.o
+./release\scientistsdisplay.o
+./release\moc_mainwindow.o
+./release\moc_scientistsdisplay.o
+);

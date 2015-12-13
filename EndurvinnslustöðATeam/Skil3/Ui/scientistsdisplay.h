@@ -1,49 +1,42 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#ifndef SCIENTISTSDISPLAY_H
+#define SCIENTISTSDISPLAY_H
 
-#include <QMainWindow>
+#include <QDialog>
 #include "Services/scientistservice.h"
-#include "Services/computerservice.h"
-#include "Ui/scientistsdisplay.h"
 #include <vector>
+#include <string>
 
 using namespace std;
 
+
 namespace Ui {
-class MainWindow;
+class ScientistsDisplay;
 }
 
-class MainWindow : public QMainWindow
+class ScientistsDisplay : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = 0);
-    ~MainWindow();
-
+    explicit ScientistsDisplay(QWidget *parent = 0);
+    ~ScientistsDisplay();
 private slots:
     void on_dropdown_order_by_currentIndexChanged(int index);
 
     void on_Search_window_textChanged(const QString &arg1);
 
     void on_dropdown_order_by_ascending_activated(const QString &arg1);
-
-    void on_Button_Scientist_clicked();
-
 private:
     string GetOrderBy();
     void displayAllScientists();
     void displayScientists(vector<Scientist> scientist);
-    void displayAllComputers();
-    void displayComputers(vector<Computer> computer);
     bool orderByAscending();
 
-    Computerservice computerService;
+    Scientistservice scientistService;
 
-    Ui::MainWindow *ui;
+    Ui::ScientistsDisplay *ui;
 
     vector<Scientist> currentlyDisplayedScientist;
-    vector<Computer> currentlyDisplayedComputer;
 };
 
-#endif // MAINWINDOW_H
+#endif // SCIENTISTSDISPLAY_H

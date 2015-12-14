@@ -1,5 +1,6 @@
 #include "addscientist.h"
 #include "ui_addscientist.h"
+#include <QMessageBox>
 
 addscientist::addscientist(QDialog *parent) :
     QDialog(parent),
@@ -45,7 +46,6 @@ void addscientist::on_pushButton_add_clicked()
         ui->error_yearD->setText("<span style='color:red'>Death year cannt be empty</span>");
         return;
     }
-
     bool success = scientistService.addScientist(Scientist(name.toStdString(), gender.toStdString(), yearBorn.toInt(), yearDeath.toInt()));
 
     if(success)
@@ -59,5 +59,5 @@ void addscientist::on_pushButton_add_clicked()
     {
 
     }
-
+    this->done(0);
 }

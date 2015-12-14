@@ -12,6 +12,8 @@ INPUT(
 ./debug\random.o
 ./debug\addscientist.o
 ./debug\addcomputer.o
+./debug\linkrepository.o
+./debug\linkservice.o
 ./debug\moc_mainwindow.o
 ./debug\moc_scientistsdisplay.o
 ./debug\moc_computerdisplay.o

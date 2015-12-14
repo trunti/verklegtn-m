@@ -24,7 +24,9 @@ SOURCES += main.cpp\
     Ui/computerdisplay.cpp \
     Ui/random.cpp \
     Ui/addscientist.cpp \
-    Ui/addcomputer.cpp
+    Ui/addcomputer.cpp \
+    Repositories/linkrepository.cpp \
+    Services/linkservice.cpp
 
 HEADERS  += mainwindow.h \
     Models/scientists.h \
@@ -37,7 +39,9 @@ HEADERS  += mainwindow.h \
     Ui/computerdisplay.h \
     Ui/random.h \
     Ui/addscientist.h \
-    Ui/addcomputer.h
+    Ui/addcomputer.h \
+    Repositories/linkrepository.h \
+    Services/linkservice.h
 
 FORMS    += mainwindow.ui \
     Ui/scientistsdisplay.ui \

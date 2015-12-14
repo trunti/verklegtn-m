@@ -54,9 +54,11 @@ void addcomputer::on_pushButton_clicked()
         ui->input_year->setText("");
         ui->input_type->setText("");
         ui->input_wasbuilt->setText("");
+
     }
     else
     {
 
     }
+    this->done(0);
 }

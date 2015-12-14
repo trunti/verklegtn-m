@@ -12,6 +12,8 @@ INPUT(
 ./release\random.o
 ./release\addscientist.o
 ./release\addcomputer.o
+./release\linkrepository.o
+./release\linkservice.o
 ./release\moc_mainwindow.o
 ./release\moc_scientistsdisplay.o
 ./release\moc_computerdisplay.o

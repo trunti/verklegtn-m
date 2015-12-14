@@ -37,4 +37,5 @@ void addscientist::on_pushButton_add_clicked()
     {
 
     }
+
 }

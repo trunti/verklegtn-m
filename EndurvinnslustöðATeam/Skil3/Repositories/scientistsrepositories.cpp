@@ -5,9 +5,18 @@ using namespace std;
 
 Scientistrepositories::Scientistrepositories()
 {
+    QString connectionName = "Scient";
+
+    if(QSqlDatabase::contains(connectionName))
+    {
+        db = QSqlDatabase::database(connectionName);
+    }
+    else
+    {
     QString dbName = "database.sqlite";
-    db = QSqlDatabase::addDatabase("QSQLITE","Scient");
+    db = QSqlDatabase::addDatabase("QSQLITE",connectionName);
     db.setDatabaseName(dbName);
+    }
 }
 
 vector<Scientist> Scientistrepositories::getAllScientists(string orderBy, bool orderAscending)
@@ -44,7 +53,7 @@ bool Scientistrepositories::addScientist(Scientist scientist)
     QSqlQuery query(db);
 
     stringstream sqlQuery;
-    sqlQuery << "INSERT INTO Persons (pName, Gender, Born, Died) VALUES ('" << scientist.getName() << "', " << scientist.getGender() << "', " << scientist.getByear() << "', " << scientist.getDyear() << ")";
+    sqlQuery << "INSERT INTO Persons (pName, Gender, Born, Died) VALUES ('" << scientist.getName() << "', '" << scientist.getGender() << "', " << scientist.getByear() << ", " << scientist.getDyear() << ")";
 
     bool success = query.exec(QString::fromStdString(sqlQuery.str()));
 

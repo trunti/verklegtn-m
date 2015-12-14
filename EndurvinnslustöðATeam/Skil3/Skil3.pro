@@ -23,7 +23,8 @@ SOURCES += main.cpp\
     Ui/scientistsdisplay.cpp \
     Ui/computerdisplay.cpp \
     Ui/random.cpp \
-    Ui/addscientist.cpp
+    Ui/addscientist.cpp \
+    Ui/addcomputer.cpp
 
 HEADERS  += mainwindow.h \
     Models/scientists.h \
@@ -35,10 +36,12 @@ HEADERS  += mainwindow.h \
     Ui/scientistsdisplay.h \
     Ui/computerdisplay.h \
     Ui/random.h \
-    Ui/addscientist.h
+    Ui/addscientist.h \
+    Ui/addcomputer.h
 
 FORMS    += mainwindow.ui \
     Ui/scientistsdisplay.ui \
     Ui/computerdisplay.ui \
     Ui/random.ui \
-    Ui/addscientist.ui
+    Ui/addscientist.ui \
+    Ui/addcomputer.ui

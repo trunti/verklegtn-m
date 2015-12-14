@@ -21,6 +21,9 @@ public:
 private:
     vector<Scientist> queryScientist(string sqlQuery);
 
+    vector<Computer> queryComputersByScientist(Scientist scientist);
+
+
     QSqlDatabase db;
 
 };

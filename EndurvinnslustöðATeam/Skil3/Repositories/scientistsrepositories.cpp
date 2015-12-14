@@ -1,6 +1,10 @@
 #include "Repositories/scientistsrepositories.h"
+#include "Models/computers.h"
+#include "Models/scientists.h"
 
+#include <cstdlib>
 #include <sstream>
+#include <QString>
 using namespace std;
 
 Scientistrepositories::Scientistrepositories()
@@ -99,4 +103,37 @@ vector<Scientist> Scientistrepositories::queryScientist(string sqlQuery)
     db.close();
     return scient;
 }
+vector<Computer> Scientistrepositories::queryComputersByScientist(Scientist scientist)
+{
+    vector<Computer> computers;
 
+    db.open();
+
+    if (!db.isOpen())
+    {
+        return computers;
+    }
+
+    QSqlQuery query(db);
+
+    stringstream sqlQuery;
+    sqlQuery << "SELECT s.* FROM ScientistComputerConnections scc ";
+    sqlQuery << "JOIN Computers c ";
+    sqlQuery << "ON c.id = scc.computerId ";
+    sqlQuery << "WHERE scc.scientistId = " << scientist.getID();
+
+    query.exec(QString::fromStdString(sqlQuery.str()));
+
+    while (query.next())
+    {
+        int id = query.value("id").toUInt();
+        string name = query.value("name").toString().toStdString();
+        string type = query.value("type").toString().toStdString();
+        int yearBuilt = query.value("Year").toInt();
+        bool wasbuilt = query.value("build").toBool();
+
+        computers.push_back(Computer(id, name, yearBuilt, type, wasbuilt ));
+    }
+
+    return computers;
+}

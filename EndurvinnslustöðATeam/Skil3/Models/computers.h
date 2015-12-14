@@ -4,11 +4,14 @@
 #include <vector>
 #include <string>
 
+#include "scientists.h"
+
 using namespace std;
 
 class Computer
 {
 public:
+    Computer();
     Computer(int ID, string name, int year, string type, bool wasbuilt);
     Computer(string name, int year, string type, int wasBuilt);
 
@@ -18,6 +21,10 @@ public:
     string getType();
     bool getWasbuilt();
 
+    vector<Scientist> getScientists();
+    void setScientists(vector<Scientist> newScientists);
+
+
 private:
     int ID;
     string name;
@@ -25,6 +32,8 @@ private:
     string type;
     bool wasbuilt;
     int wasBuilt;
+
+    vector<Scientist> scientists;
 
 };
 

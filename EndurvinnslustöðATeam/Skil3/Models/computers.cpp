@@ -1,5 +1,9 @@
 #include "computers.h"
 
+Computer::Computer()
+{
+
+}
 Computer::Computer(int ID, string name, int year, string type, bool wasbuilt)
 {
     this->ID = ID;
@@ -35,4 +39,13 @@ string Computer::getType()
 bool Computer::getWasbuilt()
 {
     return wasbuilt;
+}
+vector<Scientist> Computer::getScientists()
+{
+    return scientists;
+}
+
+void Computer::setScientists(std::vector<Scientist> newScientists)
+{
+    scientists = newScientists;
 }

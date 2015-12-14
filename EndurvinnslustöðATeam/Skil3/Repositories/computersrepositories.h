@@ -20,6 +20,7 @@ public:
 
 private:
     vector<Computer> queryComputer(string sqlQuery);
+    vector<Scientist> queryScientistsByComputer(Computer computer);
 
     QSqlDatabase db;
 };

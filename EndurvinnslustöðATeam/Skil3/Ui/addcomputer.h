@@ -2,6 +2,7 @@
 #define ADDCOMPUTER_H
 
 #include <QDialog>
+#include "Services/computerservice.h"
 
 namespace Ui {
 class addcomputer;
@@ -15,7 +16,11 @@ public:
     explicit addcomputer(QWidget *parent = 0);
     ~addcomputer();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
+    Computerservice computerService;
     Ui::addcomputer *ui;
 };
 

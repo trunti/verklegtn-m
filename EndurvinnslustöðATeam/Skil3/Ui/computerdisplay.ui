@@ -67,6 +67,13 @@
     </layout>
    </item>
    <item>
+    <widget class="QPushButton" name="pushButton_add_computer">
+     <property name="text">
+      <string>Add computer</string>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QPushButton" name="Button_remove_comp">
      <property name="enabled">
       <bool>false</bool>

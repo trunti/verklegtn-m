@@ -132,3 +132,9 @@ void ComputerDisplay::on_Button_remove_comp_clicked()
         QMessageBox::warning(this, "Error", "Remove faild!");
     }
 }
+
+void ComputerDisplay::on_pushButton_add_computer_clicked()
+{
+    addcomputer addcomp;
+    addcomp.exec();
+}

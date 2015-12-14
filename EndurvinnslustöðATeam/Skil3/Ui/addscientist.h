@@ -3,8 +3,6 @@
 
 #include <QDialog>
 #include "Services/scientistservice.h"
-#include <vector>
-#include <string>
 
 namespace Ui {
 class addscientist;

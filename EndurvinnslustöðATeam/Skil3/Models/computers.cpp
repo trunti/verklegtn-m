@@ -9,11 +9,12 @@ Computer::Computer(int ID, string name, int year, string type, bool wasbuilt)
     this->wasbuilt = wasbuilt;
 }
 
-Computer::Computer(int ID, string name, string type)
+Computer::Computer(string name, int year, string type, int wasBuilt)
 {
-    this->ID = ID;
+    this->ID = year;
     this->name = name;
     this->type = type;
+    this->wasbuilt = wasBuilt;
 }
 int Computer::getID()
 {

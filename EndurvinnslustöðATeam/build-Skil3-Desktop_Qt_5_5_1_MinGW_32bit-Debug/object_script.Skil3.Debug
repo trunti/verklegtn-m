@@ -11,9 +11,11 @@ INPUT(
 ./debug\computerdisplay.o
 ./debug\random.o
 ./debug\addscientist.o
+./debug\addcomputer.o
 ./debug\moc_mainwindow.o
 ./debug\moc_scientistsdisplay.o
 ./debug\moc_computerdisplay.o
 ./debug\moc_random.o
 ./debug\moc_addscientist.o
+./debug\moc_addcomputer.o
 );

@@ -4,9 +4,18 @@
 
 Computersrepositories::Computersrepositories()
 {
+    QString connectionName = "Comp";
+
+    if(QSqlDatabase::contains(connectionName))
+    {
+        db = QSqlDatabase::database(connectionName);
+    }
+    else
+    {
     QString dbName = "database.sqlite";
-    db = QSqlDatabase::addDatabase("QSQLITE","Comp");
+    db = QSqlDatabase::addDatabase("QSQLITE",connectionName);
     db.setDatabaseName(dbName);
+    }
 }
 
 vector<Computer> Computersrepositories::getAllComputers(string orderBy, bool orderAscending)

@@ -11,9 +11,11 @@ INPUT(
 ./release\computerdisplay.o
 ./release\random.o
 ./release\addscientist.o
+./release\addcomputer.o
 ./release\moc_mainwindow.o
 ./release\moc_scientistsdisplay.o
 ./release\moc_computerdisplay.o
 ./release\moc_random.o
 ./release\moc_addscientist.o
+./release\moc_addcomputer.o
 );

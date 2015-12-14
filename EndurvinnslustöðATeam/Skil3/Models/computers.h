@@ -10,7 +10,7 @@ class Computer
 {
 public:
     Computer(int ID, string name, int year, string type, bool wasbuilt);
-    Computer(int ID, string name, string type);
+    Computer(string name, int year, string type, int wasBuilt);
 
     int getID();
     string getName();
@@ -24,6 +24,7 @@ private:
     int year;
     string type;
     bool wasbuilt;
+    int wasBuilt;
 
 };
 

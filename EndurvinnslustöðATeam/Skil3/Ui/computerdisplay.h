@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "Services/computerservice.h"
+#include "addcomputer.h"
 #include <vector>
 #include <string>
 
@@ -29,6 +30,8 @@ private slots:
     void on_table_computer_clicked(const QModelIndex &index);
 
     void on_Button_remove_comp_clicked();
+
+    void on_pushButton_add_computer_clicked();
 
 private:
     string GetOrderBy();

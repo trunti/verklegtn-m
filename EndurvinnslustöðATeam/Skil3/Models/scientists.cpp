@@ -17,11 +17,10 @@ Scientist::Scientist(int ID, string name, string gender, int Byear, int Dyear)
 }
 Scientist::Scientist(string name, string gender, int Byear, int Dyear)
 {
-    this->ID = Dyear;
     this->name = name;
     this->gender = gender;
     this->Byear = Byear;
-    Alive = "Alive!";
+    this->Dyear = Dyear;
 }
 int Scientist::getID()
 {

@@ -52,7 +52,7 @@ bool Computersrepositories::addComputer(Computer computer)
     QSqlQuery query(db);
 
     stringstream sqlQuery;
-    sqlQuery << "INSERT INTO Computers (Name, Year, Type, Build) VALUES ('" << computer.getName() << "', '" << computer.getType() << "', " << computer.getYear() << ", " << computer.getWasbuilt() << ")";
+    sqlQuery << "INSERT INTO Computers (Name, Year, Type, Build) VALUES ('" << computer.getName() << "', " << computer.getYear() << ", '" << computer.getType() << "', " << computer.getWasbuilt() << ")";
 
     bool success = query.exec(QString::fromStdString(sqlQuery.str()));
 

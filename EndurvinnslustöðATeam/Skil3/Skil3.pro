@@ -49,3 +49,6 @@ FORMS    += mainwindow.ui \
     Ui/random.ui \
     Ui/addscientist.ui \
     Ui/addcomputer.ui
+
+RESOURCES += \
+    resource.qrc

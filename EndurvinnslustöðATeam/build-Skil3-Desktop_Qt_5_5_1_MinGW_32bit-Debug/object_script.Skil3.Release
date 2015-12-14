@@ -14,6 +14,7 @@ INPUT(
 ./release\addcomputer.o
 ./release\linkrepository.o
 ./release\linkservice.o
+./release\qrc_resource.o
 ./release\moc_mainwindow.o
 ./release\moc_scientistsdisplay.o
 ./release\moc_computerdisplay.o

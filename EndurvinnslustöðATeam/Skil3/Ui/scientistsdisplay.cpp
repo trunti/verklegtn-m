@@ -115,3 +115,15 @@ void ScientistsDisplay::on_Search_window_textChanged(const QString &arg1)
     vector<Scientist> scientist = scientistService.searchScientists(Input, GetOrderBy(), orderByAscending());
     displayScientists(scientist);
 }
+
+void ScientistsDisplay::on_pushButton_add_scientist_clicked()
+{
+    addscientist addscient;
+    int addScientistReturnValue = addscient.exec();
+
+    if(addScientistReturnValue == 0)
+    {
+        ui->Search_window->setText("");
+        displayAllScientists();
+    }
+}

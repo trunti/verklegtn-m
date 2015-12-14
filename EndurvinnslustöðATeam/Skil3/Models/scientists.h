@@ -11,7 +11,7 @@ class Scientist
 {
 public:
     Scientist(int ID,string name, string gender, int Byear,int Dyear);
-    Scientist(int ID,string name, string gender, int Byear);
+    Scientist(string name, string gender, int Byear, int Dyear);
 
     int getID();
     string getName();

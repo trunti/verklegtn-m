@@ -14,7 +14,7 @@ public:
     vector<Scientist> searchScientists(string searchString, string orderBy, bool orderAscending);
     vector<Scientist> RandomScientist();
 
-    bool addStudent(Scientist scientist);
+    bool addScientist(Scientist scientist);
     bool removeScientist(Scientist scientist);
 
 private:

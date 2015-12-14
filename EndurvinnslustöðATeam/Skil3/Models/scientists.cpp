@@ -15,9 +15,9 @@ Scientist::Scientist(int ID, string name, string gender, int Byear, int Dyear)
         this->Dyear = Dyear;
     }
 }
-Scientist::Scientist(int ID, string name, string gender, int Byear)
+Scientist::Scientist(string name, string gender, int Byear, int Dyear)
 {
-    this->ID = ID;
+    this->ID = Dyear;
     this->name = name;
     this->gender = gender;
     this->Byear = Byear;

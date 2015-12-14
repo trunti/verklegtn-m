@@ -2,6 +2,7 @@
 #define SCIENTISTSDISPLAY_H
 
 #include <QDialog>
+#include "addscientist.h"
 #include "Services/scientistservice.h"
 #include <vector>
 #include <string>
@@ -25,6 +26,8 @@ private slots:
 
     void on_dropdown_order_by_ascending_activated(const QString &arg1);
     void on_Search_window_textChanged(const QString &arg1);
+
+    void on_pushButton_add_scientist_clicked();
 
 private:
     string GetOrderBy();

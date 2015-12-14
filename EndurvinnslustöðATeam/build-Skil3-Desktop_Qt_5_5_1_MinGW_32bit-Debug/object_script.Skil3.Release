@@ -10,8 +10,10 @@ INPUT(
 ./release\scientistsdisplay.o
 ./release\computerdisplay.o
 ./release\random.o
+./release\addscientist.o
 ./release\moc_mainwindow.o
 ./release\moc_scientistsdisplay.o
 ./release\moc_computerdisplay.o
 ./release\moc_random.o
+./release\moc_addscientist.o
 );

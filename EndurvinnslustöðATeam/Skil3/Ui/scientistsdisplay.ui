@@ -55,6 +55,13 @@
      </column>
     </widget>
    </item>
+   <item>
+    <widget class="QPushButton" name="pushButton_add_scientist">
+     <property name="text">
+      <string>Add scientist</string>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <resources/>

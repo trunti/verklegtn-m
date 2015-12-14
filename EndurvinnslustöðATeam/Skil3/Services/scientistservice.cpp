@@ -27,7 +27,7 @@ vector<Scientist> Scientistservice::RandomScientist()
     return scientrepo.RandomScientist();
 }
 
-bool Scientistservice::addStudent(Scientist scientist)
+bool Scientistservice::addScientist(Scientist scientist)
 {
     return scientrepo.addScientist(scientist);
 }

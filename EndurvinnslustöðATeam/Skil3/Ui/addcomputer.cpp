@@ -20,10 +20,32 @@ void addcomputer::on_pushButton_clicked()
     QString type = ui->input_type->text();
     QString wasbuilt = ui->input_wasbuilt->text();
 
-    if(name.isEmpty() || year.isEmpty() || type.isEmpty() || wasbuilt.isEmpty())
+    ui->error_name->setText("");
+    ui->error_year->setText("");
+    ui->error_type->setText("");
+    ui->error_built->setText("");
+
+    if(name.isEmpty())
     {
+        ui->error_name->setText("<span style='color:red'>Name cannot be empty</span>");
         return;
     }
+    if(year.isEmpty())
+    {
+        ui->error_year->setText("<span style='color:red'>Year cannot be empty</span>");
+        return;
+    }
+    if(type.isEmpty())
+    {
+        ui->error_type->setText("<span style='color:red'>Type cannot be empty</span>");
+        return;
+    }
+    if(wasbuilt.isEmpty())
+    {
+        ui->error_built->setText("<span style='color:red'>Built cannt be empty</span>");
+        return;
+    }
+
     bool success = computerService.addComputer(Computer(name.toStdString(), year.toInt(), type.toStdString(), wasbuilt.toInt()));
 
     if(success)

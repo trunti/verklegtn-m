@@ -20,10 +20,32 @@ void addscientist::on_pushButton_add_clicked()
     QString yearBorn = ui->input_birth_year->text();
     QString yearDeath = ui->input_death_year->text();
 
-    if(name.isEmpty() || gender.isEmpty() || yearBorn.isEmpty() || yearDeath.isEmpty())
+    ui->error_name->setText("");
+    ui->error_gender->setText("");
+    ui->error_yearB->setText("");
+    ui->error_yearD->setText("");
+
+    if(name.isEmpty())
     {
+        ui->error_name->setText("<span style='color:red'>Name cannot be empty</span>");
         return;
     }
+    if(gender.isEmpty())
+    {
+        ui->error_gender->setText("<span style='color:red'>Gender cannot be empty</span>");
+        return;
+    }
+    if(yearBorn.isEmpty())
+    {
+        ui->error_yearB->setText("<span style='color:red'>Birth year cannot be empty</span>");
+        return;
+    }
+    if(yearDeath.isEmpty())
+    {
+        ui->error_yearD->setText("<span style='color:red'>Death year cannt be empty</span>");
+        return;
+    }
+
     bool success = scientistService.addScientist(Scientist(name.toStdString(), gender.toStdString(), yearBorn.toInt(), yearDeath.toInt()));
 
     if(success)

@@ -1,6 +1,7 @@
 #include "scientistsdisplay.h"
 #include "ui_scientistsdisplay.h"
 #include <QMessageBox>
+
 ScientistsDisplay::ScientistsDisplay(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ScientistsDisplay)
@@ -145,6 +146,7 @@ void ScientistsDisplay::on_Button_remove_sci_clicked()
             return;
         displayAllScientists();
         ui->Button_remove_sci->setEnabled(false);
+
     }
     else
     {

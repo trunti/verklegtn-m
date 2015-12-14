@@ -1,6 +1,6 @@
 #include "addcomputer.h"
 #include "ui_addcomputer.h"
-
+#include <QMessageBox>
 addcomputer::addcomputer(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::addcomputer)
@@ -25,6 +25,8 @@ void addcomputer::on_pushButton_clicked()
     ui->error_type->setText("");
     ui->error_built->setText("");
 
+
+
     if(name.isEmpty())
     {
         ui->error_name->setText("<span style='color:red'>Name cannot be empty</span>");
@@ -43,6 +45,12 @@ void addcomputer::on_pushButton_clicked()
     if(wasbuilt.isEmpty())
     {
         ui->error_built->setText("<span style='color:red'>Built cannt be empty</span>");
+        return;
+    }
+
+    int answer = QMessageBox::question(this, "Confirm", "Are you sure");
+    if(answer == QMessageBox::No)
+    {
         return;
     }
 

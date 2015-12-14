@@ -24,7 +24,7 @@ void addcomputer::on_pushButton_clicked()
     {
         return;
     }
-    bool success = computerService.addComputer(Computer(name.toStdString(), year.toInt(), type.toStdString(), wasbuilt.toInt));
+    bool success = computerService.addComputer(Computer(name.toStdString(), year.toInt(), type.toStdString(), wasbuilt.toInt()));
 
     if(success)
     {

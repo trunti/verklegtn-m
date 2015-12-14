@@ -26,6 +26,8 @@ public:
 
 private slots:
 
+    void showTime ();
+
     void on_Button_Scientist_clicked();
 
     void on_Buttin_Computer_clicked();

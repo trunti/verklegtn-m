@@ -30,3 +30,9 @@ void MainWindow::on_Button_Random_clicked()
     Random random;
     random.exec();
 }
+
+void MainWindow::on_Button_link_clicked()
+{
+    LinkTogether linkT;
+    linkT.exec();
+}

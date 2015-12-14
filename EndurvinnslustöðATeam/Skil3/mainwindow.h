@@ -7,6 +7,7 @@
 #include "Ui/scientistsdisplay.h"
 #include "Ui/computerdisplay.h"
 #include "Ui/random.h"
+#include "Ui/linktogether.h"
 #include <vector>
 
 using namespace std;
@@ -30,6 +31,8 @@ private slots:
     void on_Buttin_Computer_clicked();
 
     void on_Button_Random_clicked();
+
+    void on_Button_link_clicked();
 
 private:
     string GetOrderBy();

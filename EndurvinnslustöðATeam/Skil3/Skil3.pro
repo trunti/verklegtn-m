@@ -26,7 +26,8 @@ SOURCES += main.cpp\
     Ui/addscientist.cpp \
     Ui/addcomputer.cpp \
     Repositories/linkrepository.cpp \
-    Services/linkservice.cpp
+    Services/linkservice.cpp \
+    Ui/linktogether.cpp
 
 HEADERS  += mainwindow.h \
     Models/scientists.h \
@@ -41,14 +42,16 @@ HEADERS  += mainwindow.h \
     Ui/addscientist.h \
     Ui/addcomputer.h \
     Repositories/linkrepository.h \
-    Services/linkservice.h
+    Services/linkservice.h \
+    Ui/linktogether.h
 
 FORMS    += mainwindow.ui \
     Ui/scientistsdisplay.ui \
     Ui/computerdisplay.ui \
     Ui/random.ui \
     Ui/addscientist.ui \
-    Ui/addcomputer.ui
+    Ui/addcomputer.ui \
+    Ui/linktogether.ui
 
 RESOURCES += \
     resource.qrc

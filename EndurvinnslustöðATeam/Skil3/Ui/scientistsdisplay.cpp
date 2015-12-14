@@ -1,6 +1,6 @@
 #include "scientistsdisplay.h"
 #include "ui_scientistsdisplay.h"
-
+#include <QMessageBox>
 ScientistsDisplay::ScientistsDisplay(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ScientistsDisplay)
@@ -125,5 +125,26 @@ void ScientistsDisplay::on_pushButton_add_scientist_clicked()
     {
         ui->Search_window->setText("");
         displayAllScientists();
+    }
+}
+
+void ScientistsDisplay::on_table_scientists_clicked(const QModelIndex &index)
+{
+    ui->Button_remove_sci->setEnabled(true);
+}
+
+void ScientistsDisplay::on_Button_remove_sci_clicked()
+{
+    int selectedSciIndex = ui->table_scientists->currentIndex().row();
+    Scientist selectedSci = currentlyDisplayedScientist.at(selectedSciIndex);
+    bool success = scientistService.removeScientist(selectedSci);
+    if(success)
+    {
+        displayAllScientists();
+        ui->Button_remove_sci->setEnabled(false);
+    }
+    else
+    {
+        QMessageBox::warning(this, "Error", "Remove faild!");
     }
 }

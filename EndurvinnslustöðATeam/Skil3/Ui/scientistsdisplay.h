@@ -29,6 +29,10 @@ private slots:
 
     void on_pushButton_add_scientist_clicked();
 
+    void on_table_scientists_clicked(const QModelIndex &index);
+
+    void on_Button_remove_sci_clicked();
+
 private:
     string GetOrderBy();
     void displayAllScientists();

@@ -1,6 +1,6 @@
 #include "computerdisplay.h"
 #include "ui_computerdisplay.h"
-
+#include <QMessageBox>
 ComputerDisplay::ComputerDisplay(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ComputerDisplay)
@@ -110,4 +110,25 @@ void ComputerDisplay::on_Search_window_textChanged(const QString &arg1)
 void ComputerDisplay::on_dropdown_order_by_ascending_activated(const QString &arg1)
 {
     on_Search_window_textChanged("");
+}
+
+void ComputerDisplay::on_table_computer_clicked(const QModelIndex &index)
+{
+    ui->Button_remove_comp->setEnabled(true);
+}
+
+void ComputerDisplay::on_Button_remove_comp_clicked()
+{
+    int selectedComputerIndex = ui->table_computer->currentIndex().row();
+    Computer selectedComputer = currentlyDisplayedComputer.at(selectedComputerIndex);
+    bool success = computerService.removeComputer(selectedComputer);
+    if(success)
+    {
+        displayAllComputers();
+        ui->Button_remove_comp->setEnabled(false);
+    }
+    else
+    {
+        QMessageBox::warning(this, "Error", "Remove faild!");
+    }
 }

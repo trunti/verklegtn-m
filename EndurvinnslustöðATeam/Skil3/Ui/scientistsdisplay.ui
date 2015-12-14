@@ -56,6 +56,16 @@
     </widget>
    </item>
    <item>
+    <widget class="QPushButton" name="Button_remove_sci">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Remove</string>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QPushButton" name="pushButton_add_scientist">
      <property name="text">
       <string>Add scientist</string>

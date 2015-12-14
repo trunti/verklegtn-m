@@ -26,6 +26,10 @@ private slots:
 
     void on_dropdown_order_by_ascending_activated(const QString &arg1);
 
+    void on_table_computer_clicked(const QModelIndex &index);
+
+    void on_Button_remove_comp_clicked();
+
 private:
     string GetOrderBy();
     void displayAllComputers();

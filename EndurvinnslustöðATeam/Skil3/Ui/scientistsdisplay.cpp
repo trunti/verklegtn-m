@@ -140,6 +140,9 @@ void ScientistsDisplay::on_Button_remove_sci_clicked()
     bool success = scientistService.removeScientist(selectedSci);
     if(success)
     {
+        int answer = QMessageBox::question(this, "Confirm", "Are you sure");
+        if(answer == QMessageBox::No)
+            return;
         displayAllScientists();
         ui->Button_remove_sci->setEnabled(false);
     }

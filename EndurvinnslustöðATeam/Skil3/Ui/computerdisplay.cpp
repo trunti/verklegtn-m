@@ -124,6 +124,9 @@ void ComputerDisplay::on_Button_remove_comp_clicked()
     bool success = computerService.removeComputer(selectedComputer);
     if(success)
     {
+        int answer = QMessageBox::question(this, "Confirm", "Are you sure");
+        if(answer == QMessageBox::No)
+            return;
         displayAllComputers();
         ui->Button_remove_comp->setEnabled(false);
     }
@@ -136,5 +139,10 @@ void ComputerDisplay::on_Button_remove_comp_clicked()
 void ComputerDisplay::on_pushButton_add_computer_clicked()
 {
     addcomputer addcomp;
-    addcomp.exec();
+    int addcomputerReturnValue = addcomp.exec();
+    if(addcomputerReturnValue == 0)
+    {
+        ui->Search_window->setText("");
+        displayAllComputers();
+    }
 }

@@ -22,6 +22,11 @@ vector<Computer> Computerservice::searchComputers(string searchString, string or
     }
 }
 
+vector<Computer> Computerservice::RandomComputer()
+{
+    return comprepo.RandomComputer();
+}
+
 bool Computerservice::addComputer(Computer computer)
 {
     return comprepo.addComputer(computer);

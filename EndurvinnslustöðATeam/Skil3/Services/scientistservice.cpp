@@ -22,6 +22,11 @@ vector<Scientist> Scientistservice::searchScientists(string searchString, string
     }
 }
 
+vector<Scientist> Scientistservice::RandomScientist()
+{
+    return scientrepo.RandomScientist();
+}
+
 bool Scientistservice::addStudent(Scientist scientist)
 {
     return scientrepo.addScientist(scientist);

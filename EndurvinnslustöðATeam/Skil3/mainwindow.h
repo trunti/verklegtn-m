@@ -6,6 +6,7 @@
 #include "Services/computerservice.h"
 #include "Ui/scientistsdisplay.h"
 #include "Ui/computerdisplay.h"
+#include "Ui/random.h"
 #include <vector>
 
 using namespace std;
@@ -28,6 +29,8 @@ private slots:
 
     void on_Buttin_Computer_clicked();
 
+    void on_Button_Random_clicked();
+
 private:
     string GetOrderBy();
     void displayAllScientists();
@@ -36,7 +39,6 @@ private:
     void displayComputers(vector<Computer> computer);
     bool orderByAscending();
 
-    Computerservice computerService;
 
     Ui::MainWindow *ui;
 

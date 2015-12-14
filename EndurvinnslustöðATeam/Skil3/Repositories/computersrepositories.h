@@ -14,6 +14,7 @@ public:
 
     vector<Computer> getAllComputers(string orderBy, bool orderAscending);
     vector<Computer> searchComputers(string searchString, string orderBy, bool orderAscending);
+    vector<Computer> RandomComputer();
     bool addComputer(Computer computer);
     bool removeComputer(Computer computer);
 

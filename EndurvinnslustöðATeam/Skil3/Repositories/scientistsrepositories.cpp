@@ -28,6 +28,15 @@ vector<Scientist> Scientistrepositories::searchScientists(string searchString, s
     return queryScientist(sqlQuery.str());
 }
 
+vector<Scientist> Scientistrepositories::RandomScientist()
+{
+    stringstream sqlQuery;
+
+    sqlQuery << "Select * FROM Persons ORDER BY RANDOM() LIMIT 1";
+
+    return queryScientist(sqlQuery.str());
+}
+
 bool Scientistrepositories::addScientist(Scientist scientist)
 {
     db.open();

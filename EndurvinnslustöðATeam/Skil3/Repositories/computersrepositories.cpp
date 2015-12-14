@@ -27,6 +27,15 @@ vector<Computer> Computersrepositories::searchComputers(string searchString, str
     return queryComputer(sqlQuery.str());
 }
 
+vector<Computer> Computersrepositories::RandomComputer()
+{
+    stringstream sqlQuery;
+
+    sqlQuery << "SELECT * FROM Computers ORDER BY RANDOM() LIMIT 1";
+
+    return queryComputer(sqlQuery.str());
+}
+
 bool Computersrepositories::addComputer(Computer computer)
 {
     db.open();

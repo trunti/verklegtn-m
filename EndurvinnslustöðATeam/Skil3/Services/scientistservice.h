@@ -12,6 +12,7 @@ public:
 
     vector<Scientist> getAllScientists(string orderBy, bool orderAscending);
     vector<Scientist> searchScientists(string searchString, string orderBy, bool orderAscending);
+    vector<Scientist> RandomScientist();
 
     bool addStudent(Scientist scientist);
     bool removeScientist(Scientist scientist);

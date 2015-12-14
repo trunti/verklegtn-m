@@ -24,3 +24,9 @@ void MainWindow::on_Buttin_Computer_clicked()
     ComputerDisplay compdisplay;
     compdisplay.exec();
 }
+
+void MainWindow::on_Button_Random_clicked()
+{
+    Random random;
+    random.exec();
+}

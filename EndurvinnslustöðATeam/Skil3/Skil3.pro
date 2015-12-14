@@ -21,7 +21,8 @@ SOURCES += main.cpp\
     Repositories/computersrepositories.cpp \
     Services/computerservice.cpp \
     Ui/scientistsdisplay.cpp \
-    Ui/computerdisplay.cpp
+    Ui/computerdisplay.cpp \
+    Ui/random.cpp
 
 HEADERS  += mainwindow.h \
     Models/scientists.h \
@@ -31,8 +32,10 @@ HEADERS  += mainwindow.h \
     Repositories/computersrepositories.h \
     Services/computerservice.h \
     Ui/scientistsdisplay.h \
-    Ui/computerdisplay.h
+    Ui/computerdisplay.h \
+    Ui/random.h
 
 FORMS    += mainwindow.ui \
     Ui/scientistsdisplay.ui \
-    Ui/computerdisplay.ui
+    Ui/computerdisplay.ui \
+    Ui/random.ui

@@ -20,6 +20,10 @@ public:
     explicit LinkTogether(QWidget *parent = 0);
     ~LinkTogether();
 
+private slots:
+
+    //void on_button_link_clicked();
+
 private:
     void displayAllScientists();
     void displayAllComputers();

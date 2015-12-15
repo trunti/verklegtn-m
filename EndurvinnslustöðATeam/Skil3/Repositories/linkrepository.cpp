@@ -54,7 +54,7 @@ bool linkrepository::addLink(string scientistId, string computerId)
     QSqlQuery query(db);
 
     stringstream sqlQuery;
-    sqlQuery << "INSERT INTO ScientistComputerConnections (scientistId, computerId) VALUES ("
+    sqlQuery << "INSERT INTO Connections (scientistId, computerId) VALUES ("
              << "'" << scientistId << "', "
              << "'" << computerId << "'"
              << ")";

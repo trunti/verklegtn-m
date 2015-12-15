@@ -64,8 +64,25 @@ void LinkTogether::DisplayRelation()
         ui->table_relation->setItem(i, 1, new QTableWidgetItem(cname));
     }
 
-
-
-
-
 }
+
+/*void LinkTogether::on_button_link_clicked()
+{
+    int selectedSciIndex = ui->list_scient->currentIndex();
+    int selectedCompIndex = ui->list_comp->currentIndex();
+    Scientist selectedSci = currentlyDisplayedScientist.at(selectedSciIndex);
+
+    if(success)
+    {
+        int answer = QMessageBox::question(this, "Confirm", "Are you sure");
+        if(answer == QMessageBox::No)
+            return;
+        displayAllScientists();
+        ui->Button_remove_sci->setEnabled(false);
+
+    }
+    else
+    {
+        QMessageBox::warning(this, "Error", "Remove faild!");
+    }
+}*/

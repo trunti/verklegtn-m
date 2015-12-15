@@ -77,6 +77,10 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="../resource.qrc">
+    <normaloff>:/icons/santa.png</normaloff>:/icons/santa.png</iconset>
+  </property>
   <widget class="QPushButton" name="Button_get_random_scient">
    <property name="geometry">
     <rect>
@@ -197,6 +201,8 @@
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

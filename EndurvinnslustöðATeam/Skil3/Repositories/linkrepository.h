@@ -20,6 +20,7 @@ public:
     vector<Links> Relations();
 
     bool addLink(string scientistId, string computerId);
+    bool removeLink(string scientistId, string computerId);
 private:
     QSqlDatabase db;
 };

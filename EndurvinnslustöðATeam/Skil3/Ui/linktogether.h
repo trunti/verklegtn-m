@@ -24,6 +24,10 @@ private slots:
 
     void on_button_link_clicked();
 
+    void on_table_relation_clicked(const QModelIndex &index);
+
+    void on_button_remove_link_clicked();
+
 private:
     void displayAllScientists();
     void displayAllComputers();

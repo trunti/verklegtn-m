@@ -106,3 +106,42 @@ void LinkTogether::on_button_link_clicked()
         QMessageBox::warning(this, "Error", "Remove faild!");
     }
 }
+
+void LinkTogether::on_table_relation_clicked(const QModelIndex &index)
+{
+    ui->button_remove_link->setEnabled(true);
+}
+
+void LinkTogether::on_button_remove_link_clicked()
+{
+    int selectedSciIndex = ui->table_relation->currentIndex().row();
+    int selectedCompIndex = ui->table_relation->currentIndex().row();
+
+
+    Scientist scient = scientName[selectedSciIndex];
+    int SciID = scient.getID();
+    Computer comp = compName[selectedCompIndex];
+    int CompID = comp.getID();
+
+    ostringstream ss,aa;
+
+    ss << SciID;
+    string SID = ss.str();
+
+    aa << CompID;
+    string CID = aa.str();
+
+    bool success = linkService.removeLink(SID,CID);
+
+    if(success)
+    {
+        int answer = QMessageBox::question(this, "Confirm", "Are you sure");
+        if(answer == QMessageBox::No)
+            return;
+        DisplayRelation();
+    }
+    else
+    {
+        QMessageBox::warning(this, "Error", "Remove faild!");
+    }
+}

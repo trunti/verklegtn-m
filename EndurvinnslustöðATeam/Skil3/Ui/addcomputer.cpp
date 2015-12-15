@@ -48,6 +48,29 @@ void addcomputer::on_pushButton_clicked()
         return;
     }
 
+    if(year < "1600" || year > "2015")
+    {
+        QMessageBox::warning(this, "Error", "Year is wrong");
+        return;
+    }
+
+    if((type != "Transitor") && (type != "transitor") && (type != "Electronic") && (type != "electronic") && (type != "Electronic - mechanical") && (type != "electronic - mechanical") && (type != "mechanical") && (type != "Mechanical") && (type != "Other") && (type != "other"))
+    {
+        QMessageBox::warning(this, "Error", "This is not a type of computer");
+        return;
+    }
+
+    if((wasbuilt != "yes") && (wasbuilt != "Yes") && (wasbuilt != "no") && (wasbuilt != "No"))
+    {
+        QMessageBox::warning(this, "Error", "Built is wrong");
+        return;
+    }
+
+    if((wasbuilt == "yes") &&(wasbuilt == "Yes"))
+        wasbuilt = "1";
+    else
+        wasbuilt = "0";
+
     int answer = QMessageBox::question(this, "Confirm", "Are you sure");
     if(answer == QMessageBox::No)
     {

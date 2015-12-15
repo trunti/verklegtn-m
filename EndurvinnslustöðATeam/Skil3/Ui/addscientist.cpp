@@ -41,11 +41,6 @@ void addscientist::on_pushButton_add_clicked()
         ui->error_yearB->setText("<span style='color:red'>Birth year cannot be empty</span>");
         return;
     }
-    if(yearDeath.isEmpty())
-    {
-        ui->error_yearD->setText("<span style='color:red'>Death year cannt be empty</span>");
-        return;
-    }
 
     if((gender != "Male") && (gender != "male") && (gender != "Female") && (gender != "femal"))
     {
@@ -53,18 +48,19 @@ void addscientist::on_pushButton_add_clicked()
         return;
     }
 
-    if(yearDeath >= "2016")
+    if(yearDeath > "2015")
     {
         QMessageBox::warning(this, "Error", "Year of death is wrong");
         return;
     }
-    if(yearBorn <= "1900")
+
+    if(yearBorn < "1500" || yearBorn >"2000")
     {
         QMessageBox::warning(this,"Error", "birth year is wrong");
         return;
     }
 
-    if((yearDeath < yearBorn) && (yearDeath != "0"))
+    if((yearDeath < yearBorn) && !yearDeath.isEmpty())
     {
         QMessageBox::warning(this, "Error", "Deat year or birth year are wrong");
         return;

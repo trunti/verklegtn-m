@@ -90,7 +90,6 @@ void LinkTogether::on_button_link_clicked()
     aa << CompID;
     string CID = aa.str();
 
-
     bool success = linkService.addLink(SID,CID);
 
     if(success)
@@ -103,7 +102,7 @@ void LinkTogether::on_button_link_clicked()
     }
     else
     {
-        QMessageBox::warning(this, "Error", "Remove faild!");
+        QMessageBox::warning(this, "Error", "Adding a link failed!");
     }
 }
 
@@ -122,8 +121,6 @@ void LinkTogether::on_button_remove_link_clicked()
     ss << selectedId;
     string RowId = ss.str();
 
-    ui->listWidget->addItem(QString::fromStdString(RowId));
-
     bool success = linkService.removeLink(RowId);
 
     if(success)
@@ -135,6 +132,6 @@ void LinkTogether::on_button_remove_link_clicked()
     }
     else
     {
-        QMessageBox::warning(this, "Error", "Remove faild!");
+        QMessageBox::warning(this, "Error", "Remove failed!");
     }
 }

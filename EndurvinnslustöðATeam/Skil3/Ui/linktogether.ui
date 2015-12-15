@@ -13,33 +13,13 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QListWidget" name="list_scient">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>211</width>
-     <height>211</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QListWidget" name="list_comp">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>210</y>
-     <width>211</width>
-     <height>231</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QTableWidget" name="table_relation">
    <property name="geometry">
     <rect>
      <x>220</x>
      <y>0</y>
      <width>391</width>
-     <height>441</height>
+     <height>401</height>
     </rect>
    </property>
    <column>
@@ -65,6 +45,36 @@
    <property name="text">
     <string>Link</string>
    </property>
+  </widget>
+  <widget class="QTableWidget" name="table_scient">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>20</y>
+     <width>211</width>
+     <height>192</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>Scientist</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QTableWidget" name="table_comp">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>240</y>
+     <width>201</width>
+     <height>192</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>Computer</string>
+    </property>
+   </column>
   </widget>
  </widget>
  <resources/>

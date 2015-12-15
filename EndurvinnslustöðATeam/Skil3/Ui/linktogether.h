@@ -22,7 +22,7 @@ public:
 
 private slots:
 
-    //void on_button_link_clicked();
+    void on_button_link_clicked();
 
 private:
     void displayAllScientists();

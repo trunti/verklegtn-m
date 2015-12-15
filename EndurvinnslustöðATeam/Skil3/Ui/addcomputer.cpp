@@ -62,7 +62,7 @@ void addcomputer::on_pushButton_clicked()
 
     if((wasbuilt != "yes") && (wasbuilt != "Yes") && (wasbuilt != "no") && (wasbuilt != "No"))
     {
-        QMessageBox::warning(this, "Error", "Built is wrong");
+        QMessageBox::warning(this, "Error", "Answer yes or no");
         return;
     }
 

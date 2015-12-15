@@ -17,9 +17,9 @@ linkrepository::linkrepository()
     }
     else
     {
-    QString dbName = "database.sqlite";
-    db = QSqlDatabase::addDatabase("QSQLITE",connectionName);
-    db.setDatabaseName(dbName);
+        QString dbName = "database.sqlite";
+        db = QSqlDatabase::addDatabase("QSQLITE",connectionName);
+        db.setDatabaseName(dbName);
     }
 }
 
@@ -34,7 +34,8 @@ vector<Links> linkrepository::Relations()
     query.bindValue("con.computers_id", QString::fromStdString("*"));
     query.exec();
 
-    while(query.next()){
+    while(query.next())
+    {
         link.sciname = query.value("pname").toString().toStdString();
         link.compname = query.value("name").toString().toStdString();
         relation.push_back(link);

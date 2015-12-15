@@ -12,9 +12,9 @@ Computersrepositories::Computersrepositories()
     }
     else
     {
-    QString dbName = "database.sqlite";
-    db = QSqlDatabase::addDatabase("QSQLITE",connectionName);
-    db.setDatabaseName(dbName);
+        QString dbName = "database.sqlite";
+        db = QSqlDatabase::addDatabase("QSQLITE",connectionName);
+        db.setDatabaseName(dbName);
     }
 }
 

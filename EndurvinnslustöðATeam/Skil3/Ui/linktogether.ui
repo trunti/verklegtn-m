@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>615</width>
-    <height>483</height>
+    <width>569</width>
+    <height>558</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,9 +16,9 @@
   <widget class="QTableWidget" name="table_relation">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>10</y>
-     <width>391</width>
+     <x>290</x>
+     <y>100</y>
+     <width>271</width>
      <height>421</height>
     </rect>
    </property>
@@ -37,8 +37,8 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>450</y>
-     <width>291</width>
+     <y>530</y>
+     <width>271</width>
      <height>23</height>
     </rect>
    </property>
@@ -50,9 +50,9 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>11</y>
-     <width>201</width>
-     <height>201</height>
+     <y>100</y>
+     <width>141</width>
+     <height>421</height>
     </rect>
    </property>
    <column>
@@ -64,10 +64,10 @@
   <widget class="QTableWidget" name="table_comp">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>231</y>
-     <width>201</width>
-     <height>201</height>
+     <x>160</x>
+     <y>100</y>
+     <width>121</width>
+     <height>421</height>
     </rect>
    </property>
    <column>
@@ -82,14 +82,27 @@
    </property>
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>450</y>
-     <width>301</width>
+     <x>290</x>
+     <y>530</y>
+     <width>251</width>
      <height>23</height>
     </rect>
    </property>
    <property name="text">
     <string>Remove</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>0</y>
+     <width>551</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;Welcome to the linking section of this program.&lt;br/&gt;Here you can link scientists with the computers they worked on! &lt;br/&gt;To link together you need to select a computer and a scientist in two tables and &lt;br/&gt;then click the link button underneath the tables.&lt;br/&gt;You can also remove a already decided link if you disagree with it or think it's wrong.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
  </widget>

@@ -63,7 +63,8 @@ void LinkTogether::DisplayRelation()
 
     ui->table_relation->setRowCount(links.size());
 
-    for(unsigned int i = 0; i < links.size();i++){
+    for(unsigned int i = 0; i < links.size();i++)
+    {
         QString sname = QString::fromStdString(links[i].sciname);
         QString cname = QString::fromStdString(links[i].compname);
 

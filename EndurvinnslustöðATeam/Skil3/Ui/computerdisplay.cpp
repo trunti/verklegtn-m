@@ -125,7 +125,9 @@ void ComputerDisplay::on_Button_remove_comp_clicked()
     {
         int answer = QMessageBox::question(this, "Confirm", "Are you sure");
         if(answer == QMessageBox::No)
+        {
             return;
+        }
         displayAllComputers();
         ui->Button_remove_comp->setEnabled(false);
     }

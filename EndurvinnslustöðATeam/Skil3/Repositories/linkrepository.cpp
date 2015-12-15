@@ -80,7 +80,7 @@ bool linkrepository::removeLink(string RowId)
    QSqlQuery query(db);
 
    stringstream sqlQuery;
-   sqlQuery << "DELETE FROM Connections WHERE rowid = " << RowId;
+   sqlQuery << "DELETE FROM Connections WHERE id = " << RowId;
 
    if (!query.exec(QString::fromStdString(sqlQuery.str())))
    {

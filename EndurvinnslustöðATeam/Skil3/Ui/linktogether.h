@@ -4,6 +4,7 @@
 #include <QDialog>
 #include "Services/computerservice.h"
 #include "Services/scientistservice.h"
+#include "Services/linkservice.h"
 #include <vector>
 #include <string>
 
@@ -24,11 +25,13 @@ private:
     void displayAllComputers();
     void DisplayScientName(vector<Scientist> scientName);
     void DisplayCompName(vector<Computer> compName);
+    void DisplayRelation();
     vector<Scientist> scientName;
     vector<Computer> compName;
     Ui::LinkTogether *ui;
 
     Scientistservice scientistService;
+    linkservice linkService;
     Computerservice computerService;
 };
 

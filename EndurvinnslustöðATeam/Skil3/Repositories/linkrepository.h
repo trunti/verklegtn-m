@@ -7,10 +7,17 @@
 
 using namespace std;
 
+struct Links{
+    string sciname;
+    string compname;
+};
+
 class linkrepository
 {
 public:
     linkrepository();
+
+    vector<Links> Relations();
 
     bool addLink(string scientistId, string computerId);
 private:

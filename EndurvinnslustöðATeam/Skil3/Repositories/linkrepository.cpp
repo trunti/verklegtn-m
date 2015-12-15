@@ -22,6 +22,26 @@ linkrepository::linkrepository()
     db.setDatabaseName(dbName);
     }
 }
+
+vector<Links> linkrepository::Relations()
+{
+    Links link;
+    db.open();
+    vector<Links> relation;
+    QSqlQuery query(db);
+    query.prepare("select p.pname, c.name from Connections con join persons p on p.id = con.persons_id join computers c on c.id = con.computers_id");
+    query.bindValue("con.persons_id", QString::fromStdString("*"));
+    query.bindValue("con.computers_id", QString::fromStdString("*"));
+    query.exec();
+
+    while(query.next()){
+        link.sciname = query.value("pname").toString().toStdString();
+        link.compname = query.value("name").toString().toStdString();
+        relation.push_back(link);
+    }
+    db.close();
+    return relation;
+}
 bool linkrepository::addLink(string scientistId, string computerId)
 {
     db.open();

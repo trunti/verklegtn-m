@@ -33,6 +33,26 @@
     </rect>
    </property>
   </widget>
+  <widget class="QTableWidget" name="table_relation">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>90</y>
+     <width>311</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>Scientist</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Computer</string>
+    </property>
+   </column>
+  </widget>
  </widget>
  <resources/>
  <connections/>

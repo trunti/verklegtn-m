@@ -9,6 +9,7 @@ public:
     linkservice();
 
     bool addLink(string scientistId, string computerId);
+    vector<Links> Relation();
 private:
     linkrepository linkRepo;
 };

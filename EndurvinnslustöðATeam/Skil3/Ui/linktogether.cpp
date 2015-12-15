@@ -8,6 +8,7 @@ LinkTogether::LinkTogether(QWidget *parent) :
     ui->setupUi(this);
     displayAllScientists();
     displayAllComputers();
+    DisplayRelation();
 }
 
 LinkTogether::~LinkTogether()
@@ -46,4 +47,25 @@ void LinkTogether::DisplayCompName(vector<Computer> compName)
 
         ui->list_comp->addItem(QString::fromStdString(currentComp.getName()));
     }
+}
+
+void LinkTogether::DisplayRelation()
+{
+    ui->table_relation->clearContents();
+    vector<Links> links = linkService.Relation();
+
+    ui->table_relation->setRowCount(links.size());
+
+    for(unsigned int i = 0; i < links.size();i++){
+        QString sname = QString::fromStdString(links[i].sciname);
+        QString cname = QString::fromStdString(links[i].compname);
+
+        ui->table_relation->setItem(i, 0, new QTableWidgetItem(sname));
+        ui->table_relation->setItem(i, 1, new QTableWidgetItem(cname));
+    }
+
+
+
+
+
 }

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>615</width>
-    <height>480</height>
+    <height>611</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -90,6 +90,16 @@
    </property>
    <property name="text">
     <string>Remove</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="listWidget">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>480</y>
+     <width>256</width>
+     <height>131</height>
+    </rect>
    </property>
   </widget>
  </widget>

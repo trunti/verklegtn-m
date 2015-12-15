@@ -15,7 +15,7 @@ vector<Links> linkservice::Relation()
 {
     return linkRepo.Relations();
 }
-bool linkservice::removeLink(string scientistId, string computerId)
+bool linkservice::removeLink(string RowId)
 {
-   return linkRepo.removeLink(scientistId,computerId);
+   return linkRepo.removeLink(RowId);
 }

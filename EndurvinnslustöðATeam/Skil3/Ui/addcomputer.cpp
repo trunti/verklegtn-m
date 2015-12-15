@@ -66,10 +66,14 @@ void addcomputer::on_pushButton_clicked()
         return;
     }
 
-    if((wasbuilt == "yes") &&(wasbuilt == "Yes"))
+    if((wasbuilt == "yes") || (wasbuilt == "Yes"))
+    {
         wasbuilt = "1";
+    }
     else
+    {
         wasbuilt = "0";
+    }
 
     int answer = QMessageBox::question(this, "Confirm", "Are you sure");
     if(answer == QMessageBox::No)

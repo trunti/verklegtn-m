@@ -114,24 +114,17 @@ void LinkTogether::on_table_relation_clicked(const QModelIndex &index)
 
 void LinkTogether::on_button_remove_link_clicked()
 {
-    int selectedSciIndex = ui->table_relation->currentIndex().row();
-    int selectedCompIndex = ui->table_relation->currentIndex().row();
+    int selectedId = ui->table_relation->currentIndex().row();
+    selectedId = selectedId + 1;
 
+    ostringstream ss;
 
-    Scientist scient = scientName[selectedSciIndex];
-    int SciID = scient.getID();
-    Computer comp = compName[selectedCompIndex];
-    int CompID = comp.getID();
+    ss << selectedId;
+    string RowId = ss.str();
 
-    ostringstream ss,aa;
+    ui->listWidget->addItem(QString::fromStdString(RowId));
 
-    ss << SciID;
-    string SID = ss.str();
-
-    aa << CompID;
-    string CID = aa.str();
-
-    bool success = linkService.removeLink(SID,CID);
+    bool success = linkService.removeLink(RowId);
 
     if(success)
     {

@@ -9,7 +9,7 @@ public:
     linkservice();
 
     bool addLink(string scientistId, string computerId);
-    bool removeLink(string scientistId, string computerId);
+    bool removeLink(string RowId);
     vector<Links> Relation();
 private:
     linkrepository linkRepo;

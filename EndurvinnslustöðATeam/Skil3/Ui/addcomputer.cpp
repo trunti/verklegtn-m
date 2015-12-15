@@ -66,7 +66,10 @@ void addcomputer::on_pushButton_clicked()
     }
     else
     {
-
+        ui->input_name->setText("");
+        ui->input_year->setText("");
+        ui->input_type->setText("");
+        ui->input_wasbuilt->setText("");
     }
     this->done(0);
 }

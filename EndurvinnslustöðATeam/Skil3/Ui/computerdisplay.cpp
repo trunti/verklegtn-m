@@ -44,16 +44,15 @@ void ComputerDisplay::displayComputers(vector<Computer> computer)
         QString type = QString::fromStdString(currentComputer.getType());
         QString wasbuilt = QString::number(currentComputer.getWasbuilt());
 
+        ui->table_computer->setItem(row, 1, new QTableWidgetItem(year));
         ui->table_computer->setItem(row, 0, new QTableWidgetItem(name));
         ui->table_computer->setItem(row, 2, new QTableWidgetItem(type));
-        if(year == "0" && wasbuilt == "0")
+        if(wasbuilt == "0")
         {
-            ui->table_computer->setItem(row, 1, new QTableWidgetItem(notbuilt));
             ui->table_computer->setItem(row, 3, new QTableWidgetItem(notbuilt));
         }
         else
         {
-            ui->table_computer->setItem(row, 1, new QTableWidgetItem(year));
             ui->table_computer->setItem(row, 3, new QTableWidgetItem(built));
         }
     }

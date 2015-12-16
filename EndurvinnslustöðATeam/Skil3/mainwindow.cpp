@@ -47,3 +47,8 @@ void MainWindow::on_Button_link_clicked()
     LinkTogether linkT;
     linkT.exec();
 }
+
+void MainWindow::on_pushButton_clicked()
+{
+    close();
+}

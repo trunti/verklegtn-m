@@ -36,6 +36,8 @@ private slots:
 
     void on_Button_link_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     string GetOrderBy();
     void displayAllScientists();

@@ -177,6 +177,9 @@
      <height>91</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;Welcome to the linking section of this program.&lt;br/&gt;Here you can link scientists with the computers they worked on! &lt;br/&gt;To link together you need to select a computer and a scientist in two tables and &lt;br/&gt;then click the link button underneath the tables.&lt;br/&gt;You can also remove a already decided link if you disagree with it or think it's wrong.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>

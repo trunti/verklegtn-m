@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>306</height>
+    <width>452</width>
+    <height>337</height>
    </rect>
   </property>
   <property name="palette">
@@ -195,6 +195,9 @@
      <width>291</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Press your luck. What will you get?</string>

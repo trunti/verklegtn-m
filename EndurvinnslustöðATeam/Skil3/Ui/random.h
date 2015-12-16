@@ -24,6 +24,8 @@ private slots:
 
     void on_Button_get_random_comp_clicked();
 
+    void on_Button_quit_clicked();
+
 private:
     void displayAllScientists();
     void displayScientists(vector<Scientist> scientist);

@@ -91,7 +91,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:x-large; font-weight:600; color:blue;&quot;&gt;Add Scientist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:x-large; font-weight:600; color:#ffffff;&quot;&gt;Add Scientist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
@@ -104,7 +104,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Name</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Name:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="input_name">
@@ -115,6 +115,9 @@
      <width>371</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Enter scientist name.</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
@@ -127,7 +130,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Gender</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Gende:r&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="input_gender">
@@ -138,6 +141,12 @@
      <width>371</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Male/Female</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_4">
@@ -150,7 +159,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Birth year</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Birth year:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="input_birth_year">
@@ -161,6 +170,9 @@
      <width>371</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="placeholderText">
+    <string>What year was the scientist born?</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_5">
@@ -173,7 +185,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Death year</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Death year:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="input_death_year">
@@ -184,6 +196,9 @@
      <width>371</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="placeholderText">
+    <string>What year did the scientist die? Leave empty if person is alive!</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_add">
@@ -258,8 +273,8 @@
   <widget class="QLabel" name="input_text">
    <property name="geometry">
     <rect>
-     <x>6</x>
-     <y>280</y>
+     <x>10</x>
+     <y>230</y>
      <width>391</width>
      <height>20</height>
     </rect>
@@ -278,7 +293,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Here you can add a scientist to the database.&lt;br/&gt;To add into the database please fill all the empty sections &lt;br/&gt;Please enter all the information requested.&lt;br/&gt;Then press the add button to add the scientist.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Here you can add a scientist to the database.&lt;br/&gt;To add into the database please fill all the empty sections &lt;br/&gt;Please enter all the information requested.&lt;br/&gt;Then press the add button to add the scientist.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
  </widget>

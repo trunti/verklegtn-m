@@ -91,7 +91,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:x-large; font-weight:600; color:#0000ff;&quot;&gt;Add computer&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:x-large; font-weight:600; color:#ffffff;&quot;&gt;Add computer&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
@@ -104,7 +104,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Name</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Name:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="input_name">
@@ -115,6 +115,9 @@
      <width>371</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Enter computer name here.</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
@@ -127,7 +130,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Year</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Year:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="input_year">
@@ -138,6 +141,12 @@
      <width>371</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Enter computers build year here.</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_4">
@@ -150,7 +159,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Type</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Type:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="input_type">
@@ -161,6 +170,12 @@
      <width>371</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Electronic, electro-mechanical, mechanical, transitor or other.</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_5">
@@ -173,7 +188,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Built</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Built:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="input_wasbuilt">
@@ -184,6 +199,9 @@
      <width>371</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Was it built? (Yes/No)</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
@@ -265,7 +283,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Here you can add a computer to the database.&lt;br/&gt;To add into the database please fill all the empty sections &lt;br/&gt;Please enter all the information requested.&lt;br/&gt;Then press the add button to add the computer.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Here you can add a computer to the database.&lt;br/&gt;To add into the database please fill all the empty sections &lt;br/&gt;Please enter all the information requested.&lt;br/&gt;Then press the add button to add the computer.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
  </widget>

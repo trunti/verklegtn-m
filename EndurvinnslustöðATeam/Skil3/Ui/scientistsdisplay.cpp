@@ -132,6 +132,7 @@ void ScientistsDisplay::on_pushButton_add_scientist_clicked()
 void ScientistsDisplay::on_table_scientists_clicked(const QModelIndex &index)
 {
     ui->Button_remove_sci->setEnabled(true);
+    ui->Button_edit->setEnabled(true);
 }
 
 void ScientistsDisplay::on_Button_remove_sci_clicked()

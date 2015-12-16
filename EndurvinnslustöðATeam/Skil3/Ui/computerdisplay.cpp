@@ -114,6 +114,7 @@ void ComputerDisplay::on_dropdown_order_by_ascending_activated(const QString &ar
 void ComputerDisplay::on_table_computer_clicked(const QModelIndex &index)
 {
     ui->Button_remove_comp->setEnabled(true);
+    ui->Button_edit->setEnabled(true);
 }
 
 void ComputerDisplay::on_Button_remove_comp_clicked()

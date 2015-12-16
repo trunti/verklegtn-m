@@ -70,9 +70,31 @@ void EditScientist::on_Button_Update_clicked()
     QString yearBorn = ui->input_birth_year->text();
     QString yearDeath = ui->input_death_year->text();
 
+    if(gender != "male" && gender != "Male" && gender != "female" && gender != "Female" && !gender.isEmpty())
+    {
+        QMessageBox::warning(this, "Error", "Gender is wrong");
+        return;
+    }
+
+    if(yearBorn < "1500" && !yearBorn.isEmpty() && yearBorn < yearDeath && yearBorn > "2000")
+    {
+        QMessageBox::warning(this, "Error", "Birth year is wrong");
+        return;
+    }
+
+    if(yearDeath < "1600" && yearDeath > "2016" && !yearDeath.isEmpty())
+    {
+        QMessageBox::warning(this, "Error", "Death Year is wrong");
+        return;
+    }
+
+    if(!name.isEmpty())
     scientistservice.UpdateScientist("pname",name.toStdString(),ID);
+    if(!gender.isEmpty())
     scientistservice.UpdateScientist("gender",gender.toStdString(),ID);
+    if(!yearBorn.isEmpty())
     scientistservice.UpdateScientist("born",yearBorn.toStdString(),ID);
+    if(!yearDeath.isEmpty())
     scientistservice.UpdateScientist("died",yearDeath.toStdString(),ID);
 
     int answer = QMessageBox::question(this, "Confirm", "Are you sure");

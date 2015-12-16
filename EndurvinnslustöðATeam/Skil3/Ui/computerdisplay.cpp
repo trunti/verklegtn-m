@@ -147,3 +147,18 @@ void ComputerDisplay::on_pushButton_add_computer_clicked()
         displayAllComputers();
     }
 }
+
+void ComputerDisplay::on_Button_edit_clicked()
+{
+    EditComputer editcomp;
+    int selectedCompIndex = ui->table_computer->currentIndex().row();
+    editcomp.CompToEdit(selectedCompIndex,GetOrderBy(),orderByAscending());
+
+    int EditCompReturnValue = editcomp.exec();
+
+    if(EditCompReturnValue == 0)
+    {
+        ui->Search_window->setText("");
+        displayAllComputers();
+    }
+}

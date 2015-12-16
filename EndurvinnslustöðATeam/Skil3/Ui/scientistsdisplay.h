@@ -4,6 +4,7 @@
 #include <QDialog>
 #include "addscientist.h"
 #include "Services/scientistservice.h"
+#include "editscientist.h"
 #include <vector>
 #include <string>
 
@@ -32,6 +33,8 @@ private slots:
     void on_table_scientists_clicked(const QModelIndex &index);
 
     void on_Button_remove_sci_clicked();
+
+    void on_Button_edit_clicked();
 
 private:
     string GetOrderBy();

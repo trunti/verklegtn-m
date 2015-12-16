@@ -4,6 +4,7 @@
 #include <QDialog>
 #include "Services/computerservice.h"
 #include "addcomputer.h"
+#include "editcomputer.h"
 #include <vector>
 #include <string>
 
@@ -32,6 +33,8 @@ private slots:
     void on_Button_remove_comp_clicked();
 
     void on_pushButton_add_computer_clicked();
+
+    void on_Button_edit_clicked();
 
 private:
     string GetOrderBy();

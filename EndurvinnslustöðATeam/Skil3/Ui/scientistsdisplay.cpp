@@ -153,3 +153,18 @@ void ScientistsDisplay::on_Button_remove_sci_clicked()
         QMessageBox::warning(this, "Error", "Remove failed!");
     }
 }
+
+void ScientistsDisplay::on_Button_edit_clicked()
+{
+    EditScientist editscient;
+    int selectedSciIndex = ui->table_scientists->currentIndex().row();
+    editscient.SetWhoToEdit(selectedSciIndex);
+
+    int EditScientistReturnValue = editscient.exec();
+
+    if(EditScientistReturnValue == 0)
+    {
+        ui->Search_window->setText("");
+        displayAllScientists();
+    }
+}

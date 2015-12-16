@@ -15,6 +15,8 @@ INPUT(
 ./debug\linkrepository.o
 ./debug\linkservice.o
 ./debug\linktogether.o
+./debug\editscientist.o
+./debug\editcomputer.o
 ./debug\qrc_resource.o
 ./debug\moc_mainwindow.o
 ./debug\moc_scientistsdisplay.o
@@ -23,4 +25,6 @@ INPUT(
 ./debug\moc_addscientist.o
 ./debug\moc_addcomputer.o
 ./debug\moc_linktogether.o
+./debug\moc_editscientist.o
+./debug\moc_editcomputer.o
 );

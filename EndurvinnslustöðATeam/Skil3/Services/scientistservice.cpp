@@ -27,6 +27,11 @@ vector<Scientist> Scientistservice::RandomScientist()
     return scientrepo.RandomScientist();
 }
 
+vector<Scientist> Scientistservice::UpdateScientist(string WhatToUpdate, string Update, int ID)
+{
+    return scientrepo.UpdateScientist(WhatToUpdate,Update,ID);
+}
+
 bool Scientistservice::addScientist(Scientist scientist)
 {
     return scientrepo.addScientist(scientist);

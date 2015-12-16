@@ -124,6 +124,13 @@
     </widget>
    </item>
    <item>
+    <widget class="QPushButton" name="Button_edit">
+     <property name="text">
+      <string>Edit</string>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QPushButton" name="Button_remove_sci">
      <property name="enabled">
       <bool>false</bool>

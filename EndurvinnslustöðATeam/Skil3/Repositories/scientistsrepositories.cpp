@@ -50,6 +50,15 @@ vector<Scientist> Scientistrepositories::RandomScientist()
     return queryScientist(sqlQuery.str());
 }
 
+vector<Scientist> Scientistrepositories::UpdateScientist(string WhatToUpdate, string Update, int ID)
+{
+    stringstream sqlQuery;
+
+    sqlQuery << "Update Persons Set " << WhatToUpdate << "='" << Update <<"' Where Id=" << ID;
+
+    return queryScientist(sqlQuery.str());
+}
+
 bool Scientistrepositories::addScientist(Scientist scientist)
 {
     db.open();

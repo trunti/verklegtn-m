@@ -21,7 +21,10 @@ vector<Computer> Computerservice::searchComputers(string searchString, string or
         return comprepo.getAllComputers(orderBy, orderAscending);
     }
 }
-
+vector<Computer> Computerservice::UpdateComputer(string WhatToUpdate, string Update, int ID)
+{
+   return comprepo.UpdateComputer(WhatToUpdate,Update,ID);
+}
 vector<Computer> Computerservice::RandomComputer()
 {
     return comprepo.RandomComputer();

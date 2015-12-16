@@ -45,6 +45,15 @@ vector<Computer> Computersrepositories::RandomComputer()
     return queryComputer(sqlQuery.str());
 }
 
+vector<Computer> Computersrepositories::UpdateComputer(string WhatToUpdate, string Update, int ID)
+{
+    stringstream sqlQuery;
+
+    sqlQuery << "Update Computers Set " << WhatToUpdate << "='" << Update <<"' Where Id=" << ID;
+
+    return queryComputer(sqlQuery.str());
+}
+
 bool Computersrepositories::addComputer(Computer computer)
 {
     db.open();

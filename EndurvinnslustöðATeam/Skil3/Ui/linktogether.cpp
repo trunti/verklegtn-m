@@ -140,3 +140,13 @@ void LinkTogether::on_button_remove_link_clicked()
         QMessageBox::warning(this, "Error", "Remove failed!");
     }
 }
+
+void LinkTogether::on_Button_back_clicked()
+{
+    close();
+}
+
+void LinkTogether::on_Button_exit_clicked()
+{
+    exit(1);
+}

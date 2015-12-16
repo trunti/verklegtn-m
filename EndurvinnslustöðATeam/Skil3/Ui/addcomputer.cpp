@@ -100,3 +100,13 @@ void addcomputer::on_pushButton_clicked()
     }
     this->done(0);
 }
+
+void addcomputer::on_Button_back_clicked()
+{
+    close();
+}
+
+void addcomputer::on_Button_exit_clicked()
+{
+    exit(1);
+}

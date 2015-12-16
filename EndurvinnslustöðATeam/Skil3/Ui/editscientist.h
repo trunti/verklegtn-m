@@ -24,6 +24,10 @@ public:
 private slots:
     void on_Button_Update_clicked();
 
+    void on_Button_back_clicked();
+
+    void on_Button_exit_clicked();
+
 private:
     void Edit();
     vector<Scientist> EditScient;

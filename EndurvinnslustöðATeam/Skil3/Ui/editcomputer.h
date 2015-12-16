@@ -22,6 +22,10 @@ public:
 private slots:
     void on_Button_edit_clicked();
 
+    void on_Button_back_clicked();
+
+    void on_Button_exit_clicked();
+
 private:
     vector<Computer> Edit;
     Computerservice compservice;

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>613</width>
-    <height>519</height>
+    <width>619</width>
+    <height>566</height>
    </rect>
   </property>
   <property name="palette">
@@ -85,8 +85,8 @@
    <widget class="QPushButton" name="Button_Scientist">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>60</y>
+      <x>120</x>
+      <y>90</y>
       <width>381</width>
       <height>61</height>
      </rect>
@@ -94,6 +94,8 @@
     <property name="font">
      <font>
       <pointsize>22</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="autoFillBackground">
@@ -109,8 +111,8 @@
    <widget class="QPushButton" name="Buttin_Computer">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>130</y>
+      <x>120</x>
+      <y>180</y>
       <width>381</width>
       <height>61</height>
      </rect>
@@ -118,6 +120,8 @@
     <property name="font">
      <font>
       <pointsize>22</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -130,8 +134,8 @@
    <widget class="QPushButton" name="Button_Random">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>200</y>
+      <x>120</x>
+      <y>360</y>
       <width>381</width>
       <height>61</height>
      </rect>
@@ -139,6 +143,8 @@
     <property name="font">
      <font>
       <pointsize>22</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -152,7 +158,7 @@
    <widget class="QPushButton" name="Button_link">
     <property name="geometry">
      <rect>
-      <x>110</x>
+      <x>120</x>
       <y>270</y>
       <width>381</width>
       <height>61</height>
@@ -161,13 +167,15 @@
     <property name="font">
      <font>
       <pointsize>22</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(151, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));</string>
     </property>
     <property name="text">
-     <string>Link</string>
+     <string>Relations</string>
     </property>
    </widget>
    <widget class="QLabel" name="Digital_clock">
@@ -175,8 +183,8 @@
      <rect>
       <x>10</x>
       <y>0</y>
-      <width>121</width>
-      <height>31</height>
+      <width>161</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -199,9 +207,9 @@
    <widget class="QLabel" name="Creator">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>440</y>
-      <width>201</width>
+      <x>370</x>
+      <y>450</y>
+      <width>261</width>
       <height>20</height>
      </rect>
     </property>
@@ -209,17 +217,24 @@
      <string notr="true">color: rgb(156, 0, 0);</string>
     </property>
     <property name="text">
-     <string>By Andri, Bergvin, Einar, Garðar, Svanur</string>
+     <string>By Andri, Bergvin, Einar, Garðar og Svanur</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>530</x>
-      <y>10</y>
-      <width>75</width>
-      <height>41</height>
+      <x>540</x>
+      <y>0</y>
+      <width>81</width>
+      <height>51</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(151, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));
@@ -235,8 +250,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>613</width>
-     <height>21</height>
+     <width>619</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>

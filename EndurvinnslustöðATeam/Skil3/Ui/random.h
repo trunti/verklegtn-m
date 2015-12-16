@@ -24,7 +24,9 @@ private slots:
 
     void on_Button_get_random_comp_clicked();
 
-    void on_Button_quit_clicked();
+    void on_Button_back_clicked();
+
+    void on_Button_exit_clicked();
 
 private:
     void displayAllScientists();

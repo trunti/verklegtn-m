@@ -163,3 +163,13 @@ void ComputerDisplay::on_Button_edit_clicked()
         displayAllComputers();
     }
 }
+
+void ComputerDisplay::on_Button_back_clicked()
+{
+    close();
+}
+
+void ComputerDisplay::on_Button_exit_clicked()
+{
+    exit(1);
+}

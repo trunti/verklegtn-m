@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>569</width>
-    <height>558</height>
+    <width>632</width>
+    <height>614</height>
    </rect>
   </property>
   <property name="palette">
@@ -84,10 +84,10 @@
   <widget class="QTableWidget" name="table_relation">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>100</y>
+     <x>340</x>
+     <y>120</y>
      <width>271</width>
-     <height>421</height>
+     <height>371</height>
     </rect>
    </property>
    <column>
@@ -104,11 +104,18 @@
   <widget class="QPushButton" name="button_link">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>530</y>
+     <x>20</x>
+     <y>520</y>
      <width>271</width>
-     <height>23</height>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(151, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));
@@ -122,9 +129,9 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>100</y>
-     <width>141</width>
-     <height>421</height>
+     <y>120</y>
+     <width>151</width>
+     <height>371</height>
     </rect>
    </property>
    <column>
@@ -136,10 +143,10 @@
   <widget class="QTableWidget" name="table_comp">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>100</y>
-     <width>121</width>
-     <height>421</height>
+     <x>170</x>
+     <y>120</y>
+     <width>151</width>
+     <height>371</height>
     </rect>
    </property>
    <column>
@@ -154,11 +161,18 @@
    </property>
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>530</y>
-     <width>251</width>
-     <height>23</height>
+     <x>340</x>
+     <y>520</y>
+     <width>271</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(151, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));
@@ -171,17 +185,63 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>40</x>
      <y>0</y>
-     <width>551</width>
-     <height>91</height>
+     <width>591</width>
+     <height>111</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;Welcome to the linking section of this program.&lt;br/&gt;Here you can link scientists with the computers they worked on! &lt;br/&gt;To link together you need to select a computer and a scientist in two tables and &lt;br/&gt;then click the link button underneath the tables.&lt;br/&gt;You can also remove a already decided link if you disagree with it or think it's wrong.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;You can link a scientist to a computer by clicking on a scientist&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt; and a computer and click the link button. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt;You can also remove a relation by clicking on either the scientist&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:large; font-weight:600;&quot;&gt; or the computer and click the remove button&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Button_back">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>570</y>
+     <width>271</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(151, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));</string>
+   </property>
+   <property name="text">
+    <string>Back</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Button_exit">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>570</y>
+     <width>271</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(151, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));</string>
+   </property>
+   <property name="text">
+    <string>Exit</string>
    </property>
   </widget>
  </widget>

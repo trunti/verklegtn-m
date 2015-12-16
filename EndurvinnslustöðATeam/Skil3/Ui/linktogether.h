@@ -28,6 +28,10 @@ private slots:
 
     void on_button_remove_link_clicked();
 
+    void on_Button_back_clicked();
+
+    void on_Button_exit_clicked();
+
 private:
     void displayAllScientists();
     void displayAllComputers();

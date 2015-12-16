@@ -105,3 +105,13 @@ void EditScientist::on_Button_Update_clicked()
     this->done(0);
 
 }
+
+void EditScientist::on_Button_back_clicked()
+{
+    close();
+}
+
+void EditScientist::on_Button_exit_clicked()
+{
+    exit(1);
+}

@@ -19,6 +19,10 @@ public:
 private slots:
     void on_pushButton_add_clicked();
 
+    void on_Button_back_clicked();
+
+    void on_Button_exit_clicked();
+
 private:
     Scientistservice scientistService;
     Ui::addscientist *ui;

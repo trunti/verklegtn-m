@@ -87,7 +87,12 @@ void Random::displayComputers(vector<Computer> computer)
     currentlyDisplayedComputer = computer;
 }
 
-void Random::on_Button_quit_clicked()
+void Random::on_Button_back_clicked()
 {
     close();
+}
+
+void Random::on_Button_exit_clicked()
+{
+    exit(1);
 }

@@ -102,3 +102,13 @@ void EditComputer::on_Button_edit_clicked()
     ui->Button_edit->setEnabled(false);
     this->done(0);
 }
+
+void EditComputer::on_Button_back_clicked()
+{
+    close();
+}
+
+void EditComputer::on_Button_exit_clicked()
+{
+    exit(1);
+}

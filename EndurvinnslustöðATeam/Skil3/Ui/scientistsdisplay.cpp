@@ -169,3 +169,13 @@ void ScientistsDisplay::on_Button_edit_clicked()
         displayAllScientists();
     }
 }
+
+void ScientistsDisplay::on_Button_back_clicked()
+{
+    close();
+}
+
+void ScientistsDisplay::on_Button_exit_clicked()
+{
+    exit(1);
+}

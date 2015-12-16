@@ -42,7 +42,7 @@ void addscientist::on_pushButton_add_clicked()
         return;
     }
 
-    if((gender != "Male") && (gender != "male") && (gender != "Female") && (gender != "femal"))
+    if((gender != "Male") && (gender != "male") && (gender != "Female") && (gender != "female"))
     {
         QMessageBox::warning(this, "Error", "Gender is wrong");
         return;
@@ -56,13 +56,13 @@ void addscientist::on_pushButton_add_clicked()
 
     if(yearBorn < "1500" || yearBorn >"2000")
     {
-        QMessageBox::warning(this,"Error", "birth year is wrong");
+        QMessageBox::warning(this,"Error", "Birth year is wrong");
         return;
     }
 
     if((yearDeath < yearBorn) && !yearDeath.isEmpty())
     {
-        QMessageBox::warning(this, "Error", "Deat year or birth year are wrong");
+        QMessageBox::warning(this, "Error", "Death year or birth year are wrong");
         return;
     }
 

@@ -133,7 +133,7 @@ void ComputerDisplay::on_Button_remove_comp_clicked()
     }
     else
     {
-        QMessageBox::warning(this, "Error", "Remove faild!");
+        QMessageBox::warning(this, "Error", "Remove failed!");
     }
 }
 

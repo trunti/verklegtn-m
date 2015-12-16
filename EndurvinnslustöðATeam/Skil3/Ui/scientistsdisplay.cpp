@@ -150,6 +150,6 @@ void ScientistsDisplay::on_Button_remove_sci_clicked()
     }
     else
     {
-        QMessageBox::warning(this, "Error", "Remove faild!");
+        QMessageBox::warning(this, "Error", "Remove failed!");
     }
 }

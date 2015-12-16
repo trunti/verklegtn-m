@@ -67,11 +67,11 @@ void EditComputer::on_Button_edit_clicked()
 
     if(wasbuilt != "yes" && wasbuilt != "Yes" && wasbuilt != "no" && wasbuilt != "No" && !wasbuilt.isEmpty())
     {
-        QMessageBox::warning(this, "Error", "Buit is wrong");
+        QMessageBox::warning(this, "Error", "Built is wrong");
         return;
     }
 
-    if((type != "Transitor") && (type != "transitor") && (type != "Electronic") && (type != "electronic") && (type != "Electronic - mechanical") && (type != "electronic - mechanical") && (type != "mechanical") && (type != "Mechanical") && (type != "Other") && (type != "other") && (!type.isEmpty()))
+    if(type != "Transitor" && type != "transitor" && type != "Electronic" && type != "electronic" && type != "Electronic - mechanical" && type != "electronic - mechanical" && type != "mechanical" && type != "Mechanical" && type != "Other" && type != "other" && !type.isEmpty())
     {
         QMessageBox::warning(this, "Error", "This is not a type of computer");
         return;
@@ -94,7 +94,7 @@ void EditComputer::on_Button_edit_clicked()
         compservice.UpdateComputer("name",name.toStdString(),ID);
         if(!year.isEmpty())
         compservice.UpdateComputer("year",year.toStdString(),ID);
-        if(type.isEmpty())
+        if(!type.isEmpty())
         compservice.UpdateComputer("type",type.toStdString(),ID);
         if(!wasbuilt.isEmpty())
         compservice.UpdateComputer("build",wasbuilt.toStdString(),ID);

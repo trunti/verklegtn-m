@@ -107,38 +107,4 @@ vector<Computer> Computersrepositories::queryComputer(string sqlQuery)
     db.close();
     return comp;
 }
-vector<Scientist> Computersrepositories::queryScientistsByComputer(Computer computer)
-{
-    vector<Scientist> scientists;
-
-    db.open();
-
-    if (!db.isOpen())
-    {
-        return scientists;
-    }
-
-    QSqlQuery query(db);
-
-    stringstream sqlQuery;
-    sqlQuery << "SELECT s.* FROM ScientistComputerConnections scc ";
-    sqlQuery << "JOIN Scientists s ";
-    sqlQuery << "ON s.id = scc.scientistId ";
-    sqlQuery << "WHERE scc.computerId = " << computer.getID();
-
-    query.exec(QString::fromStdString(sqlQuery.str()));
-
-    while (query.next())
-    {
-        int id = query.value("id").toUInt();
-        string name = query.value("name").toString().toStdString();
-        string gender = query.value("gender").toString().toStdString();
-        int yearBorn = query.value("born").toInt();
-        int yearDied = query.value("died").toInt();
-
-        scientists.push_back(Scientist(id, name, gender, yearBorn, yearDied));
-    }
-
-    return scientists;
-}
 

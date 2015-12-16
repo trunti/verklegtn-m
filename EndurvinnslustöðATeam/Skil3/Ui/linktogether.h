@@ -35,9 +35,9 @@ private slots:
 private:
     void displayAllScientists();
     void displayAllComputers();
-    void DisplayScientName(vector<Scientist> scientName);
+    void DisplayScientName(vector<Scientist> scientName);//aðeins displayað nöfninn
     void DisplayCompName(vector<Computer> compName);
-    void DisplayRelation();
+    void DisplayRelation();//náð í allar tengingarnar og displayað aðeins nöfnin tengd
     vector<Scientist> scientName;
     vector<Computer> compName;
     Ui::LinkTogether *ui;

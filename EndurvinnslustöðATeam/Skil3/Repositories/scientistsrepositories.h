@@ -12,17 +12,15 @@ class Scientistrepositories
 public:
     Scientistrepositories();
 
-    vector<Scientist> getAllScientists(string orderBy, bool orderAscending);
-    vector<Scientist> searchScientists(string searchString, string orderBy, bool orderAscending);
-    vector<Scientist> RandomScientist();
-    vector<Scientist> UpdateScientist(string WhatToUpdate, string Update, int ID);
-    bool addScientist(Scientist scientist);
-    bool removeScientist(Scientist scientist);
+    vector<Scientist> getAllScientists(string orderBy, bool orderAscending);//nær í alla scientist
+    vector<Scientist> searchScientists(string searchString, string orderBy, bool orderAscending);//leitar eftir því sem notandi vill
+    vector<Scientist> RandomScientist();//nær í random scientist
+    vector<Scientist> UpdateScientist(string WhatToUpdate, string Update, int ID);//editar í gagnagrunn eftir notenda
+    bool addScientist(Scientist scientist);//bætir við í gagnagrunn
+    bool removeScientist(Scientist scientist);//eyðir úr gagnagrunni
 
 private:
     vector<Scientist> queryScientist(string sqlQuery);
-
-    vector<Computer> queryComputersByScientist(Scientist scientist);
 
 
     QSqlDatabase db;

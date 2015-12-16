@@ -8,7 +8,7 @@ Scientist::Scientist()
 
 Scientist::~Scientist()
 {
-    destroyComputers();
+
 }
 
 Scientist::Scientist(int ID, string name, string gender, int Byear, int Dyear)
@@ -61,27 +61,4 @@ int Scientist::getDyear()
 string Scientist::getAlive()
 {
     return Alive;
-}
-void Scientist::destroyComputers()
-{
-    for (unsigned int i = 0; i < computers.size(); i++)
-    {
-        delete computers.at(i);
-    }
-}
-vector<Computer*> Scientist::getComputers() const
-{
-    return computers;
-}
-
-void Scientist::setComputers(vector<Computer> newComputers)
-{
-    destroyComputers();
-
-    for (unsigned int i = 0; i < newComputers.size(); i++)
-    {
-        Computer currentComputer;
-        currentComputer = newComputers.at(i);
-        this->computers.push_back(new Computer(currentComputer.getID(), currentComputer.getName(), currentComputer.getYear(), currentComputer.getType(),currentComputer.getWasbuilt()));
-    }
 }

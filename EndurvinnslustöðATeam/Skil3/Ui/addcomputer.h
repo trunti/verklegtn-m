@@ -17,7 +17,7 @@ public:
     ~addcomputer();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_pushButton_clicked();//þegar ýtt er á takkann fer villumelding af stað svo er addað ef allt er í góðu
 
     void on_Button_back_clicked();
 

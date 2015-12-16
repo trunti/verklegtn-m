@@ -9,7 +9,7 @@ class Computerservice
 {
 public:
     Computerservice();
-
+    //verið að ná í allt úr data layer til að senda til UI
     vector<Computer> getAllComputers(string orderBy, bool orderAscending);
     vector<Computer> searchComputers(string searchString, string orderBy, bool orderAscending);
     vector<Computer> RandomComputer();

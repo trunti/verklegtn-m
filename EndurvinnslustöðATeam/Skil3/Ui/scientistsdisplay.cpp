@@ -159,7 +159,7 @@ void ScientistsDisplay::on_Button_edit_clicked()
 {
     EditScientist editscient;
     int selectedSciIndex = ui->table_scientists->currentIndex().row();
-    editscient.SetWhoToEdit(selectedSciIndex);
+    editscient.SetWhoToEdit(selectedSciIndex,GetOrderBy(),orderByAscending());
 
     int EditScientistReturnValue = editscient.exec();
 

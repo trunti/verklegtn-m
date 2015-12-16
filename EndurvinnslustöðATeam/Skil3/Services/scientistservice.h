@@ -9,7 +9,7 @@ class Scientistservice
 {
 public:
     Scientistservice();
-
+    //verið að ná í allt úr data layer til að senda til UI
     vector<Scientist> getAllScientists(string orderBy, bool orderAscending);
     vector<Scientist> searchScientists(string searchString, string orderBy, bool orderAscending);
     vector<Scientist> RandomScientist();

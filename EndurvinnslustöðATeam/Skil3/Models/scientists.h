@@ -22,11 +22,8 @@ public:
     int getDyear();
     string getAlive();
 
-    vector<Computer*> getComputers() const;
-    void setComputers(vector<Computer> computers);
 
 private:
-    void destroyComputers();
 
     int ID;
     string name;
@@ -34,8 +31,6 @@ private:
     int Byear;
     int Dyear;
     string Alive;
-
-    vector<Computer*> computers;
 
 };
 

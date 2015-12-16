@@ -17,12 +17,12 @@ EditScientist::~EditScientist()
     delete ui;
 }
 
-void EditScientist::SetWhoToEdit(int Chosen)
+void EditScientist::SetWhoToEdit(int Chosen, string order, bool ASC)
 {
     QString alive = "Alive!";
     ui->table_scientists->clearContents();
-    bool yes = true;
-    EditScient = scientistservice.getAllScientists("pname", yes);
+
+    EditScient = scientistservice.getAllScientists(order, ASC);
 
     ui->table_scientists->setRowCount(1);
     int row = 0;

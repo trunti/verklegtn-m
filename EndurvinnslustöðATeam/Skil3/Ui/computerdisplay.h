@@ -41,9 +41,9 @@ private slots:
     void on_Button_exit_clicked();
 
 private:
-    string GetOrderBy();
-    void displayAllComputers();
-    void displayComputers(vector<Computer> computer);
+    string GetOrderBy();//finnur röðuninna
+    void displayAllComputers();//nær í allar tölvur til að displaya
+    void displayComputers(vector<Computer> computer);//setur hverja fyrir sig inn í töflu
     bool orderByAscending();
 
     Computerservice computerService;

@@ -41,10 +41,10 @@ private slots:
     void on_Button_exit_clicked();
 
 private:
-    string GetOrderBy();
-    void displayAllScientists();
-    void displayScientists(vector<Scientist> scientist);
-    bool orderByAscending();
+    string GetOrderBy();//náum í hvernig notandi vill sortera
+    void displayAllScientists();//nær í alla scientista eftir sorteri notenda
+    void displayScientists(vector<Scientist> scientist);//setur þá inní töflu
+    bool orderByAscending();//hvort það sé ASC eða DESC
 
     Scientistservice scientistService;
 

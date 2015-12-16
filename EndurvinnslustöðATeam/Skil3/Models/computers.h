@@ -21,8 +21,6 @@ public:
     string getType();
     bool getWasbuilt();
 
-    vector<Scientist> getScientists();
-    void setScientists(vector<Scientist> newScientists);
 
 
 private:
@@ -32,8 +30,6 @@ private:
     string type;
     bool wasbuilt;
     int wasBuilt;
-
-    vector<Scientist> scientists;
 
 };
 

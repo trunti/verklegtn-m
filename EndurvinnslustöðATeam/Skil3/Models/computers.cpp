@@ -40,12 +40,4 @@ bool Computer::getWasbuilt()
 {
     return wasbuilt;
 }
-vector<Scientist> Computer::getScientists()
-{
-    return scientists;
-}
 
-void Computer::setScientists(std::vector<Scientist> newScientists)
-{
-    scientists = newScientists;
-}

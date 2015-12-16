@@ -78,7 +78,11 @@ void LinkTogether::on_button_link_clicked()
     int selectedSciIndex = ui->table_scient->currentIndex().row();
     int selectedCompIndex = ui->table_comp->currentIndex().row();
 
-
+    if(selectedCompIndex < 0 || selectedCompIndex > compName.size() || selectedSciIndex < 0 || selectedSciIndex > scientName.size())
+    {
+        QMessageBox::warning(this, "Oops!!", "Choose from both tables!");
+        return;
+    }
     Scientist scient = scientName[selectedSciIndex];
     int SciID = scient.getID();
     Computer comp = compName[selectedCompIndex];

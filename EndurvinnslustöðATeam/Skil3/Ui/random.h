@@ -21,25 +21,18 @@ public:
 
 private slots:
     void on_Button_get_random_scient_clicked();
-
     void on_Button_get_random_comp_clicked();
-
     void on_Button_back_clicked();
-
     void on_Button_exit_clicked();
 
 private:
-    void displayAllScientists();//nær í alla scientista og setur inn í næsta fall sem setur inn í töflu
+    void displayAllScientists();                            // Nær í alla scientista og setur inn í næsta fall sem setur inn í töflu
     void displayScientists(vector<Scientist> scientist);
-    void displayAllComputers();//sama of fyrir ofan nema með tölvur
+    void displayAllComputers();                             // Sama of fyrir ofan nema með tölvur
     void displayComputers(vector<Computer> computer);
-
     Computerservice computerService;
-
     vector<Computer> currentlyDisplayedComputer;
-
     Scientistservice scientistService;
-
     vector<Scientist> currentlyDisplayedScientist;
     Ui::Random *ui;
 };

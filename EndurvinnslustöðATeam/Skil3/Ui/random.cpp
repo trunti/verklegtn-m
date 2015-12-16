@@ -7,18 +7,15 @@ Random::Random(QWidget *parent) :
 {
     ui->setupUi(this);
 }
-
 Random::~Random()
 {
     delete ui;
 }
-
 void Random::on_Button_get_random_scient_clicked()
 {
     vector<Scientist> scient = scientistService.RandomScientist();
     displayScientists(scient);
 }
-
 void Random::on_Button_get_random_comp_clicked()
 {
     vector<Computer> comp = computerService.RandomComputer();
@@ -86,12 +83,10 @@ void Random::displayComputers(vector<Computer> computer)
     }
     currentlyDisplayedComputer = computer;
 }
-
 void Random::on_Button_back_clicked()
 {
     close();
 }
-
 void Random::on_Button_exit_clicked()
 {
     exit(1);

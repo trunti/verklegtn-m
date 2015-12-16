@@ -11,7 +11,6 @@ class Scientistrepositories
 {
 public:
     Scientistrepositories();
-
     vector<Scientist> getAllScientists(string orderBy, bool orderAscending);//nær í alla scientist
     vector<Scientist> searchScientists(string searchString, string orderBy, bool orderAscending);//leitar eftir því sem notandi vill
     vector<Scientist> RandomScientist();//nær í random scientist

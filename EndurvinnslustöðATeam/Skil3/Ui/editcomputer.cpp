@@ -8,12 +8,10 @@ EditComputer::EditComputer(QWidget *parent) :
 {
     ui->setupUi(this);
 }
-
 EditComputer::~EditComputer()
 {
     delete ui;
 }
-
 void EditComputer::CompToEdit(int chosen,string order,bool ASC)
 {
     Edit = compservice.getAllComputers(order,ASC);
@@ -42,7 +40,6 @@ void EditComputer::CompToEdit(int chosen,string order,bool ASC)
         ui->table_computer->setItem(0, 3, new QTableWidgetItem(built));
     }
 }
-
 void EditComputer::on_Button_edit_clicked()
 {
     QString str;
@@ -102,12 +99,10 @@ void EditComputer::on_Button_edit_clicked()
     ui->Button_edit->setEnabled(false);
     this->done(0);
 }
-
 void EditComputer::on_Button_back_clicked()
 {
     close();
 }
-
 void EditComputer::on_Button_exit_clicked()
 {
     exit(1);

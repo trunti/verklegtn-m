@@ -17,7 +17,6 @@ Computersrepositories::Computersrepositories()
         db.setDatabaseName(dbName);
     }
 }
-
 vector<Computer> Computersrepositories::getAllComputers(string orderBy, bool orderAscending)
 {
     stringstream sqlQuery;
@@ -26,7 +25,6 @@ vector<Computer> Computersrepositories::getAllComputers(string orderBy, bool ord
 
     return queryComputer(sqlQuery.str());
 }
-
 vector<Computer> Computersrepositories::searchComputers(string searchString, string orderBy, bool orderAscending)
 {
     stringstream sqlQuery;
@@ -35,7 +33,6 @@ vector<Computer> Computersrepositories::searchComputers(string searchString, str
 
     return queryComputer(sqlQuery.str());
 }
-
 vector<Computer> Computersrepositories::RandomComputer()
 {
     stringstream sqlQuery;
@@ -44,7 +41,6 @@ vector<Computer> Computersrepositories::RandomComputer()
 
     return queryComputer(sqlQuery.str());
 }
-
 vector<Computer> Computersrepositories::UpdateComputer(string WhatToUpdate, string Update, int ID)
 {
     stringstream sqlQuery;
@@ -53,7 +49,6 @@ vector<Computer> Computersrepositories::UpdateComputer(string WhatToUpdate, stri
 
     return queryComputer(sqlQuery.str());
 }
-
 bool Computersrepositories::addComputer(Computer computer)
 {
     db.open();
@@ -68,7 +63,6 @@ bool Computersrepositories::addComputer(Computer computer)
     db.close();
     return success;
 }
-
 bool Computersrepositories::removeComputer(Computer computer)
 {
     db.open();
@@ -83,7 +77,6 @@ bool Computersrepositories::removeComputer(Computer computer)
     db.close();
     return success;
 }
-
 vector<Computer> Computersrepositories::queryComputer(string sqlQuery)
 {
     db.open();
@@ -107,4 +100,3 @@ vector<Computer> Computersrepositories::queryComputer(string sqlQuery)
     db.close();
     return comp;
 }
-

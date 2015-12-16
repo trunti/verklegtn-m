@@ -1,6 +1,7 @@
 #include "computerdisplay.h"
 #include "ui_computerdisplay.h"
 #include <QMessageBox>
+
 ComputerDisplay::ComputerDisplay(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ComputerDisplay)
@@ -17,7 +18,6 @@ ComputerDisplay::ComputerDisplay(QWidget *parent) :
 
     displayAllComputers();
 }
-
 ComputerDisplay::~ComputerDisplay()
 {
     delete ui;
@@ -27,7 +27,6 @@ void ComputerDisplay::displayAllComputers()
     vector<Computer> computer = computerService.getAllComputers(GetOrderBy(), orderByAscending());
     displayComputers(computer);
 }
-
 void ComputerDisplay::displayComputers(vector<Computer> computer)
 {
     ui->table_computer->clearContents();
@@ -76,7 +75,6 @@ void ComputerDisplay::on_dropdown_order_by_currentIndexChanged(int index)
 {
     on_Search_window_textChanged("");
 }
-
 string ComputerDisplay::GetOrderBy()
 {
     string CurrentOrderWanted = ui->dropdown_order_by->currentText().toStdString();
@@ -110,13 +108,11 @@ void ComputerDisplay::on_dropdown_order_by_ascending_activated(const QString &ar
 {
     on_Search_window_textChanged("");
 }
-
 void ComputerDisplay::on_table_computer_clicked(const QModelIndex &index)
 {
     ui->Button_remove_comp->setEnabled(true);
     ui->Button_edit->setEnabled(true);
 }
-
 void ComputerDisplay::on_Button_remove_comp_clicked()
 {
     int selectedComputerIndex = ui->table_computer->currentIndex().row();
@@ -137,7 +133,6 @@ void ComputerDisplay::on_Button_remove_comp_clicked()
         QMessageBox::warning(this, "Error", "Remove failed!");
     }
 }
-
 void ComputerDisplay::on_pushButton_add_computer_clicked()
 {
     addcomputer addcomp;
@@ -148,7 +143,6 @@ void ComputerDisplay::on_pushButton_add_computer_clicked()
         displayAllComputers();
     }
 }
-
 void ComputerDisplay::on_Button_edit_clicked()
 {
     EditComputer editcomp;
@@ -163,12 +157,10 @@ void ComputerDisplay::on_Button_edit_clicked()
         displayAllComputers();
     }
 }
-
 void ComputerDisplay::on_Button_back_clicked()
 {
     close();
 }
-
 void ComputerDisplay::on_Button_exit_clicked()
 {
     exit(1);

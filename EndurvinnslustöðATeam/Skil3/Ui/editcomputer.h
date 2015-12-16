@@ -17,13 +17,11 @@ class EditComputer : public QDialog
 public:
     explicit EditComputer(QWidget *parent = 0);
     ~EditComputer();
-    void CompToEdit(int chosen, string order, bool ASC);//finna hvaða tölvu á að edita
+    void CompToEdit(int chosen, string order, bool ASC);    // Finna hvaða tölvu á að edita.
 
 private slots:
-    void on_Button_edit_clicked();//fundið tölvu ID og breytt þeirri tölvu í gagnagrunni
-
+    void on_Button_edit_clicked();                          // Fundið tölvu ID og breytt þeirri tölvu í gagnagrunni.
     void on_Button_back_clicked();
-
     void on_Button_exit_clicked();
 
 private:

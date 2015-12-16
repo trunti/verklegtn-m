@@ -4,12 +4,10 @@ Computerservice::Computerservice()
 {
 
 }
-
 vector<Computer> Computerservice::getAllComputers(string orderBy, bool orderAscending)
 {
     return comprepo.getAllComputers(orderBy, orderAscending);
 }
-
 vector<Computer> Computerservice::searchComputers(string searchString, string orderBy, bool orderAscending)
 {
     if (searchString.length() > 0)

@@ -18,18 +18,15 @@ ScientistsDisplay::ScientistsDisplay(QWidget *parent) :
 
     displayAllScientists();
 }
-
 ScientistsDisplay::~ScientistsDisplay()
 {
     delete ui;
 }
-
 void ScientistsDisplay::displayAllScientists()
 {
     vector<Scientist> scientist = scientistService.getAllScientists(GetOrderBy(), orderByAscending());
     displayScientists(scientist);
 }
-
 void ScientistsDisplay::displayScientists(vector<Scientist> scientist)
 {
     QString alive = "Alive!";
@@ -61,7 +58,6 @@ void ScientistsDisplay::displayScientists(vector<Scientist> scientist)
 
     currentlyDisplayedScientist = scientist;
 }
-
 bool ScientistsDisplay::orderByAscending()
 {
     string AscText = ui->dropdown_order_by_ascending->currentText().toStdString();
@@ -75,12 +71,10 @@ bool ScientistsDisplay::orderByAscending()
         return false;
     }
 }
-
 void ScientistsDisplay::on_dropdown_order_by_currentIndexChanged(int index)
 {
     on_Search_window_textChanged("");
 }
-
 string ScientistsDisplay::GetOrderBy()
 {
     string CurrentOrderWanted = ui->dropdown_order_by->currentText().toStdString();
@@ -103,12 +97,10 @@ string ScientistsDisplay::GetOrderBy()
     }
     return "pName";
 }
-
 void ScientistsDisplay::on_dropdown_order_by_ascending_activated(const QString &arg1)
 {
     on_Search_window_textChanged("");
 }
-
 void ScientistsDisplay::on_Search_window_textChanged(const QString &arg1)
 {
     string Input = ui->Search_window->text().toStdString();
@@ -116,7 +108,6 @@ void ScientistsDisplay::on_Search_window_textChanged(const QString &arg1)
     vector<Scientist> scientist = scientistService.searchScientists(Input, GetOrderBy(), orderByAscending());
     displayScientists(scientist);
 }
-
 void ScientistsDisplay::on_pushButton_add_scientist_clicked()
 {
     addscientist addscient;
@@ -128,13 +119,11 @@ void ScientistsDisplay::on_pushButton_add_scientist_clicked()
         displayAllScientists();
     }
 }
-
 void ScientistsDisplay::on_table_scientists_clicked(const QModelIndex &index)
 {
     ui->Button_remove_sci->setEnabled(true);
     ui->Button_edit->setEnabled(true);
 }
-
 void ScientistsDisplay::on_Button_remove_sci_clicked()
 {
     int selectedSciIndex = ui->table_scientists->currentIndex().row();
@@ -154,7 +143,6 @@ void ScientistsDisplay::on_Button_remove_sci_clicked()
         QMessageBox::warning(this, "Error", "Remove failed!");
     }
 }
-
 void ScientistsDisplay::on_Button_edit_clicked()
 {
     EditScientist editscient;
@@ -169,12 +157,10 @@ void ScientistsDisplay::on_Button_edit_clicked()
         displayAllScientists();
     }
 }
-
 void ScientistsDisplay::on_Button_back_clicked()
 {
     close();
 }
-
 void ScientistsDisplay::on_Button_exit_clicked()
 {
     exit(1);

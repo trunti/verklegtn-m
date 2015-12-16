@@ -12,7 +12,6 @@ Computer::Computer(int ID, string name, int year, string type, bool wasbuilt)
     this->type = type;
     this->wasbuilt = wasbuilt;
 }
-
 Computer::Computer(string name, int year, string type, int wasBuilt)
 {
     this->year = year;

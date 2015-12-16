@@ -11,7 +11,6 @@ class Computersrepositories
 {
 public:
     Computersrepositories();
-
     vector<Computer> getAllComputers(string orderBy, bool orderAscending);//nær í allar tölvur
     vector<Computer> searchComputers(string searchString, string orderBy, bool orderAscending);//leitar í gagnagrunni eftir notanda
     vector<Computer> RandomComputer();//nær í random tölvu

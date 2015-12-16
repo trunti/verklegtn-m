@@ -1,18 +1,17 @@
 #include "addcomputer.h"
 #include "ui_addcomputer.h"
 #include <QMessageBox>
+
 addcomputer::addcomputer(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::addcomputer)
 {
     ui->setupUi(this);
 }
-
 addcomputer::~addcomputer()
 {
     delete ui;
 }
-
 void addcomputer::on_pushButton_clicked()
 {
     QString name = ui->input_name->text();
@@ -100,12 +99,10 @@ void addcomputer::on_pushButton_clicked()
     }
     this->done(0);
 }
-
 void addcomputer::on_Button_back_clicked()
 {
     close();
 }
-
 void addcomputer::on_Button_exit_clicked()
 {
     exit(1);

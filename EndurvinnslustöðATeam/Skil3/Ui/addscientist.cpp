@@ -8,12 +8,10 @@ addscientist::addscientist(QDialog *parent) :
 {
     ui->setupUi(this);
 }
-
 addscientist::~addscientist()
 {
     delete ui;
 }
-
 void addscientist::on_pushButton_add_clicked()
 {
     QString name = ui->input_name->text();
@@ -90,12 +88,10 @@ void addscientist::on_pushButton_add_clicked()
     }
     this->done(0);
 }
-
 void addscientist::on_Button_back_clicked()
 {
     close();
 }
-
 void addscientist::on_Button_exit_clicked()
 {
     exit(1);

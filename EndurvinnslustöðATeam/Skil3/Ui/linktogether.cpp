@@ -13,7 +13,6 @@ LinkTogether::LinkTogether(QWidget *parent) :
     displayAllComputers();
     DisplayRelation();
 }
-
 LinkTogether::~LinkTogether()
 {
     delete ui;
@@ -55,7 +54,6 @@ void LinkTogether::DisplayCompName(vector<Computer> compName)
         ui->table_comp->setItem(i,0,new QTableWidgetItem(name));
     }
 }
-
 void LinkTogether::DisplayRelation()
 {
     ui->table_relation->clearContents();
@@ -115,7 +113,6 @@ void LinkTogether::on_table_relation_clicked(const QModelIndex &index)
 {
     ui->button_remove_link->setEnabled(true);
 }
-
 void LinkTogether::on_button_remove_link_clicked()
 {
     int selectedId = ui->table_relation->currentIndex().row();
@@ -140,12 +137,10 @@ void LinkTogether::on_button_remove_link_clicked()
         QMessageBox::warning(this, "Error", "Remove failed!");
     }
 }
-
 void LinkTogether::on_Button_back_clicked()
 {
     close();
 }
-
 void LinkTogether::on_Button_exit_clicked()
 {
     exit(1);

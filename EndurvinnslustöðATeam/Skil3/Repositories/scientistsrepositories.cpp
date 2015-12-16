@@ -22,7 +22,6 @@ Scientistrepositories::Scientistrepositories()
     db.setDatabaseName(dbName);
     }
 }
-
 vector<Scientist> Scientistrepositories::getAllScientists(string orderBy, bool orderAscending)
 {
     stringstream sqlQuery;
@@ -31,7 +30,6 @@ vector<Scientist> Scientistrepositories::getAllScientists(string orderBy, bool o
 
     return queryScientist(sqlQuery.str());
 }
-
 vector<Scientist> Scientistrepositories::searchScientists(string searchString, string orderBy, bool orderAscending)
 {
     stringstream sqlQuery;
@@ -49,7 +47,6 @@ vector<Scientist> Scientistrepositories::RandomScientist()
 
     return queryScientist(sqlQuery.str());
 }
-
 vector<Scientist> Scientistrepositories::UpdateScientist(string WhatToUpdate, string Update, int ID)
 {
     stringstream sqlQuery;
@@ -58,7 +55,6 @@ vector<Scientist> Scientistrepositories::UpdateScientist(string WhatToUpdate, st
 
     return queryScientist(sqlQuery.str());
 }
-
 bool Scientistrepositories::addScientist(Scientist scientist)
 {
     db.open();
@@ -73,7 +69,6 @@ bool Scientistrepositories::addScientist(Scientist scientist)
     db.close();
     return success;
 }
-
 bool Scientistrepositories::removeScientist(Scientist scientist)
 {
     db.open();
@@ -88,7 +83,6 @@ bool Scientistrepositories::removeScientist(Scientist scientist)
     db.close();
     return success;
 }
-
 vector<Scientist> Scientistrepositories::queryScientist(string sqlQuery)
 {
     db.open();

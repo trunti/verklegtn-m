@@ -22,7 +22,6 @@ linkrepository::linkrepository()
         db.setDatabaseName(dbName);
     }
 }
-
 vector<Links> linkrepository::Relations()
 {
     Links link;

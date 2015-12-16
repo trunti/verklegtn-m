@@ -17,10 +17,8 @@ public:
     ~addscientist();
 
 private slots:
-    void on_pushButton_add_clicked();//þegar ýtt er á add fer villumelding afstað og addar ef allt er löglegt
-
+    void on_pushButton_add_clicked();           // Þegar ýtt er á add fer villumelding afstað og addar ef allt er löglegt.
     void on_Button_back_clicked();
-
     void on_Button_exit_clicked();
 
 private:

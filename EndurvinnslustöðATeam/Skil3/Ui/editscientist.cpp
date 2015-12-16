@@ -16,7 +16,6 @@ EditScientist::~EditScientist()
 {
     delete ui;
 }
-
 void EditScientist::SetWhoToEdit(int Chosen, string order, bool ASC)
 {
     QString alive = "Alive!";
@@ -45,9 +44,6 @@ void EditScientist::SetWhoToEdit(int Chosen, string order, bool ASC)
     ui->table_scientists->setItem(row, 3, new QTableWidgetItem(dyear));
     }
 }
-
-
-
 void EditScientist::on_Button_Update_clicked()
 {
     QString str;
@@ -105,12 +101,10 @@ void EditScientist::on_Button_Update_clicked()
     this->done(0);
 
 }
-
 void EditScientist::on_Button_back_clicked()
 {
     close();
 }
-
 void EditScientist::on_Button_exit_clicked()
 {
     exit(1);

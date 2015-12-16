@@ -14,7 +14,6 @@ public:
     ~Scientist();
     Scientist(int ID,string name, string gender, int Byear,int Dyear);
     Scientist(string name, string gender, int Byear, int Dyear);
-
     int getID();
     string getName();
     string getGender();
@@ -22,9 +21,7 @@ public:
     int getDyear();
     string getAlive();
 
-
 private:
-
     int ID;
     string name;
     string gender;

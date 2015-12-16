@@ -21,35 +21,25 @@ class ComputerDisplay : public QDialog
 public:
     explicit ComputerDisplay(QWidget *parent = 0);
     ~ComputerDisplay();
+
 private slots:
     void on_dropdown_order_by_currentIndexChanged(int index);
-
     void on_Search_window_textChanged(const QString &arg1);
-
     void on_dropdown_order_by_ascending_activated(const QString &arg1);
-
     void on_table_computer_clicked(const QModelIndex &index);
-
     void on_Button_remove_comp_clicked();
-
     void on_pushButton_add_computer_clicked();
-
     void on_Button_edit_clicked();
-
     void on_Button_back_clicked();
-
     void on_Button_exit_clicked();
 
 private:
-    string GetOrderBy();//finnur röðuninna
-    void displayAllComputers();//nær í allar tölvur til að displaya
-    void displayComputers(vector<Computer> computer);//setur hverja fyrir sig inn í töflu
+    string GetOrderBy();                                // Finnur röðuninna.
+    void displayAllComputers();                         // Nær í allar tölvur til að displaya.
+    void displayComputers(vector<Computer> computer);   // Setur hverja fyrir sig inn í töflu.
     bool orderByAscending();
-
     Computerservice computerService;
-
     vector<Computer> currentlyDisplayedComputer;
-
     Ui::ComputerDisplay *ui;
 };
 
